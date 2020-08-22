@@ -1,0 +1,141 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'me.moallemi.advanced-build-version'
+
+advancedVersioning {
+    nameOptions {
+        versionMajor 0
+        versionMinor 0
+        versionPatch 1
+    }
+    codeOptions {
+        versionCodeType 'AUTO_INCREMENT_ONE_STEP'
+    }
+
+    outputOptions {
+        renameOutput true
+        nameFormat 'GradleSample-v${versionName}'
+    }
+}
+
+def appVersionName = advancedVersioning.versionName
+def appVersionCode = advancedVersioning.versionCode
+
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        applicationId "mk.podcast.com"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+
+        versionCode appVersionCode
+        versionName appVersionName
+
+        vectorDrawables.useSupportLibrary true
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        //api key variable define
+        buildConfigField 'String','BaseApiKey', "\"${ApiKeySensitiveData}\""
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    productFlavors{
+        def BASE_URL_FIELD = "BASE_URL_FIELD"
+        def BASE_URL_DEV = "\"https://api.themoviedb.org/3/\""
+        def BASE_URL_PROD = "\"https://api.themoviedb.org/3/\""
+        def BASE_URL_UAT = "\"https://api.themoviedb.org/3/\""
+
+        flavorDimensions "default"
+        dev{
+            dimension = "default"
+            applicationIdSuffix = ".dev"
+            manifestPlaceholders = [appName: "@string/app_name_dev"]
+            buildConfigField 'String', BASE_URL_FIELD , BASE_URL_DEV
+        }
+        prod{
+            dimension = "default"
+            applicationIdSuffix = ".prod"
+            manifestPlaceholders = [appName: "@string/app_name_prod"]
+            buildConfigField 'String', BASE_URL_FIELD , BASE_URL_PROD
+        }
+    }
+}
+
+
+dependencies {
+    implementation project(":share")
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    // Kotlin
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation rootProject.ext.libraries.ktx
+
+    // App dependencies
+    implementation rootProject.ext.libraries.appCompat
+    implementation rootProject.ext.libraries.constraintLayout
+    implementation rootProject.ext.libraries.material
+    implementation rootProject.ext.libraries.swiperefreshlayout
+    implementation rootProject.ext.libraries.youtube
+
+    //Glide
+    implementation rootProject.ext.libraries.glide
+    annotationProcessor rootProject.ext.libraries.glideAnnotion
+
+    //GSON
+    implementation rootProject.ext.libraries.gson
+
+    //Retrofit
+    implementation rootProject.ext.libraries.retrofit
+    implementation rootProject.ext.libraries.retrofit_converter
+    implementation rootProject.ext.libraries.retrofit_adpter
+
+    //RxKotlin
+    implementation rootProject.ext.libraries.rxkotlin
+    implementation rootProject.ext.libraries.rxandroid
+
+    //OKHttp
+    implementation rootProject.ext.libraries.okhttp
+
+    // Architecture Components
+    // LiveData
+    implementation rootProject.ext.libraries.livedata
+    kapt rootProject.ext.libraries.livecycle_arch_compiler
+    implementation rootProject.ext.libraries.lifecycle_arch_extension
+    kapt rootProject.ext.libraries.lifecycle_compiler
+    // Room
+    implementation rootProject.ext.libraries.room
+    kapt rootProject.ext.libraries.roomcompiler
+
+    //Testing
+    // Local Unit Tests
+    testImplementation rootProject.ext.libraries.junit
+    testImplementation rootProject.ext.libraries.junitktx
+    testImplementation rootProject.ext.libraries.corektx
+    testImplementation rootProject.ext.libraries.mockk
+    testImplementation rootProject.ext.libraries.mockito
+    testImplementation rootProject.ext.libraries.roboelectric
+
+    // Tests that require Android Device
+    androidTestImplementation rootProject.ext.libraries.junit
+    androidTestImplementation rootProject.ext.libraries.expressoCore
+    androidTestImplementation rootProject.ext.libraries.testRule
+    androidTestImplementation rootProject.ext.libraries.testRunner
+    androidTestImplementation rootProject.ext.libraries.testCore
+    androidTestImplementation rootProject.ext.libraries.testExtktx
+    androidTestImplementation rootProject.ext.libraries.expressoContrib
+    androidTestImplementation rootProject.ext.libraries.mockitoAndroid
+    androidTestImplementation rootProject.ext.libraries.testExt
+}

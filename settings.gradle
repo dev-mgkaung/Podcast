@@ -1,0 +1,3 @@
+include ':share'
+include ':app'
+rootProject.name = "Podcast"
