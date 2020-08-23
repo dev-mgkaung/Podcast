@@ -3,12 +3,7 @@ package mk.padc.themovie.utils
 import mk.podcast.com.BuildConfig
 
 const val BASE_URL = "base url"
-const val GET_POPULAR = "movie/popular"
-const val GET_TOPRATED="movie/top_rated"
-const val GET_ACTOR="person/popular"
-const val GET_GENERIC_List="genre/movie/list"
-const val GET_Discover="discover/movie"
-
+const val DATABASE_NAME="Podcast.DB"
 
 
 //Params

@@ -2,4 +2,11 @@
     <string name="app_name_dev">Podcast(Dev)</string>
     <string name="app_name_prod">Podcast(Prod)</string>
     <string name="loading">Loading...</string>
+    <string name="black_circle">&#x25CF;</string>
+    <string name="title_home">Home</string>
+    <string name="title_search">Search</string>
+    <string name="title_profile">Profile</string>
+    <string name="title_download">Download</string>
+
+    <string name="hello_blank_fragment">Profile fragment</string>
 </resources>

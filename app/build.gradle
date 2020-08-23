@@ -73,12 +73,20 @@ android {
             buildConfigField 'String', BASE_URL_FIELD , BASE_URL_PROD
         }
     }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
 }
 
 
 dependencies {
     implementation project(":share")
     implementation fileTree(dir: "libs", include: ["*.jar"])
+
     // Kotlin
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation rootProject.ext.libraries.ktx
@@ -90,8 +98,16 @@ dependencies {
     implementation rootProject.ext.libraries.swiperefreshlayout
     implementation rootProject.ext.libraries.youtube
 
+
+    implementation rootProject.ext.libraries.navigation_fragment
+    implementation rootProject.ext.libraries.navigation_ui
+    implementation rootProject.ext.libraries.navigation_fragment_ktx
+    implementation rootProject.ext.libraries.navigation_ui_ktx
+
+
     //Glide
     implementation rootProject.ext.libraries.glide
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     annotationProcessor rootProject.ext.libraries.glideAnnotion
 
     //GSON
@@ -115,6 +131,7 @@ dependencies {
     kapt rootProject.ext.libraries.livecycle_arch_compiler
     implementation rootProject.ext.libraries.lifecycle_arch_extension
     kapt rootProject.ext.libraries.lifecycle_compiler
+    implementation rootProject.ext.libraries.lifecycle_extensions
     // Room
     implementation rootProject.ext.libraries.room
     kapt rootProject.ext.libraries.roomcompiler
