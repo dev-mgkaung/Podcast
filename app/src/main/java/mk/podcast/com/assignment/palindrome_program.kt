@@ -2,7 +2,7 @@ package mk.podcast.com.assignment
 
 import java.util.*
 
-class palindrome_programa
+class palindrome_program
 {
     companion object
     {
