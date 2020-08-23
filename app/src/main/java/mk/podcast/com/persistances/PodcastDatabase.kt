@@ -5,9 +5,10 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import mk.padc.themovie.utils.DATABASE_NAME
-import mk.podcast.com.persistances.daos.PodcastDaos
+import mk.podcast.com.datas.vos.PodcastVO
+import mk.podcast.com.persistances.daos.PodcastDao
 
-@Database(entities = [PodcastDaos::class], version = 1, exportSchema = false)
+@Database(entities = [PodcastVO::class], version = 1, exportSchema = false)
 abstract class PodcastDatabase : RoomDatabase() {
     companion object {
 
@@ -28,5 +29,5 @@ abstract class PodcastDatabase : RoomDatabase() {
         }
     }
 
-    abstract fun podcastDao(): PodcastDaos
+    abstract fun podcastDao(): PodcastDao
 }
