@@ -6,11 +6,11 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    android:background="#020E27"
+    android:background="@color/white"
     tools:context=".activities.SplashActivity">
 
     <ImageView
-        android:src="@drawable/ic_launcher_foreground"
+        android:src="@drawable/icon"
         android:layout_width="100dp"
         android:scaleType="fitXY"
         android:layout_height="100dp" />
@@ -21,7 +21,7 @@
         android:layout_margin="@dimen/common_margin"
         android:text="@string/loading"
         android:gravity="center"
-        android:textColor="@color/white"
+        android:textColor="@color/colorPrimaryDark"
         android:fontFamily="@font/contrail_one"
         app:autoSizeTextType="uniform"
         app:autoSizeMinTextSize="12sp"

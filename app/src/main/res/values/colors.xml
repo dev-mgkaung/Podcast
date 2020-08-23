@@ -1,8 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#F44336</color>
-    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorPrimary">#ec5757</color>
+    <color name="colorPrimaryDark">#ec5757</color>
+
     <color name="colorAccent">#03DAC5</color>
+    <color name="media_bg_color">#5854a3</color>
+    <color name="category_1">#fdda8a</color>
+    <color name="category_2">#cee6e7</color>
+    <color name="category_3">#e8d1e5</color>
+    <color name="text_color_primary">#0a0a0a</color>
+    <color name="text_color_secondary">#252525</color>
+    <color name="empty_view_btn">#b5dbf7</color>
+    <color name="progress_color">#bae2fe</color>
+    <color name="text_color_tertary">#979797</color>
+
     <color name="red_50">#FFEBEE</color>
     <color name="red_100">#FFCDD2</color>
     <color name="red_200">#EF9A9A</color>
