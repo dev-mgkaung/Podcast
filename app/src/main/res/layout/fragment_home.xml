@@ -5,11 +5,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="mk.podcast.com.fragments.HomeFragment">
 
-  <androidx.recyclerview.widget.RecyclerView
+     <androidx.recyclerview.widget.RecyclerView
       android:layout_width="match_parent"
       android:layout_height="match_parent"
       app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
       tools:listitem="@layout/podcast_listitem"
       android:id="@+id/podcast_recyclerview"/>
+
+
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
