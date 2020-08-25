@@ -14,23 +14,28 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_begin="3dp" />
-
-    <ImageView
-        android:id="@+id/download_podcast_img"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/imagecard"
         android:layout_width="92dp"
         android:layout_height="98dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="8dp"
+        app:cardCornerRadius="25dp"
         android:layout_marginBottom="32dp"
-        android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline3"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/placeholder" />
-
+        app:layout_constraintTop_toTopOf="parent">
+        <ImageView
+            android:id="@+id/download_podcast_img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/placeholder" />
+    </androidx.cardview.widget.CardView>
+    
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline3"
         android:layout_width="wrap_content"
