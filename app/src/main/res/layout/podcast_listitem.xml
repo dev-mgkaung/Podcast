@@ -2,10 +2,11 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/description"
     android:layout_width="match_parent"
     android:background="@color/white"
+    android:id="@+id/podcastlayout"
     android:layout_height="120dp"
+    android:layout_marginTop="8dp"
     android:paddingTop="8dp"
     android:paddingBottom="8dp">
 
@@ -15,12 +16,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="5dp" />
+        app:layout_constraintGuide_begin="3dp" />
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="102dp"
-        android:layout_height="105dp"
+        android:id="@+id/podcast_img"
+        android:layout_width="92dp"
+        android:layout_height="98dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="8dp"
@@ -28,6 +29,7 @@
         android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/placeholder" />
@@ -37,7 +39,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.29440388" />
+        app:layout_constraintGuide_percent="0.27" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline4"
@@ -47,7 +49,7 @@
         app:layout_constraintGuide_end="61dp" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/download_img"
         android:layout_width="37dp"
         android:layout_height="42dp"
         android:layout_marginTop="16dp"
@@ -59,41 +61,41 @@
         app:srcCompat="@drawable/download" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/podcast_hour"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="1 hr left"
         android:textColor="@color/text_color_tertary"
         android:textSize="10sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="@+id/download_img"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/imageView2"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:layout_constraintStart_toStartOf="@+id/download_img"
+        app:layout_constraintTop_toBottomOf="@+id/download_img"
         app:layout_constraintVertical_bias="0.55" />
 
     <com.google.android.material.chip.Chip
-        app:rippleColor="@color/colorPrimaryDark"
-        app:chipBackgroundColor="@android:color/holo_blue_bright"
         android:id="@+id/title"
-        android:layout_width="220dp"
-        android:layout_height="21dp"
-        android:layout_marginTop="4dp"
+        android:layout_width="wrap_content"
+        android:layout_height="33dp"
+        android:layout_marginTop="2dp"
         android:text="Art Design"
         android:textColor="@color/black"
-        android:textSize="10sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        android:textSize="11sp"
+        app:chipBackgroundColor="@color/category_1"
+        app:layout_constraintBottom_toTopOf="@+id/description"
         app:layout_constraintEnd_toStartOf="@+id/guideline4"
-        app:layout_constraintHorizontal_bias="0.06"
+        app:layout_constraintHorizontal_bias="0.038"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.705" />
+        app:layout_constraintVertical_bias="0.705"
+        app:rippleColor="@color/colorPrimaryDark" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/description"
         android:layout_width="220dp"
         android:layout_height="37dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="4dp"
         android:ellipsize="end"
         android:fontFamily="@font/contrail_one"
         android:maxLines="2"
@@ -101,7 +103,7 @@
         android:text="Women in Tech Product \n hosted by Exprese Degcore dddddd"
         android:textColor="@color/text_color_primary"
         app:layout_constraintEnd_toStartOf="@+id/guideline4"
-        app:layout_constraintHorizontal_bias="0.076"
+        app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
         app:layout_constraintTop_toBottomOf="@+id/title" />
 
@@ -117,8 +119,9 @@
         android:progressTint="@color/progress_color"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline4"
-        app:layout_constraintHorizontal_bias="0.23"
+        app:layout_constraintHorizontal_bias="0.272"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        app:layout_constraintTop_toBottomOf="@+id/description"
+        app:layout_constraintVertical_bias="0.304" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -9,8 +9,12 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import mk.podcast.com.R
 import androidx.navigation.ui.AppBarConfiguration
 import mk.padc.share.activities.BaseActivity
+import mk.podcast.com.adapters.PodcastRecyclerAdapter
+import mk.podcast.com.datas.vos.PodcastVO
+import mk.podcast.com.mvp.presenters.MainPresenter
+import mk.podcast.com.mvp.views.MainView
 
-class MainActivity : BaseActivity() {
+class MainActivity :  BaseActivity()  {
 
     companion object {
         //MainActivity call from other screen
@@ -27,4 +31,5 @@ class MainActivity : BaseActivity() {
 
         navView.setupWithNavController(navController)
     }
+
 }

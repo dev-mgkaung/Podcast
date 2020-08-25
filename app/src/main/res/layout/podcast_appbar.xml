@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_marginTop="1dp"
+    android:layout_height="460dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:gravity="center"
+        android:background="@color/white">
+
+        <ImageView
+            android:layout_marginLeft="5dp"
+            android:id="@+id/logoid"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="64dp"
+            android:layout_marginLeft="20dp"
+            android:gravity="center"
+            android:text="Podcast"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_height="match_parent"
+            android:layout_margin="6dp"
+            android:src="@drawable/ic_baseline_notifications_none_24"/>
+
+    </RelativeLayout>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_margin="6dp"
+        app:cardElevation="10dp"
+        app:cardCornerRadius="20dp"
+        app:cardBackgroundColor="@color/media_bg_color">
+    </androidx.cardview.widget.CardView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="4"
+        android:layout_margin="6dp"
+        android:ellipsize="end"
+        android:text="Blah BlahBlahBlahBlahBlahBlaah BlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBhBlahBlahBlahBlahBlahBlahBlahBlahBlahBah BlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBah BlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBah BlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlahBlah"
+        android:textColor="@color/text_color_primary"
+        android:fontFamily="@font/contrail_one"
+        android:textSize="13sp"
+        android:id="@+id/detail"/>
+
+</LinearLayout>
