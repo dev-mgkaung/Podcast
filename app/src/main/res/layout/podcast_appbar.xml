@@ -41,11 +41,23 @@
     </RelativeLayout>
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="280dp"
         android:layout_margin="6dp"
         app:cardElevation="10dp"
         app:cardCornerRadius="20dp"
         app:cardBackgroundColor="@color/media_bg_color">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:orientation="horizontal"
+                android:weightSum="5">
+
+            </LinearLayout>
+        </LinearLayout>
     </androidx.cardview.widget.CardView>
     <TextView
         android:layout_width="match_parent"

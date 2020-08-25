@@ -100,4 +100,10 @@
         "when a user tries to pick up one of cards.\n\n"
     </string>
     <string name="action_settings">Settings</string>
+    <string name="your_shows">Your Shows</string>
+    <string name="up_next">Up Next</string>
+    <string name="welcome">Welcome</string>
+    <string name="empty_viewpod_label">It looks like you arenot enrolled in \n any podcasts, but it\'s easy to get \n started</string>
+    <string name="find_something_new">FIND SOMETHING NEW</string>
+    <string name="reload">RELOAD</string>
 </resources>
