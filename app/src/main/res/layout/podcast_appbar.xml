@@ -4,7 +4,7 @@
     android:orientation="vertical"
     android:background="@color/white"
     android:layout_marginTop="1dp"
-    android:layout_height="460dp"
+    android:layout_height="430dp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <RelativeLayout
         android:layout_width="match_parent"
@@ -41,7 +41,7 @@
     </RelativeLayout>
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="280dp"
+        android:layout_height="240dp"
         android:layout_margin="6dp"
         app:cardElevation="10dp"
         app:cardCornerRadius="20dp"
@@ -49,13 +49,46 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginTop="25dp"
             android:orientation="vertical">
+            <include layout="@layout/full_media_play_user_data_view"/>
             <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
+                android:layout_height="60dp"
                 android:orientation="horizontal"
                 android:weightSum="5">
-
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_baseline_skip_previous_24"/>
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_baseline_replay_10_24"/>
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:padding="2dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_baseline_play_circle_filled_24"/>
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_baseline_forward_30_24"/>
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_baseline_skip_next_24"/>
             </LinearLayout>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
