@@ -106,4 +106,5 @@
     <string name="empty_viewpod_label">It looks like you arenot enrolled in \n any podcasts, but it\'s easy to get \n started</string>
     <string name="find_something_new">FIND SOMETHING NEW</string>
     <string name="reload">RELOAD</string>
+    <string name="title_activity_detail">ScrollingActivity</string>
 </resources>

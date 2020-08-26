@@ -2,29 +2,29 @@ package mk.podcast.com.mvp.presenters.impls
 
 import androidx.lifecycle.LifecycleOwner
 import mk.padc.share.mvp.presenters.impl.BaseAppPresenterImpl
-import mk.podcast.com.datas.dummy.getDummyCategoryList
 import mk.podcast.com.datas.dummy.getDummyPodcastList
-import mk.podcast.com.mvp.presenters.CategoryPresenter
-import mk.podcast.com.mvp.views.CategoryView
+import mk.podcast.com.mvp.presenters.DetailPresenter
+import mk.podcast.com.mvp.views.DetailView
 
-class CategoryPresenterImpl : CategoryPresenter, BaseAppPresenterImpl<CategoryView>() {
+
+class DetailPresenterImpl : DetailPresenter, BaseAppPresenterImpl<DetailView>() {
 
     //   var mMovieImpl : MovieModel = MovieModelmpl
 
     override fun onUiReady(lifeCycleOwner: LifecycleOwner) {
         loadAllPodcastFromAPI()
-        onNotifyCallDataList(lifeCycleOwner)
+        onNotifyDataList(lifeCycleOwner)
 
-        mView?.displayCategoryList(getDummyCategoryList())
-
-    }
-
-    override fun onTapCategoryListItem() {
+        mView?.displayData(getDummyPodcastList())
 
     }
 
+    override fun onTap() {
 
-    private fun onNotifyCallDataList(lifeCycleOwner: LifecycleOwner)
+    }
+
+
+    private fun onNotifyDataList(lifeCycleOwner: LifecycleOwner)
     {
 //        mMovieImpl.getAllPopularMovieList(onError = {})
 //            .observe(lifeCycleOwner, Observer {

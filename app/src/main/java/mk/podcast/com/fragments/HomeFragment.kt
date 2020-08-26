@@ -11,6 +11,8 @@ import kotlinx.android.synthetic.main.app_content_scrolling.view.*
 import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.android.synthetic.main.fragment_home.view.*
 import mk.podcast.com.R
+import mk.podcast.com.activities.DetailActivity
+import mk.podcast.com.activities.MainActivity
 import mk.podcast.com.adapters.PodcastRecyclerAdapter
 import mk.podcast.com.datas.vos.PodcastVO
 import mk.podcast.com.mvp.presenters.MainPresenter
@@ -73,6 +75,6 @@ class HomeFragment : Fragment(), MainView {
     }
 
     override fun navigateToDetailScreen() {
-
+        startActivity(activity?.let { DetailActivity.newIntent(it) })
     }
 }

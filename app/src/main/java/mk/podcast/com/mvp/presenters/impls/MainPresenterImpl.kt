@@ -19,7 +19,7 @@ class MainPresenterImpl : MainPresenter, BaseAppPresenterImpl<MainView>() {
     }
 
     override fun onTapPodCastListItem() {
-
+      mView?.navigateToDetailScreen()
     }
 
 
