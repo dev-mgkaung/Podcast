@@ -4,4 +4,4 @@
 ## Coordinator Layout Practice
 ## Exoplayer Practice
 
-[![Believe Developer.](https://miro.medium.com/max/2560/1*i-Y56eoLI1Vnje-JXAJC5g.png)
+[![Believe Developer.](https://github.com/dev-mgkaung/Podcast/blob/master/img_5f40df70dcb48_1598087024.png)
