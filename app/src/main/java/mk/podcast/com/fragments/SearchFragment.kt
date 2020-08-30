@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.fragment_search.view.*
 import mk.podcast.com.R
 import mk.podcast.com.adapters.CategoryRecyclerAdapter
-import mk.podcast.com.datas.vos.CategoryVO
+import mk.podcast.com.datas.vos.GenreVO
 import mk.podcast.com.mvp.presenters.CategoryPresenter
 import mk.podcast.com.mvp.presenters.impls.CategoryPresenterImpl
 import mk.podcast.com.mvp.views.CategoryView
@@ -54,9 +54,11 @@ class SearchFragment : Fragment(), CategoryView {
         view.category_recyclerview?.adapter = mAdapter
     }
 
-    override fun displayCategoryList(list: List<CategoryVO>) {
+    override fun displayCategoryList(list: List<GenreVO>) {
         mAdapter.setNewData(list.toMutableList())
     }
+
+
 
     override fun navigateToDetailScreen()
     {}

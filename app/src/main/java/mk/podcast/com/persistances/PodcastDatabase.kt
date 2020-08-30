@@ -5,16 +5,15 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import mk.padc.themovie.utils.DATABASE_NAME
-import mk.podcast.com.datas.vos.CategoryVO
-import mk.podcast.com.datas.vos.DetailVO
-import mk.podcast.com.datas.vos.PodcastVO
-import mk.podcast.com.persistances.daos.CategoryDao
+import mk.podcast.com.datas.vos.*
+import mk.podcast.com.persistances.daos.GenerDao
 import mk.podcast.com.persistances.daos.DetailDao
+import mk.podcast.com.persistances.daos.PlayListDao
 import mk.podcast.com.persistances.daos.PodcastDao
 
 @Database(
-    entities = [PodcastVO::class, CategoryVO::class, DetailVO::class],
-    version = 3,
+    entities = [PodcastVO::class, GenreVO::class, DetailEpisodeVO::class, RandomPodcastVO::class,PlayListVO::class],
+    version = 4,
     exportSchema = false
 )
 abstract class PodcastDatabase : RoomDatabase() {
@@ -39,6 +38,7 @@ abstract class PodcastDatabase : RoomDatabase() {
     }
 
     abstract fun podcastDao(): PodcastDao
-    abstract fun catgoryDao(): CategoryDao
+    abstract fun generDao(): GenerDao
     abstract fun detailDao(): DetailDao
+    abstract fun playListDao(): PlayListDao
 }

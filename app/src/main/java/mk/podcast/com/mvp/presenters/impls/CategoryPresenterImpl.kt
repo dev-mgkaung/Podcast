@@ -2,8 +2,6 @@ package mk.podcast.com.mvp.presenters.impls
 
 import androidx.lifecycle.LifecycleOwner
 import mk.padc.share.mvp.presenters.impl.BaseAppPresenterImpl
-import mk.podcast.com.datas.dummy.getDummyCategoryList
-import mk.podcast.com.datas.dummy.getDummyPodcastList
 import mk.podcast.com.mvp.presenters.CategoryPresenter
 import mk.podcast.com.mvp.views.CategoryView
 
@@ -15,7 +13,7 @@ class CategoryPresenterImpl : CategoryPresenter, BaseAppPresenterImpl<CategoryVi
         loadAllPodcastFromAPI()
         onNotifyCallDataList(lifeCycleOwner)
 
-        mView?.displayCategoryList(getDummyCategoryList())
+      //  mView?.displayCategoryList(getDummyCategoryList())
 
     }
 

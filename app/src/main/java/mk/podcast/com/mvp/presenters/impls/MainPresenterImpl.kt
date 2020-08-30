@@ -2,7 +2,6 @@ package mk.podcast.com.mvp.presenters.impls
 
 import androidx.lifecycle.LifecycleOwner
 import mk.padc.share.mvp.presenters.impl.BaseAppPresenterImpl
-import mk.podcast.com.datas.dummy.getDummyPodcastList
 import mk.podcast.com.mvp.presenters.MainPresenter
 import mk.podcast.com.mvp.views.MainView
 
@@ -14,7 +13,7 @@ class MainPresenterImpl : MainPresenter, BaseAppPresenterImpl<MainView>() {
         loadAllPodcastFromAPI()
         onNotifyCallMovieList(lifeCycleOwner)
 
-        mView?.displayPodcastList(getDummyPodcastList())
+     //   mView?.displayPodcastList(getDummyPodcastList())
 
     }
 

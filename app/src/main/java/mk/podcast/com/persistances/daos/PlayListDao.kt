@@ -5,17 +5,16 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import mk.podcast.com.datas.vos.CategoryVO
-import mk.podcast.com.datas.vos.PodcastVO
+import mk.podcast.com.datas.vos.PlayListVO
 
 
 @Dao
-interface CategoryDao {
+interface PlayListDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insertCategoryData(podcasts: CategoryVO)
+    fun insertPlayListData(data: PlayListVO)
 
-    @Query("select * from category")
-    fun getAllCategoryData(): LiveData<List<CategoryVO>>
+    @Query("select * from playlist")
+    fun getAllPlayListData(): LiveData<List<PlayListVO>>
 
 }

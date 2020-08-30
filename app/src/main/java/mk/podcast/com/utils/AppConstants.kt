@@ -5,13 +5,30 @@ import mk.podcast.com.BuildConfig
 const val BASE_URL = BuildConfig.BASE_URL_FIELD
 const val DATABASE_NAME="Podcast.DB"
 
+//End points
+const val GET_GENRE = "genres"
+const val GET_BEST_PODCAST= "best_podcasts"
+const val GET_DETAIL ="episodes/{id}"
+const val GET_JUST_LISTEN = "just_listen"
+const val GET_PLAYLIST= "playlists/"
 
-//Params
+
+//API Param Keys
+const val API_KEY_PARAM = "X-ListenAPI-Key"
+const val TOP_LEVEL_ONLY_PARAM = "top_level_only"
+const val  GENRE_ID_PARAM = "genre_id"
+const val PAGE_PARAM ="page"
+const val REGION_PARAM = "region"
+const val SAFE_MODE_PARAM ="safe_mode"
+const val ID_PARAM="id"
+const val SORT_PARAM= "sort"
+
+//Api Params Values
 const val PARAM_API_ACCESS_TOKEN = "1482256d06c14502a542d48c95407f18"
-const val LANGUAGE = "en-US"
-const val page_id=1
+const val page=0
 const val region="us"
 const val safe_mode=0
+const val sort= "recent_first"
 
 
 //Error Messages

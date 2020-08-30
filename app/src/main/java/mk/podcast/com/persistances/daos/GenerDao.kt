@@ -5,15 +5,16 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import mk.podcast.com.datas.vos.DetailEpisodeVO
+import mk.podcast.com.datas.vos.GenreVO
+
 
 @Dao
-interface DetailDao {
+interface GenerDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insertDetailData(data: DetailEpisodeVO)
+    fun insertGenerData(data: GenreVO)
 
-    @Query("select * from detail")
-    fun getAllDetailData(): LiveData<DetailEpisodeVO>
+    @Query("select * from genere")
+    fun getAllGenerData(): LiveData<List<GenreVO>>
 
 }
