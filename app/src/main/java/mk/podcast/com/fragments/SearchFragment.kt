@@ -58,9 +58,8 @@ class SearchFragment : Fragment(), CategoryView {
         mAdapter.setNewData(list.toMutableList())
     }
 
-    override fun navigateToDetailScreen() {
-
-    }
+    override fun navigateToDetailScreen()
+    {}
 
     companion object {
 

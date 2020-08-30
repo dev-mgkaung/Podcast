@@ -16,8 +16,6 @@ abstract class BaseActivity : AppCompatActivity()
         Snackbar.make(window.decorView, message, Snackbar.LENGTH_LONG).show()
     }
 
-    fun showDialog(){
-
-    }
+    fun showDialog(){}
 
 }

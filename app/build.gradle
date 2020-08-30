@@ -55,9 +55,8 @@ android {
 
     productFlavors{
         def BASE_URL_FIELD = "BASE_URL_FIELD"
-        def BASE_URL_DEV = "\"https://api.themoviedb.org/3/\""
-        def BASE_URL_PROD = "\"https://api.themoviedb.org/3/\""
-        def BASE_URL_UAT = "\"https://api.themoviedb.org/3/\""
+        def BASE_URL_DEV = "\"https://listen-api/listennotes.com/api/v2\""
+        def BASE_URL_PROD = "\"https://listen-api/listennotes.com/api/v2\""
 
         flavorDimensions "default"
         dev{
@@ -132,9 +131,15 @@ dependencies {
     implementation rootProject.ext.libraries.lifecycle_arch_extension
     kapt rootProject.ext.libraries.lifecycle_compiler
     implementation rootProject.ext.libraries.lifecycle_extensions
+
     // Room
     implementation rootProject.ext.libraries.room
     kapt rootProject.ext.libraries.roomcompiler
+
+    //Exo Player
+    implementation rootProject.ext.libraries.exoplayer_core
+    implementation rootProject.ext.libraries.exoplayer_dash
+    implementation rootProject.ext.libraries.exoplayer_ui
 
     //Testing
     // Local Unit Tests

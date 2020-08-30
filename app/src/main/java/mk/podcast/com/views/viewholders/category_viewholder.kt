@@ -27,9 +27,7 @@ class CategoryViewHolder(itemView: View, private val mDelegate: CategoryDelegate
 //        itemView.title
 //        itemView.description
 //        itemView.podcast_hour
-//        Glide.with(itemView.download_podcast_img)
-//            .load(data.image)
-//            .into(itemView.download_podcast_img)
+    //    itemView.loadImageView(this,itemView.downloadimage,mData.imageurl)
     }
 
 }

@@ -60,12 +60,9 @@ class DownloadFragment : Fragment(), DownloadView {
         mAdapter.setNewData(list.toMutableList())
     }
 
-    override fun navigateToDetailScreen() {
-
-    }
+    override fun navigateToDetailScreen() {}
 
     companion object {
-
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
             DownloadFragment().apply {}

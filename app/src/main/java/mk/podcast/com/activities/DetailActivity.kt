@@ -22,7 +22,5 @@ class DetailActivity : AppCompatActivity(), DetailView {
 
     }
 
-    override fun displayData(list: List<PodcastVO>) {
-
-    }
+    override fun displayData(list: List<PodcastVO>) {}
 }
