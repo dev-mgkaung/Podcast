@@ -40,7 +40,7 @@ object PodcastModelmpl : PodcastModels, BaseModel() {
         onError: (String) -> Unit
     ) {
         mApi.fetchPlayList(PARAM_API_ACCESS_TOKEN,playlistId)
-            .map { it.items?.toList() ?: listOf() }
+            .map { it.items.toList() ?: listOf() }
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe ({

@@ -55,8 +55,8 @@ android {
 
     productFlavors{
         def BASE_URL_FIELD = "BASE_URL_FIELD"
-        def BASE_URL_DEV = "\"https://listen-api/listennotes.com/api/v2/\""
-        def BASE_URL_PROD = "\"https://listen-api/listennotes.com/api/v2/\""
+        def BASE_URL_DEV = "\"https://listen-api.listennotes.com/api/v2/\""
+        def BASE_URL_PROD = "\"https://listen-api.listennotes.com/api/v2/\""
 
         flavorDimensions "default"
         dev{

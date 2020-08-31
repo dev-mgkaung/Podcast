@@ -20,6 +20,10 @@ class MainPresenterImpl : MainPresenter, BaseAppPresenterImpl<MainView>() {
       mView?.navigateToDetailScreen()
     }
 
+    override fun onDownloadPodcastItem() {
+
+    }
+
     override fun onTapFindSomethingNew() {
 
     }

@@ -52,5 +52,4 @@ interface PodcastApi {
         @Path(ID_PARAM) id:String
     ): Observable<GetPlayListResponse>
 
-
 }

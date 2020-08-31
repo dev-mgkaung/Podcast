@@ -63,8 +63,6 @@ class HomeFragment : Fragment(), MainView {
         }
     }
 
-
-
     companion object {
 
         @JvmStatic

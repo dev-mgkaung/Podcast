@@ -39,16 +39,13 @@ class SmartRecyclerView @JvmOverloads constructor(
     fun setEmptyView(emptyView: View) {
         mEmptyView = emptyView
     }
-
-    /**
-     * check if adapter connected to SRV is empty. If so, show emptyView.
-     */
+    
     private fun checkIfEmpty() {
         val isEmpty = adapter!!.itemCount == 0
 
         mEmptyView?.let {
-            it.visibility = if (isEmpty) View.VISIBLE else View.INVISIBLE
-            visibility = if (isEmpty) View.INVISIBLE else View.VISIBLE
+            it.visibility = if (isEmpty) View.VISIBLE else View.GONE
+            visibility = if (isEmpty) View.GONE else View.VISIBLE
         }
     }
 }
