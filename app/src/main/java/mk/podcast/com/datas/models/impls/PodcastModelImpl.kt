@@ -2,6 +2,11 @@ package mk.podcast.com.datas.models.impls
 
 import android.annotation.SuppressLint
 import androidx.lifecycle.LiveData
+import io.reactivex.android.schedulers.AndroidSchedulers
+import io.reactivex.schedulers.Schedulers
+import mk.padc.themovie.utils.EM_NO_INTERNET_CONNECTION
+import mk.padc.themovie.utils.PARAM_API_ACCESS_TOKEN
+import mk.padc.themovie.utils.playlistId
 import mk.podcast.com.datas.models.BaseModel
 import mk.podcast.com.datas.models.PodcastModels
 import mk.podcast.com.datas.vos.DetailEpisodeVO
@@ -15,23 +20,34 @@ object PodcastModelmpl : PodcastModels, BaseModel() {
         return mTheDB.podcastDao().getAllPodcastData()
     }
 
+    @SuppressLint("CheckResult")
     override fun getAllPodcastFromApiAndSaveToDatabase(
         onSuccess: () -> Unit,
         onError: (String) -> Unit
     ) {
 
 
+
     }
 
-    override fun getAllPlayListList(onError: (String) -> Unit): LiveData<List<PlayListVO>> {
+    override fun getAllPlayList(onError: (String) -> Unit): LiveData<List<PlayListVO>> {
         return mTheDB.playListDao().getAllPlayListData()
     }
 
+    @SuppressLint("CheckResult")
     override fun getAllPlayListFromApiAndSaveToDatabase(
         onSuccess: () -> Unit,
         onError: (String) -> Unit
     ) {
-
+        mApi.fetchPlayList(PARAM_API_ACCESS_TOKEN,playlistId)
+            .map { it.items?.toList() ?: listOf() }
+            .subscribeOn(Schedulers.io())
+            .observeOn(AndroidSchedulers.mainThread())
+            .subscribe ({
+                mTheDB.playListDao().insertPlayListData(it)
+            },{
+                onError(it.localizedMessage ?: EM_NO_INTERNET_CONNECTION)
+            })
     }
 
     override fun getDetailEpisodeData(onError: (String) -> Unit): LiveData<DetailEpisodeVO> {

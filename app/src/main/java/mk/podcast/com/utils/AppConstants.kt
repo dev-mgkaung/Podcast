@@ -10,7 +10,7 @@ const val GET_GENRE = "genres"
 const val GET_BEST_PODCAST= "best_podcasts"
 const val GET_DETAIL ="episodes/{id}"
 const val GET_JUST_LISTEN = "just_listen"
-const val GET_PLAYLIST= "playlists/"
+const val GET_PLAYLIST_INFO_AND_ITEM= "playlists/{id}?type=episode_list&last_timestamp_ms=0&sort=recent_added_first"
 
 
 //API Param Keys
@@ -24,11 +24,12 @@ const val ID_PARAM="id"
 const val SORT_PARAM= "sort"
 
 //Api Params Values
-const val PARAM_API_ACCESS_TOKEN = "1482256d06c14502a542d48c95407f18"
+const val PARAM_API_ACCESS_TOKEN = BuildConfig.BaseApiKey
 const val page=0
 const val region="us"
 const val safe_mode=0
 const val sort= "recent_first"
+const val playlistId="SgTozE1ZAe3"
 
 
 //Error Messages

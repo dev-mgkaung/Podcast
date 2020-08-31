@@ -4,10 +4,10 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 import androidx.room.TypeConverters
 import com.google.gson.annotations.SerializedName
-import mk.podcast.com.persistances.converters.PodcastConverter
+import mk.podcast.com.persistances.converters.PodCastVOConverter
 
 @Entity(tableName = "randompodcast")
-//@TypeConverters(PodcastConverter::class)
+@TypeConverters( PodCastVOConverter::class)
 
 data class RandomPodcastVO(
     @PrimaryKey
@@ -21,7 +21,7 @@ data class RandomPodcastVO(
     @SerializedName("listennotes_edit_url") val listennotes_edit_url: String,
     @SerializedName("listennotes_url") val listennotes_url: String,
     @SerializedName("maybe_audio_invalid") val maybe_audio_invalid: Boolean,
-   // @SerializedName("podcast") val podcast: PodcastVO,
+    @SerializedName("podcast") val podcast: PodcastVO,
     @SerializedName("pub_date_ms") val pub_date_ms: Long,
     @SerializedName("thumbnail") val thumbnail: String,
     @SerializedName("title") val title: String

@@ -1,20 +1,19 @@
 package mk.podcast.com.mvp.presenters.impls
 
 import androidx.lifecycle.LifecycleOwner
+import androidx.lifecycle.Observer
 import mk.padc.share.mvp.presenters.impl.BaseAppPresenterImpl
+import mk.podcast.com.datas.models.impls.PodcastModelmpl
 import mk.podcast.com.mvp.presenters.MainPresenter
 import mk.podcast.com.mvp.views.MainView
 
 class MainPresenterImpl : MainPresenter, BaseAppPresenterImpl<MainView>() {
 
- //   var mMovieImpl : MovieModel = MovieModelmpl
+    var mModelImpl : PodcastModelmpl = PodcastModelmpl
 
     override fun onUiReady(lifeCycleOwner: LifecycleOwner) {
         loadAllPodcastFromAPI()
         onNotifyCallMovieList(lifeCycleOwner)
-
-     //   mView?.displayPodcastList(getDummyPodcastList())
-
     }
 
     override fun onTapPodCastListItem() {
@@ -24,19 +23,17 @@ class MainPresenterImpl : MainPresenter, BaseAppPresenterImpl<MainView>() {
 
     private fun onNotifyCallMovieList(lifeCycleOwner: LifecycleOwner)
     {
-//        mMovieImpl.getAllPopularMovieList(onError = {})
-//            .observe(lifeCycleOwner, Observer {
-//                mView?.displayPopularMovieList(it)
-//            })
+        //For PlayList
+        mModelImpl.getAllPlayList(onError = {})
+            .observe(lifeCycleOwner, Observer {
+                mView?.displayPodcastList(it)
+            })
 
     }
 
     private fun loadAllPodcastFromAPI() {
-//        mMovieImpl.getAllPopularMovieFromApiAndSaveToDatabase(
-//            onSuccess = {},
-//            onError = {}
-//        )
-//
+        //For PlayList
+        mModelImpl.getAllPlayListFromApiAndSaveToDatabase(onSuccess = {}, onError = {})
     }
 
 }

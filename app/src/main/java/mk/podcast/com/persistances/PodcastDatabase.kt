@@ -13,7 +13,7 @@ import mk.podcast.com.persistances.daos.PodcastDao
 
 @Database(
     entities = [PodcastVO::class, GenreVO::class, DetailEpisodeVO::class, RandomPodcastVO::class,PlayListVO::class],
-    version = 4,
+    version = 5,
     exportSchema = false
 )
 abstract class PodcastDatabase : RoomDatabase() {

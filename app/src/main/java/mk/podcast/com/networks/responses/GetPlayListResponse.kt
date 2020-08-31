@@ -4,11 +4,15 @@ import com.google.gson.annotations.SerializedName
 import mk.podcast.com.datas.vos.PlayListVO
 
 data class GetPlayListResponse(
-    @SerializedName("has_next")     val has_next: Boolean,
-    @SerializedName("has_previous")     val has_previous: Boolean,
-    @SerializedName("next_page_number")  val next_page_number: Int,
-    @SerializedName("page_number")   val page_number: Int,
-    @SerializedName("playlists")   val playlists: List<PlayListVO>,
-    @SerializedName("previous_page_number")    val previous_page_number: Int,
-    @SerializedName("total")   val total: Int
+    @SerializedName("description") val description: String,
+    @SerializedName("id")  val id: String,
+    @SerializedName("image")  val image: String,
+    @SerializedName("items") val items: List<PlayListVO>,
+    @SerializedName("last_timestamp_ms") val last_timestamp_ms: Long,
+    @SerializedName("listennotes_url") val listennotes_url: String,
+    @SerializedName("name")  val name: String,
+    @SerializedName("thumbnail") val thumbnail: String,
+    @SerializedName("total")  val total: Int,
+    @SerializedName("type")  val type: String,
+    @SerializedName("visibility")  val visibility: String
 )

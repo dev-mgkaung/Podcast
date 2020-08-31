@@ -12,7 +12,7 @@ import mk.podcast.com.datas.vos.PlayListVO
 interface PlayListDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insertPlayListData(data: PlayListVO)
+    fun insertPlayListData(data: List<PlayListVO>)
 
     @Query("select * from playlist")
     fun getAllPlayListData(): LiveData<List<PlayListVO>>
