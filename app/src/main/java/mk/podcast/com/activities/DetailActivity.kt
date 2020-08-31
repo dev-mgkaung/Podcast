@@ -23,4 +23,13 @@ class DetailActivity : AppCompatActivity(), DetailView {
     }
 
     override fun displayData(list: List<PodcastVO>) {}
+    override fun showErrorMessage(error: String) {
+
+    }
+
+    override fun showLoading() {
+    }
+
+    override fun hideLoading() {
+    }
 }

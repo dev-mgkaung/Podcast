@@ -63,6 +63,18 @@ class SearchFragment : Fragment(), CategoryView {
     override fun navigateToDetailScreen()
     {}
 
+    override fun showErrorMessage(error: String) {
+
+    }
+
+    override fun showLoading() {
+
+    }
+
+    override fun hideLoading() {
+
+    }
+
     companion object {
 
         @JvmStatic

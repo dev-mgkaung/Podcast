@@ -12,16 +12,24 @@ class MainPresenterImpl : MainPresenter, BaseAppPresenterImpl<MainView>() {
     var mModelImpl : PodcastModelmpl = PodcastModelmpl
 
     override fun onUiReady(lifeCycleOwner: LifecycleOwner) {
-        loadAllPodcastFromAPI()
-        onNotifyCallMovieList(lifeCycleOwner)
+        loadAllDataFromAPI()
+        onNotifyCallDataList(lifeCycleOwner)
     }
 
-    override fun onTapPodCastListItem() {
+    override fun onTapPlayListItem() {
       mView?.navigateToDetailScreen()
     }
 
+    override fun onTapFindSomethingNew() {
 
-    private fun onNotifyCallMovieList(lifeCycleOwner: LifecycleOwner)
+    }
+
+    override fun onTapReload() {
+
+    }
+
+
+    private fun onNotifyCallDataList(lifeCycleOwner: LifecycleOwner)
     {
         //For PlayList
         mModelImpl.getAllPlayList(onError = {})
@@ -31,7 +39,7 @@ class MainPresenterImpl : MainPresenter, BaseAppPresenterImpl<MainView>() {
 
     }
 
-    private fun loadAllPodcastFromAPI() {
+    private fun loadAllDataFromAPI() {
         //For PlayList
         mModelImpl.getAllPlayListFromApiAndSaveToDatabase(onSuccess = {}, onError = {})
     }

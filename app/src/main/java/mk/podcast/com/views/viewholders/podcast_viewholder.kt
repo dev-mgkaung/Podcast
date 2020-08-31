@@ -5,7 +5,6 @@ import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.podcast_listitem.view.*
 import mk.padc.share.views.viewholders.BaseViewHolder
 import mk.podcast.com.datas.vos.PlayListVO
-import mk.podcast.com.datas.vos.PodcastVO
 import mk.podcast.com.delegates.PodcastDelegate
 
 class PodcastViewHolder(itemView: View, private val mDelegate: PodcastDelegate)
@@ -14,7 +13,7 @@ class PodcastViewHolder(itemView: View, private val mDelegate: PodcastDelegate)
     init {
         itemView.podcastlayout.setOnClickListener {
             mData?.let {
-                mDelegate.onTapPodCastListItem()
+                mDelegate.onTapPlayListItem()
             }
         }
          }

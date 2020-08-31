@@ -30,8 +30,8 @@
                 android:layout_height="wrap_content"
                 android:text="@string/welcome"
                 android:textStyle="bold"
-                android:textSize="25sp"
-                android:layout_marginTop="8dp"
+                android:textSize="20sp"
+                android:layout_marginTop="10dp"
                 android:fontFamily="@font/contrail_one"
                 android:layout_gravity="center"/>
             <TextView
@@ -40,7 +40,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/empty_viewpod_label"
                 android:textStyle="bold"
-                android:textSize="20sp"
+                android:textSize="14sp"
                 android:maxLines="3"
                 android:layout_marginLeft="6dp"
                 android:layout_marginRight="6dp"
@@ -49,25 +49,27 @@
                 android:fontFamily="@font/contrail_one"
                 android:layout_gravity="center"/>
             <Button
+                android:id="@+id/btnFind"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="50dp"
                 android:layout_margin="10dp"
-                android:background="@drawable/bg_rounded_corner_btn1"
+                android:backgroundTint="@color/category_1"
                 android:textColor="@color/text_color_primary"
-                android:textSize="14sp"
+                android:textSize="12sp"
                 android:text="@string/find_something_new"/>
             <Button
+                android:id="@+id/btnReload"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="50dp"
                 android:layout_margin="10dp"
-                android:background="@drawable/bg_rounded_corner_btn2"
+                android:backgroundTint="@color/category_2"
                 android:textColor="@color/text_color_primary"
-                android:textSize="14sp"
+                android:textSize="12sp"
                 android:text="@string/reload"/>
             <ImageView
                 android:layout_width="60dp"
                 android:layout_height="40dp"
-                android:layout_marginBottom="10dp"
+                android:layout_marginBottom="5dp"
                 android:src="@drawable/ic_more"
                 android:layout_gravity="center"/>
         </LinearLayout>

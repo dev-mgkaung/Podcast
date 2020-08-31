@@ -37,6 +37,11 @@ dependencies {
     implementation rootProject.ext.libraries.constraintLayout
     implementation rootProject.ext.libraries.material
 
+    //Glide
+    implementation rootProject.ext.libraries.glide
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    annotationProcessor rootProject.ext.libraries.glideAnnotion
+
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
