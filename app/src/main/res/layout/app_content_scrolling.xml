@@ -12,17 +12,19 @@
             android:layout_width="match_parent"
             android:layout_gravity="center"
             android:layout_height="match_parent">
-            <mk.padc.share.views.components.SmartRecyclerView
-                android:layout_marginTop="?actionBarSize"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                tools:listitem="@layout/podcast_listitem"
-                android:id="@+id/podcast_recyclerview"/>
             <include android:layout_height="wrap_content"
                 android:layout_width="match_parent"
                 android:id="@+id/emptyViewPod"
+                android:visibility="gone"
                 layout="@layout/view_pod_empty"/>
+            <mk.padc.share.views.components.SmartRecyclerView
+                android:layout_marginTop="?actionBarSize"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/podcast_listitem"
+                android:id="@+id/podcast_recyclerview"/>
+
         </RelativeLayout>
     </androidx.core.widget.NestedScrollView>
 
