@@ -13,14 +13,15 @@ class DetailPresenterImpl : DetailPresenter, BaseAppPresenterImpl<DetailView>() 
 
     override fun onUiReady(lifeCycleOwner: LifecycleOwner, episodeID: String) {
 
-        mModelImpl.getDetailFromApiAndSaveToDatabase(episodeID,onSuccess = {
-           //mView?.displayDetailData(it)
-        }, onError = {})
+            mModelImpl.getDetailFromApiAndSaveToDatabase(episodeID,onSuccess = {
+            }, onError = {})
 
-//        mModelImpl.getDetailEpisodeData (episodeID,onError = {})
-//            .observe(lifeCycleOwner, Observer {
-//                mView?.displayDetailData(it)
-//            })
+            mModelImpl.getDetailEpisodeData (episodeID,onError = {})
+                .observe(lifeCycleOwner, Observer {
+                    it?.let{
+                        mView?.displayDetailData(it)
+                    }
+                })
     }
 
     override fun onTap() {}

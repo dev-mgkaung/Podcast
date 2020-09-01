@@ -51,7 +51,7 @@ object PodcastModelmpl : PodcastModels, BaseModel() {
     }
 
     override fun getDetailEpisodeData(episodeId: String,onError: (String) -> Unit): LiveData<DetailEpisodeVO> {
-        return mTheDB.detailDao().getAllDetailDataByEpisodeID(id= episodeId)
+        return mTheDB.detailDao().getAllDetailDataByEpisodeID(episodeId)
     }
 
     @SuppressLint("CheckResult")
@@ -65,8 +65,7 @@ object PodcastModelmpl : PodcastModels, BaseModel() {
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe ({
-                mTheDB.detailDao().insertDetailData(it)
-                onSuccess(it as DetailEpisodeVO)
+                it?.let{data-> mTheDB.detailDao().insertDetailData(data) }
             },{
                 onError(it.localizedMessage ?: EM_NO_INTERNET_CONNECTION)
             })

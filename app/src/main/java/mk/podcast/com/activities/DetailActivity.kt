@@ -26,11 +26,12 @@ import mk.podcast.com.mvp.views.DetailView
 class DetailActivity : AppCompatActivity(), DetailView {
 
     companion object {
-        fun newIntent(context: Context, episodeId: String) =
-            Intent(context, DetailActivity::class.java)
-                .apply {
-                    putExtra(EPISODE_PARAM, episodeId)
-                }
+        const val EPISODE_PARAM = "dataId"
+        fun newIntent(context:Context,dataId:String): Intent {
+            val intent = Intent(context,DetailActivity::class.java)
+            intent.putExtra(EPISODE_PARAM,dataId)
+            return intent
+        }
     }
 
     private lateinit var mPresenter: DetailPresenter
@@ -39,13 +40,10 @@ class DetailActivity : AppCompatActivity(), DetailView {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail)
 
-        var episodeId = intent.getStringExtra(EPISODE_PARAM)
         setUpPresenter()
         setUpListener()
 
-        if (episodeId != null) {
-            mPresenter.onUiReady(this, episodeId)
-        }
+        mPresenter.onUiReady(this,  intent.getStringExtra(EPISODE_PARAM).toString())
     }
 
     private fun setUpPresenter() {
