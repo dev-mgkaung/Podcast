@@ -14,14 +14,12 @@
             <include android:layout_height="wrap_content"
                 android:layout_width="match_parent"
                 android:id="@+id/emptyViewPod"
-                android:background="@color/orange_200"
                 android:visibility="gone"
                 layout="@layout/view_pod_empty"/>
             <mk.padc.share.views.components.SmartRecyclerView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:nestedScrollingEnabled="true"
-                android:background="@color/black"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 tools:listitem="@layout/podcast_listitem"
                 android:id="@+id/podcast_recyclerview"/>
