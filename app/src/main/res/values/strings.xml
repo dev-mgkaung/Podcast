@@ -19,4 +19,5 @@
     <string name="find_something_new">FIND SOMETHING NEW</string>
     <string name="reload">RELOAD</string>
     <string name="title_activity_detail">ScrollingActivity</string>
+    <string name="explore_categories">Explore Categories</string>
 </resources>

@@ -60,14 +60,14 @@
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:fontFamily="@font/contrail_one"
-            android:text="Exlore Categories"
+            android:text="@string/explore_categories"
             android:textColor="@color/text_color_primary"
             android:textSize="18sp"
             android:textStyle="bold" />
-        <RelativeLayout
+            <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-            <include android:layout_height="wrap_content"
+               <include android:layout_height="wrap_content"
                 android:layout_width="match_parent"
                 android:id="@+id/search_emptyViewPod"
                 android:visibility="gone"
