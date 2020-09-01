@@ -12,26 +12,19 @@ class DetailPresenterImpl : DetailPresenter, BaseAppPresenterImpl<DetailView>() 
     var mModelImpl : PodcastModelmpl = PodcastModelmpl
 
     override fun onUiReady(lifeCycleOwner: LifecycleOwner, episodeID: String) {
-        loadAllDataFromAPI(episodeID)
-        onNotifyCallDataList(lifeCycleOwner)
+
+        mModelImpl.getDetailFromApiAndSaveToDatabase(episodeID,onSuccess = {
+           //mView?.displayDetailData(it)
+        }, onError = {})
+
+//        mModelImpl.getDetailEpisodeData (episodeID,onError = {})
+//            .observe(lifeCycleOwner, Observer {
+//                mView?.displayDetailData(it)
+//            })
     }
 
     override fun onTap() {}
 
 
-    private fun onNotifyCallDataList(lifeCycleOwner: LifecycleOwner)
-    {
-        //For Detail
-        mModelImpl.getDetailEpisodeData (onError = {})
-            .observe(lifeCycleOwner, Observer {
-              mView?.displayDetailData(it)
-            })
-
-    }
-
-    private fun loadAllDataFromAPI(episodeId : String) {
-        //For Detail
-        mModelImpl.getDetailFromApiAndSaveToDatabase(episodeId,onSuccess = {}, onError = {})
-    }
 
 }

@@ -22,7 +22,7 @@ interface PodcastApi {
     ): Observable<GetPlayListResponse>
 
     /* Fetch detailed meta data for an episode by id*/
-    @GET(GET_DETAIL)
+    @GET("episodes/{id}")
     fun fetchDetailEpisodeByID(
         @Header(API_KEY_PARAM) apiKey: String,
         @Path(ID_PARAM) id: String,

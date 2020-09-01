@@ -10,7 +10,7 @@ import mk.podcast.com.persistances.converters.PodCastVOConverter
 @TypeConverters(PodCastVOConverter::class)
 data class DetailEpisodeVO(
     @PrimaryKey
-    @SerializedName("id") val id: String,
+    @SerializedName("id") val detail_id: String,
     @SerializedName("audio")  val audio: String,
     @SerializedName("audio_length_sec")  val audio_length_sec: Long,
     @SerializedName("description") val description: String,

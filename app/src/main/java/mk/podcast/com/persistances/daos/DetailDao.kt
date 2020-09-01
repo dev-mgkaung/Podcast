@@ -13,7 +13,7 @@ interface DetailDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertDetailData(data: DetailEpisodeVO)
 
-    @Query("select * from detail")
-    fun getAllDetailData(): LiveData<DetailEpisodeVO>
+    @Query("select * from detail WHERE detail_id = :id")
+    fun getAllDetailDataByEpisodeID(id : String): LiveData<DetailEpisodeVO>
 
 }

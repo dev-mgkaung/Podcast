@@ -43,7 +43,6 @@ class DetailActivity : AppCompatActivity(), DetailView {
         setUpPresenter()
         setUpListener()
 
-        Toast.makeText(this,"Episode $episodeId", Toast.LENGTH_LONG).show()
         if (episodeId != null) {
             mPresenter.onUiReady(this, episodeId)
         }
@@ -55,6 +54,7 @@ class DetailActivity : AppCompatActivity(), DetailView {
     }
 
     override fun displayDetailData(data: DetailEpisodeVO) {
+
         detail_title.text=data.title
         detail_description.text= Html.fromHtml( data.description)
         audio_time.text= data.audio_length_sec.convertMillisecondToHMS()

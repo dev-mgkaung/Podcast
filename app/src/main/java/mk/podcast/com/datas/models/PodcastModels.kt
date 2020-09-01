@@ -17,8 +17,8 @@ interface PodcastModels
     fun getAllPlayListFromApiAndSaveToDatabase(onSuccess: () -> Unit, onError: (String) -> Unit)
 
     //Detail Episode Data
-    fun getDetailEpisodeData(onError: (String) -> Unit) : LiveData<DetailEpisodeVO>
-    fun getDetailFromApiAndSaveToDatabase(episodeId : String, onSuccess: () -> Unit, onError: (String) -> Unit)
+    fun getDetailEpisodeData(episodeId : String, onError: (String) -> Unit) : LiveData<DetailEpisodeVO>
+    fun getDetailFromApiAndSaveToDatabase(episodeId : String, onSuccess: (detailVO :DetailEpisodeVO) -> Unit, onError: (String) -> Unit)
 
     //Category Data
     fun getCategoryDataList(onError: (String) -> Unit) : LiveData<List<GenreVO>>

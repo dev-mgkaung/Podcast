@@ -50,22 +50,23 @@ object PodcastModelmpl : PodcastModels, BaseModel() {
             })
     }
 
-    override fun getDetailEpisodeData(onError: (String) -> Unit): LiveData<DetailEpisodeVO> {
-        return mTheDB.detailDao().getAllDetailData()
+    override fun getDetailEpisodeData(episodeId: String,onError: (String) -> Unit): LiveData<DetailEpisodeVO> {
+        return mTheDB.detailDao().getAllDetailDataByEpisodeID(id= episodeId)
     }
 
     @SuppressLint("CheckResult")
     override fun getDetailFromApiAndSaveToDatabase(
         episodeId: String,
-        onSuccess: () -> Unit,
+        onSuccess: (DetailEpisodeVO) -> Unit,
         onError: (String) -> Unit
     ) {
-        mApi.fetchDetailEpisodeByID(PARAM_API_ACCESS_TOKEN,"c2db92a9cc45462385866e6b45f91ef9")
+        mApi.fetchDetailEpisodeByID(PARAM_API_ACCESS_TOKEN,episodeId)
             .map { it }
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe ({
                 mTheDB.detailDao().insertDetailData(it)
+                onSuccess(it as DetailEpisodeVO)
             },{
                 onError(it.localizedMessage ?: EM_NO_INTERNET_CONNECTION)
             })
