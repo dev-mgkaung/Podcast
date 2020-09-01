@@ -1,6 +1,5 @@
 package mk.podcast.com.mvp.presenters.impls
 
-import android.util.Log
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.Observer
 import mk.padc.share.mvp.presenters.impl.BaseAppPresenterImpl
@@ -12,14 +11,12 @@ class DetailPresenterImpl : DetailPresenter, BaseAppPresenterImpl<DetailView>() 
 
     var mModelImpl : PodcastModelmpl = PodcastModelmpl
 
-    override fun onUiReady(lifeCycleOwner: LifecycleOwner,episodeId: String) {
-        loadAllDataFromAPI(episodeId)
+    override fun onUiReady(lifeCycleOwner: LifecycleOwner, episodeID: String) {
+        loadAllDataFromAPI(episodeID)
         onNotifyCallDataList(lifeCycleOwner)
     }
 
-    override fun onTap() {
-
-    }
+    override fun onTap() {}
 
 
     private fun onNotifyCallDataList(lifeCycleOwner: LifecycleOwner)

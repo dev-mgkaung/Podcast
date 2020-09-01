@@ -70,8 +70,7 @@ class HomeFragment : Fragment(), MainView {
     companion object {
 
         @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            HomeFragment().apply {}
+        fun newInstance() = HomeFragment().apply {}
     }
 
     override fun displayPodcastList(list: List<PlayListVO>) {

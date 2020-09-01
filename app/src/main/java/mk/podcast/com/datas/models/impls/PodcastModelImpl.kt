@@ -60,8 +60,8 @@ object PodcastModelmpl : PodcastModels, BaseModel() {
         onSuccess: () -> Unit,
         onError: (String) -> Unit
     ) {
-        mApi.fetchDetailEpisodeByID(PARAM_API_ACCESS_TOKEN,episodeId)
-            .map { it?.let { it } }
+        mApi.fetchDetailEpisodeByID(PARAM_API_ACCESS_TOKEN,"c2db92a9cc45462385866e6b45f91ef9")
+            .map { it }
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe ({
