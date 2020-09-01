@@ -24,7 +24,7 @@ class SplashActivity : BaseActivity() {
             startActivity(MainActivity.newIntent(this))
             //finish this activity
             finish()
-        },3000)
+        },2000)
 
     }
 }

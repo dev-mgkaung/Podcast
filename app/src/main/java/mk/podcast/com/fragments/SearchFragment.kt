@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.fragment_search.view.*
@@ -40,6 +41,7 @@ class SearchFragment : Fragment(), CategoryView {
     private fun setUpListeners() {
 
     }
+
 
     private fun setUpPresenter() {
         mPresenter = ViewModelProviders.of(this).get(CategoryPresenterImpl::class.java)

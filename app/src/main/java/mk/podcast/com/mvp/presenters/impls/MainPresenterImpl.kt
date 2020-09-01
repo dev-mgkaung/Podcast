@@ -4,6 +4,7 @@ import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.Observer
 import mk.padc.share.mvp.presenters.impl.BaseAppPresenterImpl
 import mk.podcast.com.datas.models.impls.PodcastModelmpl
+import mk.podcast.com.datas.vos.PlayListVO
 import mk.podcast.com.mvp.presenters.MainPresenter
 import mk.podcast.com.mvp.views.MainView
 
@@ -16,8 +17,8 @@ class MainPresenterImpl : MainPresenter, BaseAppPresenterImpl<MainView>() {
         onNotifyCallDataList(lifeCycleOwner)
     }
 
-    override fun onTapPlayListItem() {
-      mView?.navigateToDetailScreen()
+    override fun onTapPlayListItem(playListVO: PlayListVO) {
+      mView?.navigateToDetailScreen(playListVO.data.data_id)
     }
 
     override fun onDownloadPodcastItem() {

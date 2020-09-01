@@ -12,7 +12,7 @@ data class DetailEpisodeVO(
     @PrimaryKey
     @SerializedName("id") val id: String,
     @SerializedName("audio")  val audio: String,
-    @SerializedName("audio_length_sec")  val audio_length_sec: Int,
+    @SerializedName("audio_length_sec")  val audio_length_sec: Long,
     @SerializedName("description") val description: String,
     @SerializedName("explicit_content") val explicit_content: Boolean,
     @SerializedName("image")  val image: String,

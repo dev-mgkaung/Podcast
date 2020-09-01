@@ -32,6 +32,9 @@ const val sort= "recent_first"
 const val playlistId="SgTozE1ZAe3"
 
 
+// Intent Variables
+const val EPISODE_PARAM="episodeId"
+
 //Error Messages
 const val EM_NO_INTERNET_CONNECTION = "No Internet Connection"
 const val EM_NO_NEWS_AVAILABLE = "There are no data available"

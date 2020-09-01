@@ -54,11 +54,21 @@ object PodcastModelmpl : PodcastModels, BaseModel() {
         return mTheDB.detailDao().getAllDetailData()
     }
 
+    @SuppressLint("CheckResult")
     override fun getDetailFromApiAndSaveToDatabase(
+        episodeId: String,
         onSuccess: () -> Unit,
         onError: (String) -> Unit
     ) {
-
+        mApi.fetchDetailEpisodeByID(PARAM_API_ACCESS_TOKEN,episodeId)
+            .map { it?.let { it } }
+            .subscribeOn(Schedulers.io())
+            .observeOn(AndroidSchedulers.mainThread())
+            .subscribe ({
+                mTheDB.detailDao().insertDetailData(it)
+            },{
+                onError(it.localizedMessage ?: EM_NO_INTERNET_CONNECTION)
+            })
     }
 
     override fun getCategoryDataList(onError: (String) -> Unit): LiveData<List<GenreVO>> {

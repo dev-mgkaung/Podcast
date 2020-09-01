@@ -14,6 +14,21 @@ import retrofit2.http.Query
 
 interface PodcastApi {
 
+    /* Fetch a playlist's info and items (i.e., episodes or podcasts).  id= SgTozE1ZAe3*/
+    @GET(GET_PLAYLIST_INFO_AND_ITEM)
+    fun fetchPlayList(
+        @Header(API_KEY_PARAM) apiKey: String,
+        @Path(ID_PARAM) id:String
+    ): Observable<GetPlayListResponse>
+
+    /* Fetch detailed meta data for an episode by id*/
+    @GET(GET_DETAIL)
+    fun fetchDetailEpisodeByID(
+        @Header(API_KEY_PARAM) apiKey: String,
+        @Path(ID_PARAM) id: String,
+    ): Observable<DetailEpisodeVO>
+
+
     /* Fetch a list of podcast genres */
     @GET(GET_GENRE)
     fun fetchPodcastGenresList(
@@ -32,12 +47,6 @@ interface PodcastApi {
        @Query(SAFE_MODE_PARAM) safe_mode: Int
    ): Observable<GetBestPodcastResponse>
 
-    /* Fetch detailed meta data for an episode by id*/
-    @GET(GET_DETAIL)
-    fun fetchDetailEpisodeByID(
-        @Header(API_KEY_PARAM) apiKey: String,
-        @Path(ID_PARAM) id: String,
-        ): Observable<DetailEpisodeVO>
 
     /* Fetch a random podcast episode */
     @GET(GET_JUST_LISTEN)
@@ -45,11 +54,5 @@ interface PodcastApi {
         @Header(API_KEY_PARAM) apiKey: String,
     ): Observable<RandomPodcastVO>
 
-    /* Fetch a playlist's info and items (i.e., episodes or podcasts).  id= SgTozE1ZAe3*/
-    @GET(GET_PLAYLIST_INFO_AND_ITEM)
-    fun fetchPlayList(
-        @Header(API_KEY_PARAM) apiKey: String,
-        @Path(ID_PARAM) id:String
-    ): Observable<GetPlayListResponse>
 
 }

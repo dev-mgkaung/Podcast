@@ -14,19 +14,17 @@ data class PlayListVO(
     @PrimaryKey
     @SerializedName("id") val plid: Int,
     @SerializedName("added_at_ms") val added_at_ms: Long,
-
-    @Embedded
     @SerializedName("data") val data: DataVO,
     @SerializedName("notes") val notes: String,
     @SerializedName("type") val type: String
 )
 
 data class DataVO(
+    @SerializedName("id")var data_id: String,
     @SerializedName("audio")var audio: String,
     @SerializedName("audio_length_sec")var audio_length_sec: Int,
     @SerializedName("description")var description: String,
     @SerializedName("explicit_content")var explicit_content: Boolean,
-    @SerializedName("id")var id: String,
     @SerializedName("image")var image: String,
     @SerializedName("link")var link: String,
     @SerializedName("listennotes_edit_url")var listennotes_edit_url: String,

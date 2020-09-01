@@ -1,10 +1,13 @@
 package mk.podcast.com.fragments
 
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -43,6 +46,7 @@ class HomeFragment : Fragment(), MainView {
         setUpListeners()
         mPresenter.onUiReady(this)
     }
+
     private fun setUpViewPod(){
         mEmptyViewPod = emptyViewPod as EmptyViewPod
         mEmptyViewPod.setDelegate(mPresenter)
@@ -74,8 +78,8 @@ class HomeFragment : Fragment(), MainView {
         mAdapter.setNewData(list.toMutableList())
     }
 
-    override fun navigateToDetailScreen() {
-        startActivity(activity?.let { DetailActivity.newIntent(it) })
+    override fun navigateToDetailScreen(episodeID : String) {
+        startActivity(DetailActivity.newIntent(activity as Context,episodeID))
     }
 
     override fun showErrorMessage(error: String) {

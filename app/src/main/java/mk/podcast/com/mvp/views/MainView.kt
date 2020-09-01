@@ -5,5 +5,5 @@ import mk.podcast.com.datas.vos.PlayListVO
 
 interface MainView : BaseView {
     fun displayPodcastList(list: List<PlayListVO>)
-    fun navigateToDetailScreen()
+    fun navigateToDetailScreen(episodeID : String)
 }
