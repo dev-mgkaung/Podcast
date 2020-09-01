@@ -61,7 +61,11 @@ class DetailActivity : AppCompatActivity(), DetailView {
         detail_image.load(data.thumbnail)
     }
 
-    private fun setUpListener() {}
+    private fun setUpListener() {
+        toolbar.setNavigationOnClickListener{
+            super.onBackPressed();
+        }
+    }
 
     override fun onBackPressed() {
         super.onBackPressed()
