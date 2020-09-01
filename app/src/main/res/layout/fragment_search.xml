@@ -64,13 +64,22 @@
             android:textColor="@color/text_color_primary"
             android:textSize="18sp"
             android:textStyle="bold" />
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/category_recyclerview"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="200dp"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            tools:listitem="@layout/category_list_item" />
+            android:layout_height="wrap_content">
+            <include android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:id="@+id/search_emptyViewPod"
+                android:visibility="gone"
+                layout="@layout/view_pod_empty"/>
+            <mk.padc.share.views.components.SmartRecyclerView
+                android:id="@+id/category_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/category_list_item" />
+        </RelativeLayout>
+
     </LinearLayout>
 
 

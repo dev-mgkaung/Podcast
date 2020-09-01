@@ -7,6 +7,7 @@ import io.reactivex.schedulers.Schedulers
 import mk.padc.themovie.utils.EM_NO_INTERNET_CONNECTION
 import mk.padc.themovie.utils.PARAM_API_ACCESS_TOKEN
 import mk.padc.themovie.utils.playlistId
+import mk.padc.themovie.utils.top_level_only
 import mk.podcast.com.datas.models.BaseModel
 import mk.podcast.com.datas.models.PodcastModels
 import mk.podcast.com.datas.vos.DetailEpisodeVO
@@ -25,8 +26,6 @@ object PodcastModelmpl : PodcastModels, BaseModel() {
         onSuccess: () -> Unit,
         onError: (String) -> Unit
     ) {
-
-
 
     }
 
@@ -75,11 +74,20 @@ object PodcastModelmpl : PodcastModels, BaseModel() {
         return mTheDB.generDao().getAllGenerData()
     }
 
+    @SuppressLint("CheckResult")
     override fun getCategoryDataFromApiAndSaveToDatabase(
         onSuccess: () -> Unit,
         onError: (String) -> Unit
     ) {
-
+        mApi.fetchPodcastGenresList(PARAM_API_ACCESS_TOKEN, top_level_only)
+            .map { it.genres.toList() ?: listOf() }
+            .subscribeOn(Schedulers.io())
+            .observeOn(AndroidSchedulers.mainThread())
+            .subscribe ({
+                it?.let{  mTheDB.generDao().insertGenerData(it)}
+            },{
+                onError(it.localizedMessage ?: EM_NO_INTERNET_CONNECTION)
+            })
     }
 
 

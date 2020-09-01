@@ -12,7 +12,7 @@ import mk.podcast.com.datas.vos.GenreVO
 interface GenerDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insertGenerData(data: GenreVO)
+    fun insertGenerData(data: List<GenreVO>)
 
     @Query("select * from genere")
     fun getAllGenerData(): LiveData<List<GenreVO>>

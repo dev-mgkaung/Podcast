@@ -8,6 +8,10 @@ import android.view.ViewGroup
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import kotlinx.android.synthetic.main.app_content_scrolling.*
+import kotlinx.android.synthetic.main.app_content_scrolling.podcast_recyclerview
+import kotlinx.android.synthetic.main.fragment_search.*
 import kotlinx.android.synthetic.main.fragment_search.view.*
 import mk.podcast.com.R
 import mk.podcast.com.adapters.CategoryRecyclerAdapter
@@ -15,11 +19,13 @@ import mk.podcast.com.datas.vos.GenreVO
 import mk.podcast.com.mvp.presenters.CategoryPresenter
 import mk.podcast.com.mvp.presenters.impls.CategoryPresenterImpl
 import mk.podcast.com.mvp.views.CategoryView
+import mk.podcast.com.views.viewpods.EmptyViewPod
 
 class SearchFragment : Fragment(), CategoryView {
 
     private lateinit var mAdapter: CategoryRecyclerAdapter
     private lateinit var mPresenter: CategoryPresenter
+    private lateinit var mEmptyViewPod : EmptyViewPod
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,30 +36,36 @@ class SearchFragment : Fragment(), CategoryView {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        var view = inflater.inflate(R.layout.fragment_search, container, false)
+       return  inflater.inflate(R.layout.fragment_search, container, false)
+    }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         setUpPresenter()
-        setUpRecyclerView(view)
+        setUpViewPod()
+        setUpRecyclerView()
         setUpListeners()
         mPresenter.onUiReady(this)
-        return view;
     }
-
     private fun setUpListeners() {
 
     }
-
+    private fun setUpViewPod(){
+        mEmptyViewPod = search_emptyViewPod as EmptyViewPod
+        mEmptyViewPod.setDelegate(mPresenter)
+    }
 
     private fun setUpPresenter() {
         mPresenter = ViewModelProviders.of(this).get(CategoryPresenterImpl::class.java)
         mPresenter.initPresenter(this)
     }
 
-    private fun setUpRecyclerView(view: View) {
+    private fun setUpRecyclerView() {
         mAdapter = CategoryRecyclerAdapter(mPresenter)
-        val linearLayoutManager = LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL, false)
-        view.category_recyclerview?.layoutManager = linearLayoutManager
-
-        view.category_recyclerview?.adapter = mAdapter
+        category_recyclerview.apply {
+            layoutManager = LinearLayoutManager(activity, RecyclerView.HORIZONTAL,false)
+            adapter = mAdapter
+            setEmptyView(mEmptyViewPod)
+        }
     }
 
     override fun displayCategoryList(list: List<GenreVO>) {

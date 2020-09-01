@@ -9,23 +9,22 @@ import mk.podcast.com.mvp.views.DetailView
 
 class DetailPresenterImpl : DetailPresenter, BaseAppPresenterImpl<DetailView>() {
 
-    var mModelImpl : PodcastModelmpl = PodcastModelmpl
+    var mModelImpl: PodcastModelmpl = PodcastModelmpl
 
     override fun onUiReady(lifeCycleOwner: LifecycleOwner, episodeID: String) {
 
-            mModelImpl.getDetailFromApiAndSaveToDatabase(episodeID,onSuccess = {
-            }, onError = {})
+        mModelImpl.getDetailFromApiAndSaveToDatabase(episodeID, onSuccess = {
+        }, onError = {})
 
-            mModelImpl.getDetailEpisodeData (episodeID,onError = {})
-                .observe(lifeCycleOwner, Observer {
-                    it?.let{
-                        mView?.displayDetailData(it)
-                    }
-                })
+        mModelImpl.getDetailEpisodeData(episodeID, onError = {})
+            .observe(lifeCycleOwner, Observer {
+                it?.let {
+                    mView?.displayDetailData(it)
+                }
+            })
     }
 
     override fun onTap() {}
-
 
 
 }

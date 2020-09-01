@@ -20,12 +20,7 @@ class CategoryViewHolder(itemView: View, private val mDelegate: CategoryDelegate
 
     override fun bindData(data: GenreVO) {
         mData = data
-        //  itemView.progressBar.
-//        itemView.download_img
-//        itemView.title
-//        itemView.description
-//        itemView.podcast_hour
-    //    itemView.loadImageView(this,itemView.downloadimage,mData.imageurl)
+        itemView.cateogry_title.text=mData?.name
     }
 
 }

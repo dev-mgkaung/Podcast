@@ -20,7 +20,7 @@ interface PodcastModels
     fun getDetailEpisodeData(episodeId : String, onError: (String) -> Unit) : LiveData<DetailEpisodeVO>
     fun getDetailFromApiAndSaveToDatabase(episodeId : String, onSuccess: (detailVO :DetailEpisodeVO) -> Unit, onError: (String) -> Unit)
 
-    //Category Data
+    //Category Genre Data
     fun getCategoryDataList(onError: (String) -> Unit) : LiveData<List<GenreVO>>
     fun getCategoryDataFromApiAndSaveToDatabase(onSuccess: () -> Unit, onError: (String) -> Unit)
 
