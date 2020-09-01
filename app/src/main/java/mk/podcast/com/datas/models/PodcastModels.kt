@@ -1,10 +1,7 @@
 package mk.podcast.com.datas.models
 
 import androidx.lifecycle.LiveData
-import mk.podcast.com.datas.vos.DetailEpisodeVO
-import mk.podcast.com.datas.vos.GenreVO
-import mk.podcast.com.datas.vos.PlayListVO
-import mk.podcast.com.datas.vos.PodcastVO
+import mk.podcast.com.datas.vos.*
 
 interface PodcastModels
 {
@@ -23,5 +20,9 @@ interface PodcastModels
     //Category Genre Data
     fun getCategoryDataList(onError: (String) -> Unit) : LiveData<List<GenreVO>>
     fun getCategoryDataFromApiAndSaveToDatabase(onSuccess: () -> Unit, onError: (String) -> Unit)
+
+    //RandomPodcast Data
+    fun getRandomPodcastData( onError: (String) -> Unit) : LiveData<RandomPodcastVO>
+    fun getRandomPodcastFromApiAndSaveToDatabase( onSuccess: (datavo :RandomPodcastVO) -> Unit, onError: (String) -> Unit)
 
 }

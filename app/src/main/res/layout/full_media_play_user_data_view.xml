@@ -28,6 +28,7 @@
         app:layout_constraintStart_toStartOf="@+id/guideline2"
         app:layout_constraintTop_toTopOf="parent">
         <ImageView
+            android:id="@+id/mediaImageView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="fitXY"
@@ -42,38 +43,39 @@
         app:layout_constraintGuide_percent="0.28" />
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="289dp"
+        android:id="@+id/title"
+        android:layout_width="260dp"
         android:layout_height="21dp"
+        android:layout_marginRight="15dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="12dp"
         android:ellipsize="end"
         android:fontFamily="@font/contrail_one"
         android:maxLines="1"
-        android:text="Blah Blah Blah Blah BoaBlah Bl"
+        android:text=""
         android:textColor="@color/white"
         android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintBottom_toTopOf="@+id/subtitle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.008"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView2"
-        android:layout_width="290dp"
+        android:id="@+id/subtitle"
+        android:layout_width="260dp"
         android:layout_height="20dp"
+        android:layout_marginRight="10dp"
         android:layout_marginTop="16dp"
         android:ellipsize="end"
         android:fontFamily="@font/contrail_one"
         android:maxLines="1"
-        android:text="Blah Blah Blah Blah BoaBlah Bl"
         android:textColor="@color/text_color_tertary"
         android:textSize="13sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.008"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/title" />
 
     <TextView
         android:id="@+id/textView3"
@@ -86,7 +88,7 @@
         android:textColor="@color/progress_color"
         android:textSize="10sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/subtitle" />
 
     <ProgressBar
         android:id="@+id/progressBar2"
@@ -101,5 +103,5 @@
         app:layout_constraintEnd_toStartOf="@+id/textView3"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/subtitle" />
 </androidx.constraintlayout.widget.ConstraintLayout>

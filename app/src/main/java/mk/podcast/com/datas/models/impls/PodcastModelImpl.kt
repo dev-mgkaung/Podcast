@@ -10,10 +10,7 @@ import mk.padc.themovie.utils.playlistId
 import mk.padc.themovie.utils.top_level_only
 import mk.podcast.com.datas.models.BaseModel
 import mk.podcast.com.datas.models.PodcastModels
-import mk.podcast.com.datas.vos.DetailEpisodeVO
-import mk.podcast.com.datas.vos.GenreVO
-import mk.podcast.com.datas.vos.PlayListVO
-import mk.podcast.com.datas.vos.PodcastVO
+import mk.podcast.com.datas.vos.*
 
 object PodcastModelmpl : PodcastModels, BaseModel() {
 
@@ -85,6 +82,28 @@ object PodcastModelmpl : PodcastModels, BaseModel() {
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe ({
                 it?.let{  mTheDB.generDao().insertGenerData(it)}
+            },{
+                onError(it.localizedMessage ?: EM_NO_INTERNET_CONNECTION)
+            })
+    }
+
+    override fun getRandomPodcastData(onError: (String) -> Unit): LiveData<RandomPodcastVO> {
+        return mTheDB.randomPodCastDao().getAllRandomPodCast()
+    }
+
+    @SuppressLint("CheckResult")
+    override fun getRandomPodcastFromApiAndSaveToDatabase(
+        onSuccess: (datavo: RandomPodcastVO) -> Unit,
+        onError: (String) -> Unit
+    ) {
+        mApi.fetchRandomPodcastEpisode(PARAM_API_ACCESS_TOKEN)
+            .map { it }
+            .subscribeOn(Schedulers.io())
+            .observeOn(AndroidSchedulers.mainThread())
+            .subscribe({
+                it?.let {data ->
+                    mTheDB.randomPodCastDao().insertRandomPodcast(data)
+                }
             },{
                 onError(it.localizedMessage ?: EM_NO_INTERNET_CONNECTION)
             })
