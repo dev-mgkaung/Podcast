@@ -93,7 +93,9 @@
             android:textColor="@color/text_color_primary"
             android:textSize="16sp"
             android:fontFamily="@font/contrail_one" />
-        <include layout="@layout/mini_video_player_layout" />
+        <include
+            android:id="@+id/minimusicplayerviewpod"
+            layout="@layout/custom_mini_music_playerview" />
     </LinearLayout>
 
 

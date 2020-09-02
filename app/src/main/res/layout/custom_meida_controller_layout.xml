@@ -15,19 +15,21 @@
             android:padding="12dp"
             android:src="@drawable/ic_baseline_skip_previous_24"/>
         <ImageView
+            android:id="@+id/fifteenSecBtn"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:padding="12dp"
             android:src="@drawable/ic_baseline_replay_10_24"/>
         <ImageView
-            android:id="@+id/jlPlayBtn"
+            android:id="@+id/playPauseBtn"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:padding="3dp"
             android:src="@drawable/ic_baseline_play_circle_filled_24"/>
         <ImageView
+            android:id="@+id/thirtySecBtn"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"

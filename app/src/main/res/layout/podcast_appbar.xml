@@ -41,19 +41,17 @@
     </RelativeLayout>
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="230dp"
+        android:layout_height="200dp"
         android:layout_margin="6dp"
         app:cardElevation="10dp"
         app:cardCornerRadius="20dp"
         app:cardBackgroundColor="@color/media_bg_color">
-        <LinearLayout
+        <include
+            android:id="@+id/musicplayerviewpod"
+            layout="@layout/custom_music_playerview"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="25dp"
-            android:orientation="vertical">
-            <include layout="@layout/full_media_play_user_data_view"/>
-            <include layout="@layout/custom_meida_controller_layout"/>
-        </LinearLayout>
+            android:layout_marginTop="25dp"/>
     </androidx.cardview.widget.CardView>
     <TextView
         android:layout_width="match_parent"

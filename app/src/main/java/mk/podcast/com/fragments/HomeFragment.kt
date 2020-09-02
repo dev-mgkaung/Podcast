@@ -18,7 +18,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.app_content_scrolling.*
 import kotlinx.android.synthetic.main.custom_meida_controller_layout.*
-import kotlinx.android.synthetic.main.full_media_play_user_data_view.*
 import kotlinx.android.synthetic.main.podcast_appbar.*
 import mk.padc.share.utils.load
 import mk.podcast.com.R
@@ -31,13 +30,14 @@ import mk.podcast.com.mvp.presenters.MainPresenter
 import mk.podcast.com.mvp.presenters.impls.MainPresenterImpl
 import mk.podcast.com.mvp.views.MainView
 import mk.podcast.com.views.viewpods.EmptyViewPod
+import mk.podcast.com.views.viewpods.MusicPlayerPlayerViewPod
 
 class HomeFragment : Fragment(), MainView {
 
     private lateinit var mAdapter: PodcastRecyclerAdapter
     private lateinit var mPresenter: MainPresenter
     private lateinit var mEmptyViewPod : EmptyViewPod
-
+    private lateinit var mMusicPlayerViewPod : MusicPlayerPlayerViewPod
 
     private val PERMISSION_REQUEST_CODE = 101
 
@@ -57,21 +57,16 @@ class HomeFragment : Fragment(), MainView {
         setUpPresenter()
         setUpViewPod()
         setUpRecyclerView()
-        setUpListeners()
         mPresenter.onUiReady(this)
     }
 
     private fun setUpViewPod(){
         mEmptyViewPod = emptyViewPod as EmptyViewPod
         mEmptyViewPod.setDelegate(mPresenter)
+
+        mMusicPlayerViewPod =  musicplayerviewpod as MusicPlayerPlayerViewPod
+        mMusicPlayerViewPod.setDelegate(mPresenter)
     }
-    private fun setUpListeners() {
-
-        jlPlayBtn.setOnClickListener {
-
-        }
-    }
-
 
     private fun setUpPresenter() {
         mPresenter = ViewModelProviders.of(this).get(MainPresenterImpl::class.java)
@@ -99,9 +94,7 @@ class HomeFragment : Fragment(), MainView {
 
     override fun displayRandomPodcastData(data: RandomPodcastVO) {
         detail.text= Html.fromHtml(data.description)
-        title.text=data.title
-        subtitle.text=Html.fromHtml(data.description)
-        mediaImageView.load(data.image)
+        mMusicPlayerViewPod.setUpData(data.title,data.description,data.image)
     }
 
     override fun navigateToDetailScreen(episodeID: String) {

@@ -49,5 +49,10 @@ class MainPresenterImpl : MainPresenter, BaseAppPresenterImpl<MainView>() {
     override fun onTapFindSomethingNew() {}
 
     override fun onTapReload() {}
+    override fun onTouchPlayPause() {}
+
+    override fun onTouchFifteenSec() {}
+
+    override fun onTouchThirtySec() {}
 
 }
