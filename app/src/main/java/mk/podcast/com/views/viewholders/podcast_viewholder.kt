@@ -19,7 +19,7 @@ class PodcastViewHolder(itemView: View, private val mDelegate: PodcastDelegate)
         }
         itemView.download_img.setOnClickListener {
             mData?.let {
-                it?.let {  mdata->   mDelegate.onDownloadPodcastItem(mdata.data) }
+                it?.let {  mdata->   mDelegate.onTapDownloadPodcastItem(mdata.data) }
             }
         }
          }

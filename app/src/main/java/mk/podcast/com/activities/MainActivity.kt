@@ -14,7 +14,6 @@ class MainActivity :  BaseActivity() {
     companion object {
         //MainActivity call from other screen
         fun newIntent(context: Context) = Intent(context, MainActivity::class.java)
-
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

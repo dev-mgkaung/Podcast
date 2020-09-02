@@ -1,6 +1,8 @@
 package mk.podcast.com.datas.models.impls
 
 import android.annotation.SuppressLint
+import android.content.Context
+import android.widget.Toast
 import androidx.lifecycle.LiveData
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
@@ -11,6 +13,7 @@ import mk.padc.themovie.utils.top_level_only
 import mk.podcast.com.datas.models.BaseModel
 import mk.podcast.com.datas.models.PodcastModels
 import mk.podcast.com.datas.vos.*
+import mk.podcast.com.utils.startDownloading
 
 object PodcastModelmpl : PodcastModels, BaseModel() {
 
@@ -109,5 +112,9 @@ object PodcastModelmpl : PodcastModels, BaseModel() {
             })
     }
 
+    override fun startDownloadPodcast(context: Context,dataVO: DataVO) {
+        Toast.makeText(context,"Start Downloading",Toast.LENGTH_LONG).show()
+        startDownloading(context,dataVO)
+    }
 
 }

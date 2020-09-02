@@ -21,6 +21,7 @@
             android:padding="12dp"
             android:src="@drawable/ic_baseline_replay_10_24"/>
         <ImageView
+            android:id="@+id/jlPlayBtn"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"

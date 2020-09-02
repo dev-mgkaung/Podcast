@@ -1,5 +1,6 @@
 package mk.podcast.com.datas.models
 
+import android.content.Context
 import androidx.lifecycle.LiveData
 import mk.podcast.com.datas.vos.*
 
@@ -25,4 +26,7 @@ interface PodcastModels
     fun getRandomPodcastData( onError: (String) -> Unit) : LiveData<RandomPodcastVO>
     fun getRandomPodcastFromApiAndSaveToDatabase( onSuccess: (datavo :RandomPodcastVO) -> Unit, onError: (String) -> Unit)
 
+
+    //Download Podcast
+    fun startDownloadPodcast(context: Context,dataVO: DataVO)
 }
