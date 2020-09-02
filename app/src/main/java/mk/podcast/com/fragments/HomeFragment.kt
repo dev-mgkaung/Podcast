@@ -10,6 +10,7 @@ import android.os.Environment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.core.content.ContextCompat.checkSelfPermission
 import androidx.core.content.ContextCompat.getSystemService
 import androidx.fragment.app.Fragment
@@ -100,11 +101,9 @@ class HomeFragment : Fragment(), MainView {
         startActivity(DetailActivity.newIntent(activity as Context, episodeID))
     }
 
-    private fun checkPermission() {
 
-    }
-    
     override fun selectedDownloadPodcastItem(data: DataVO) {
+        Toast.makeText(context, "Start Downloading ${data.title}", Toast.LENGTH_SHORT).show()
         context?.let { startDownloading(it,data) }
     }
 

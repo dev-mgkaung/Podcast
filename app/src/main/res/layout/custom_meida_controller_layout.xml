@@ -38,4 +38,5 @@
             android:layout_weight="1"
             android:padding="12dp"
             android:src="@drawable/ic_baseline_skip_next_24"/>
+
     </LinearLayout>
