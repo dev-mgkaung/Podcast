@@ -1,5 +1,6 @@
 package mk.podcast.com.fragments
 
+import android.app.Activity
 import android.app.DownloadManager
 import android.content.Context
 import android.content.pm.PackageManager
@@ -7,10 +8,13 @@ import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.os.Environment
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
 import androidx.core.content.ContextCompat.checkSelfPermission
 import androidx.core.content.ContextCompat.getSystemService
 import androidx.fragment.app.Fragment
@@ -40,6 +44,9 @@ class HomeFragment : Fragment(), MainView {
     private lateinit var mPresenter: MainPresenter
     private lateinit var mEmptyViewPod : EmptyViewPod
 
+    private val TAG = "Permission"
+    private val PERMISSION_REQUEST_CODE = 101
+    private var allowpermission=false
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
@@ -59,7 +66,35 @@ class HomeFragment : Fragment(), MainView {
         setUpListeners()
         mPresenter.onUiReady(this)
     }
+    fun setupPermissions() {
+        val permission = ContextCompat.checkSelfPermission(
+            activity as Activity,
+            android.Manifest.permission.WRITE_EXTERNAL_STORAGE
+        )
+        if (permission != PackageManager.PERMISSION_GRANTED) {
+            Log.i(TAG, "Permission to write external storage denied")
+            makeRequest()
+        }
+    }
 
+    private fun makeRequest() {
+        ActivityCompat.requestPermissions(activity as Activity, arrayOf(android.Manifest.permission.WRITE_EXTERNAL_STORAGE), PERMISSION_REQUEST_CODE)
+    }
+
+    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<String>, grantResults: IntArray) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+        when (requestCode) {
+            PERMISSION_REQUEST_CODE -> {
+
+                if (grantResults.isEmpty() || grantResults[0] != PackageManager.PERMISSION_GRANTED) {
+                    Toast.makeText(activity as Activity, "Permission Denied", Toast.LENGTH_SHORT).show()
+                } else {
+                    Toast.makeText(activity as Activity, "Permission Granted", Toast.LENGTH_SHORT).show()
+                    allowpermission=true
+                }
+            }
+        }
+    }
     private fun setUpViewPod(){
         mEmptyViewPod = emptyViewPod as EmptyViewPod
         mEmptyViewPod.setDelegate(mPresenter)
@@ -103,8 +138,12 @@ class HomeFragment : Fragment(), MainView {
 
 
     override fun selectedDownloadPodcastItem(data: DataVO) {
+        setupPermissions()
+        if(allowpermission)
+        {
         Toast.makeText(context, "Start Downloading ${data.title}", Toast.LENGTH_SHORT).show()
         context?.let { startDownloading(it,data) }
+        }
     }
 
     override fun showErrorMessage(error: String) {
