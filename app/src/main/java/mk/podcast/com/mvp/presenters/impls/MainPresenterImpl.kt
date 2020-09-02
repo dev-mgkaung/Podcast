@@ -33,6 +33,8 @@ class MainPresenterImpl : MainPresenter, BaseAppPresenterImpl<MainView>() {
             })
     }
 
+
+
     override fun onTapPlayListItem(playListVO: PlayListVO) {
       mView?.navigateToDetailScreen(playListVO.data.data_id)
     }

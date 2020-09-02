@@ -10,4 +10,5 @@ interface MainView : BaseView {
     fun displayRandomPodcastData (data : RandomPodcastVO)
     fun navigateToDetailScreen(episodeID : String)
     fun selectedDownloadPodcastItem(data: DataVO)
+
 }
