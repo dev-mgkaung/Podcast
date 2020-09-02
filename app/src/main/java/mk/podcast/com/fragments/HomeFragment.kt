@@ -2,10 +2,13 @@ package mk.podcast.com.fragments
 
 import android.app.Activity
 import android.content.Context
+import android.content.Intent
 import android.content.pm.PackageManager
+import android.media.AudioManager
+import android.media.MediaPlayer
+import android.net.Uri
 import android.os.Bundle
 import android.text.Html
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -17,9 +20,7 @@ import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.app_content_scrolling.*
-import kotlinx.android.synthetic.main.custom_meida_controller_layout.*
 import kotlinx.android.synthetic.main.podcast_appbar.*
-import mk.padc.share.utils.load
 import mk.podcast.com.R
 import mk.podcast.com.activities.DetailActivity
 import mk.podcast.com.adapters.PodcastRecyclerAdapter
@@ -29,8 +30,11 @@ import mk.podcast.com.datas.vos.RandomPodcastVO
 import mk.podcast.com.mvp.presenters.MainPresenter
 import mk.podcast.com.mvp.presenters.impls.MainPresenterImpl
 import mk.podcast.com.mvp.views.MainView
+import mk.podcast.com.services.MusicPlayerService
+import mk.podcast.com.utils.Mp3Player
 import mk.podcast.com.views.viewpods.EmptyViewPod
 import mk.podcast.com.views.viewpods.MusicPlayerPlayerViewPod
+
 
 class HomeFragment : Fragment(), MainView {
 
@@ -40,6 +44,8 @@ class HomeFragment : Fragment(), MainView {
     private lateinit var mMusicPlayerViewPod : MusicPlayerPlayerViewPod
 
     private val PERMISSION_REQUEST_CODE = 101
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -94,7 +100,7 @@ class HomeFragment : Fragment(), MainView {
 
     override fun displayRandomPodcastData(data: RandomPodcastVO) {
         detail.text= Html.fromHtml(data.description)
-        mMusicPlayerViewPod.setUpData(data.title,data.description,data.image)
+        mMusicPlayerViewPod.setUpData(data.title, data.description, data.image,data.audio)
     }
 
     override fun navigateToDetailScreen(episodeID: String) {
@@ -105,6 +111,29 @@ class HomeFragment : Fragment(), MainView {
         setupPermissions(data)
     }
 
+    override fun onTouchPlayPauseImage(audioUrl: String) {
+        Mp3Player.initSetUpPlayer(context as Context,"streaming",audioUrl)
+        Mp3Player.playAudio()
+    }
+
+    override fun onStart() {
+        super.onStart()
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        Mp3Player.releaseAudio()
+    }
+
+    override fun onPause() {
+        super.onPause()
+        Mp3Player.pauseAudio()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Mp3Player.resumeAudio()
+    }
 
     override fun showErrorMessage(error: String) {}
 
@@ -113,27 +142,39 @@ class HomeFragment : Fragment(), MainView {
     override fun hideLoading() {}
 
     fun setupPermissions(data: DataVO) {
-        val permission = ContextCompat.checkSelfPermission(activity as Activity, android.Manifest.permission.WRITE_EXTERNAL_STORAGE)
+        val permission = ContextCompat.checkSelfPermission(
+            activity as Activity,
+            android.Manifest.permission.WRITE_EXTERNAL_STORAGE
+        )
 
         if (permission != PackageManager.PERMISSION_GRANTED) {
             makeRequest()
-        }else { data?.let { mPresenter?.onDownloadPodcastItem(activity as Context,it) } }
+        }else { data?.let { mPresenter?.onDownloadPodcastItem(activity as Context, it) } }
     }
 
     private fun makeRequest() {
-        ActivityCompat.requestPermissions(activity as Activity, arrayOf(android.Manifest.permission.WRITE_EXTERNAL_STORAGE), PERMISSION_REQUEST_CODE)
+        ActivityCompat.requestPermissions(
+            activity as Activity,
+            arrayOf(android.Manifest.permission.WRITE_EXTERNAL_STORAGE),
+            PERMISSION_REQUEST_CODE
+        )
     }
 
-    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<String>, grantResults: IntArray)
+    override fun onRequestPermissionsResult(
+        requestCode: Int,
+        permissions: Array<String>,
+        grantResults: IntArray
+    )
     {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
         when (requestCode) {
             PERMISSION_REQUEST_CODE -> {
 
                 if (grantResults.isEmpty() || grantResults[0] != PackageManager.PERMISSION_GRANTED) {
-                    Toast.makeText(activity as Activity, "Permission Denied", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(activity as Activity, "Permission Denied", Toast.LENGTH_SHORT)
+                        .show()
                 } else {
-                    Toast.makeText(context,"Permission GRANDED",Toast.LENGTH_LONG).show()
+                    Toast.makeText(context, "Permission GRANDED", Toast.LENGTH_LONG).show()
                 }
             }
         }

@@ -49,7 +49,8 @@ class MainPresenterImpl : MainPresenter, BaseAppPresenterImpl<MainView>() {
     override fun onTapFindSomethingNew() {}
 
     override fun onTapReload() {}
-    override fun onTouchPlayPause() {}
+
+    override fun onTouchPlayPause(audioUrl : String) { mView?.onTouchPlayPauseImage(audioUrl) }
 
     override fun onTouchFifteenSec() {}
 

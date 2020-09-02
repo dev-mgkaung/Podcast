@@ -12,16 +12,18 @@ class MusicPlayerPlayerViewPod @JvmOverloads constructor(
 ) : LinearLayout(context, attrs, defStyleAttr) {
 
     private var mDelegate: Delegate? = null
+    private var mAudioUrl : String ?=null
 
     override fun onFinishInflate() {
         super.onFinishInflate()
         setUpListener()
     }
 
-    fun setUpData(mtitle: String, mdesc: String,mimageUrl: String) {
+    fun setUpData(mtitle: String, mdesc: String,mimageUrl: String, maudioUrl : String) {
         podcast_title.text= mtitle
         podcast_description.text=mdesc
         podcast_ImageView.load(mimageUrl)
+        mAudioUrl=maudioUrl
     }
 
     fun setDelegate(delegate: Delegate) {
@@ -31,11 +33,11 @@ class MusicPlayerPlayerViewPod @JvmOverloads constructor(
     private fun setUpListener() {
         thirtySecBtn.setOnClickListener { mDelegate?.onTouchThirtySec() }
         fifteenSecBtn.setOnClickListener { mDelegate?.onTouchFifteenSec() }
-        playPauseBtn.setOnClickListener { mDelegate?.onTouchPlayPause() }
+        playPauseBtn.setOnClickListener { mAudioUrl?.let { it1 -> mDelegate?.onTouchPlayPause(it1) } }
     }
 
     interface Delegate {
-        fun onTouchPlayPause()
+        fun onTouchPlayPause(audioUrl : String)
         fun onTouchFifteenSec()
         fun onTouchThirtySec()
     }
