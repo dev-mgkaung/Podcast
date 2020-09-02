@@ -8,6 +8,7 @@ import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.os.Environment
+import android.text.Html
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -126,9 +127,9 @@ class HomeFragment : Fragment(), MainView {
     }
 
     override fun displayRandomPodcastData(data: RandomPodcastVO) {
-        detail.text=data.description
+        detail.text= Html.fromHtml(data.description)
         title.text=data.title
-        subtitle.text=data.description
+        subtitle.text=Html.fromHtml(data.description)
         mediaImageView.load(data.image)
     }
 
