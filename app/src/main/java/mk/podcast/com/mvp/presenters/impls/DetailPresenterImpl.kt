@@ -18,13 +18,22 @@ class DetailPresenterImpl : DetailPresenter, BaseAppPresenterImpl<DetailView>() 
 
         mModelImpl.getDetailEpisodeData(episodeID, onError = {})
             .observe(lifeCycleOwner, Observer {
-                it?.let {
-                    mView?.displayDetailData(it)
-                }
+                it?.let { mView?.displayDetailData(it) }
             })
     }
 
     override fun onTap() {}
 
+    override fun onTouchPlayPause(audioUri : String) {
+        mView?.onTouchPlayPauseIcon(audioUri)
+    }
+
+    override fun onTouchFifteenSec() {
+        mView?.onTouchBackwardFifteenSecIcon()
+    }
+
+    override fun onTouchThirtySec() {
+        mView?.onTouchForwardThirtySecIcon()
+    }
 
 }

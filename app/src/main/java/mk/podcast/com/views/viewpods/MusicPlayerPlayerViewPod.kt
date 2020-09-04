@@ -1,8 +1,12 @@
 package mk.podcast.com.views.viewpods
 
 import android.content.Context
+import android.text.Html
 import android.util.AttributeSet
+import android.widget.ImageView
 import android.widget.LinearLayout
+import android.widget.ProgressBar
+import android.widget.TextView
 import kotlinx.android.synthetic.main.custom_meida_controller_layout.view.*
 import kotlinx.android.synthetic.main.custom_music_playerview.view.*
 import mk.padc.share.utils.load
@@ -21,9 +25,20 @@ class MusicPlayerPlayerViewPod @JvmOverloads constructor(
 
     fun setUpData(mtitle: String, mdesc: String,mimageUrl: String, maudioUrl : String) {
         podcast_title.text= mtitle
-        podcast_description.text=mdesc
+        podcast_description.text= Html.fromHtml(mdesc)
         podcast_ImageView.load(mimageUrl)
         mAudioUrl=maudioUrl
+    }
+
+    fun getPlayPauseImage() : ImageView{
+        return playPauseBtn
+    }
+    fun getProgressBar() : ProgressBar
+    {
+        return progressBar2
+    }
+    fun getRemainingTime() : TextView{
+        return remainingTime
     }
 
     fun setDelegate(delegate: Delegate) {

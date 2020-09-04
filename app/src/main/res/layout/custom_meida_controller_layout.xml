@@ -8,12 +8,17 @@
         android:layout_marginTop="10dp"
         android:orientation="horizontal"
         android:weightSum="5">
-        <ImageView
+        <TextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:padding="12dp"
-            android:src="@drawable/ic_baseline_skip_previous_24"/>
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:text="1x"/>
         <ImageView
             android:id="@+id/fifteenSecBtn"
             android:layout_width="0dp"
@@ -35,11 +40,16 @@
             android:layout_weight="1"
             android:padding="12dp"
             android:src="@drawable/ic_baseline_forward_30_24"/>
-        <ImageView
+        <TextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:padding="12dp"
-            android:src="@drawable/ic_baseline_skip_next_24"/>
+            android:textStyle="normal"
+            android:textSize="16sp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:text="Zz"/>
 
     </LinearLayout>

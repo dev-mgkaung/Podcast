@@ -6,4 +6,7 @@ import mk.podcast.com.datas.vos.PodcastVO
 
 interface DetailView : BaseView {
     fun displayDetailData(data: DetailEpisodeVO)
+    fun onTouchPlayPauseIcon(audioUri : String)
+    fun onTouchForwardThirtySecIcon()
+    fun onTouchBackwardFifteenSecIcon()
 }

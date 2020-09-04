@@ -30,8 +30,6 @@ import mk.podcast.com.datas.vos.RandomPodcastVO
 import mk.podcast.com.mvp.presenters.MainPresenter
 import mk.podcast.com.mvp.presenters.impls.MainPresenterImpl
 import mk.podcast.com.mvp.views.MainView
-import mk.podcast.com.services.MusicPlayerService
-import mk.podcast.com.utils.Mp3Player
 import mk.podcast.com.views.viewpods.EmptyViewPod
 import mk.podcast.com.views.viewpods.MusicPlayerPlayerViewPod
 
@@ -44,8 +42,6 @@ class HomeFragment : Fragment(), MainView {
     private lateinit var mMusicPlayerViewPod : MusicPlayerPlayerViewPod
 
     private val PERMISSION_REQUEST_CODE = 101
-
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -112,9 +108,7 @@ class HomeFragment : Fragment(), MainView {
     }
 
     override fun onTouchPlayPauseImage(audioUrl: String) {
-        Mp3Player.initSetUpPlayer(context as Context,"streaming",audioUrl)
-        Mp3Player.playAudio()
-    }
+       }
 
     override fun onStart() {
         super.onStart()
@@ -122,17 +116,14 @@ class HomeFragment : Fragment(), MainView {
 
     override fun onDestroy() {
         super.onDestroy()
-        Mp3Player.releaseAudio()
     }
 
     override fun onPause() {
         super.onPause()
-        Mp3Player.pauseAudio()
     }
 
     override fun onResume() {
         super.onResume()
-        Mp3Player.resumeAudio()
     }
 
     override fun showErrorMessage(error: String) {}
@@ -169,10 +160,8 @@ class HomeFragment : Fragment(), MainView {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
         when (requestCode) {
             PERMISSION_REQUEST_CODE -> {
-
                 if (grantResults.isEmpty() || grantResults[0] != PackageManager.PERMISSION_GRANTED) {
-                    Toast.makeText(activity as Activity, "Permission Denied", Toast.LENGTH_SHORT)
-                        .show()
+                    Toast.makeText(activity as Activity, "Permission Denied", Toast.LENGTH_SHORT).show()
                 } else {
                     Toast.makeText(context, "Permission GRANDED", Toast.LENGTH_LONG).show()
                 }
