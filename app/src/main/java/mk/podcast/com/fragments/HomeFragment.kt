@@ -27,6 +27,7 @@ import mk.podcast.com.adapters.PodcastRecyclerAdapter
 import mk.podcast.com.datas.vos.DataVO
 import mk.podcast.com.datas.vos.PlayListVO
 import mk.podcast.com.datas.vos.RandomPodcastVO
+import mk.podcast.com.medias.MyMediaPlayerHelper
 import mk.podcast.com.mvp.presenters.MainPresenter
 import mk.podcast.com.mvp.presenters.impls.MainPresenterImpl
 import mk.podcast.com.mvp.views.MainView
@@ -36,10 +37,11 @@ import mk.podcast.com.views.viewpods.MusicPlayerPlayerViewPod
 
 class HomeFragment : Fragment(), MainView {
 
+    private var initPlayer = true
     private lateinit var mAdapter: PodcastRecyclerAdapter
     private lateinit var mPresenter: MainPresenter
-    private lateinit var mEmptyViewPod : EmptyViewPod
-    private lateinit var mMusicPlayerViewPod : MusicPlayerPlayerViewPod
+    private lateinit var mEmptyViewPod: EmptyViewPod
+    private lateinit var mMusicPlayerViewPod: MusicPlayerPlayerViewPod
 
     private val PERMISSION_REQUEST_CODE = 101
 
@@ -52,8 +54,9 @@ class HomeFragment : Fragment(), MainView {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-      return   inflater.inflate(R.layout.fragment_home, container, false)
+        return inflater.inflate(R.layout.fragment_home, container, false)
     }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setUpPresenter()
@@ -62,11 +65,11 @@ class HomeFragment : Fragment(), MainView {
         mPresenter.onUiReady(this)
     }
 
-    private fun setUpViewPod(){
+    private fun setUpViewPod() {
         mEmptyViewPod = emptyViewPod as EmptyViewPod
         mEmptyViewPod.setDelegate(mPresenter)
 
-        mMusicPlayerViewPod =  musicplayerviewpod as MusicPlayerPlayerViewPod
+        mMusicPlayerViewPod = musicplayerviewpod as MusicPlayerPlayerViewPod
         mMusicPlayerViewPod.setDelegate(mPresenter)
     }
 
@@ -75,7 +78,7 @@ class HomeFragment : Fragment(), MainView {
         mPresenter.initPresenter(this)
     }
 
-    private fun setUpRecyclerView()  {
+    private fun setUpRecyclerView() {
         mAdapter = PodcastRecyclerAdapter(mPresenter)
         podcast_recyclerview.apply {
             layoutManager = LinearLayoutManager(activity, RecyclerView.VERTICAL, false)
@@ -95,8 +98,8 @@ class HomeFragment : Fragment(), MainView {
     }
 
     override fun displayRandomPodcastData(data: RandomPodcastVO) {
-        detail.text= Html.fromHtml(data.description)
-        mMusicPlayerViewPod.setUpData(data.title, data.description, data.image,data.audio)
+        detail.text = Html.fromHtml(data.description)
+        mMusicPlayerViewPod.setUpData(data.title, data.description, data.image, data.audio)
     }
 
     override fun navigateToDetailScreen(episodeID: String) {
@@ -108,22 +111,25 @@ class HomeFragment : Fragment(), MainView {
     }
 
     override fun onTouchPlayPauseImage(audioUrl: String) {
-       }
-
-    override fun onStart() {
-        super.onStart()
+        if (initPlayer) {
+            MyMediaPlayerHelper.initMediaPlayer(
+                activity as Activity, audioUrl,
+                mMusicPlayerViewPod.getSeekBar(),
+                mMusicPlayerViewPod.getPlayPauseImage(),
+                mMusicPlayerViewPod.getRemainingTime(),
+                mMusicPlayerViewPod.getRemainingTime()
+            )
+            initPlayer = false
+        }
+        MyMediaPlayerHelper.playPauseMediaPlayBack(activity as Activity)
     }
 
-    override fun onDestroy() {
-        super.onDestroy()
+    override fun onTouchForwardThirtySecIcon() {
+        MyMediaPlayerHelper.forwardMediaPlayBack(activity as Activity)
     }
 
-    override fun onPause() {
-        super.onPause()
-    }
-
-    override fun onResume() {
-        super.onResume()
+    override fun onTouchBackwardFifteenSecIcon() {
+        MyMediaPlayerHelper.backwardMediaPlayBack(activity as Activity)
     }
 
     override fun showErrorMessage(error: String) {}
@@ -132,6 +138,10 @@ class HomeFragment : Fragment(), MainView {
 
     override fun hideLoading() {}
 
+    override fun onDestroy() {
+        super.onDestroy()
+        MyMediaPlayerHelper.closeMediaPlayBack(activity as Activity)
+    }
     fun setupPermissions(data: DataVO) {
         val permission = ContextCompat.checkSelfPermission(
             activity as Activity,
@@ -140,7 +150,9 @@ class HomeFragment : Fragment(), MainView {
 
         if (permission != PackageManager.PERMISSION_GRANTED) {
             makeRequest()
-        }else { data?.let { mPresenter?.onDownloadPodcastItem(activity as Context, it) } }
+        } else {
+            data?.let { mPresenter?.onDownloadPodcastItem(activity as Context, it) }
+        }
     }
 
     private fun makeRequest() {
@@ -155,13 +167,13 @@ class HomeFragment : Fragment(), MainView {
         requestCode: Int,
         permissions: Array<String>,
         grantResults: IntArray
-    )
-    {
+    ) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
         when (requestCode) {
             PERMISSION_REQUEST_CODE -> {
                 if (grantResults.isEmpty() || grantResults[0] != PackageManager.PERMISSION_GRANTED) {
-                    Toast.makeText(activity as Activity, "Permission Denied", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(activity as Activity, "Permission Denied", Toast.LENGTH_SHORT)
+                        .show()
                 } else {
                     Toast.makeText(context, "Permission GRANDED", Toast.LENGTH_LONG).show()
                 }

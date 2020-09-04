@@ -3,10 +3,7 @@ package mk.podcast.com.views.viewpods
 import android.content.Context
 import android.text.Html
 import android.util.AttributeSet
-import android.widget.ImageView
-import android.widget.LinearLayout
-import android.widget.ProgressBar
-import android.widget.TextView
+import android.widget.*
 import kotlinx.android.synthetic.main.custom_meida_controller_layout.view.*
 import kotlinx.android.synthetic.main.custom_music_playerview.view.*
 import mk.padc.share.utils.load
@@ -33,9 +30,9 @@ class MusicPlayerPlayerViewPod @JvmOverloads constructor(
     fun getPlayPauseImage() : ImageView{
         return playPauseBtn
     }
-    fun getProgressBar() : ProgressBar
+    fun getSeekBar() : SeekBar
     {
-        return progressBar2
+        return mediseekbar
     }
     fun getRemainingTime() : TextView{
         return remainingTime

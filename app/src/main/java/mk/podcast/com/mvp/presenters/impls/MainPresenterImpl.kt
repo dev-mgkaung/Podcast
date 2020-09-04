@@ -52,8 +52,13 @@ class MainPresenterImpl : MainPresenter, BaseAppPresenterImpl<MainView>() {
 
     override fun onTouchPlayPause(audioUrl : String) { mView?.onTouchPlayPauseImage(audioUrl) }
 
-    override fun onTouchFifteenSec() {}
 
-    override fun onTouchThirtySec() {}
+    override fun onTouchFifteenSec() {
+        mView?.onTouchBackwardFifteenSecIcon()
+    }
+
+    override fun onTouchThirtySec() {
+        mView?.onTouchForwardThirtySecIcon()
+    }
 
 }

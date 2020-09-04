@@ -12,5 +12,6 @@ interface MainView : BaseView {
     fun navigateToDetailScreen(episodeID : String)
     fun selectedDownloadPodcastItem(data: DataVO)
     fun onTouchPlayPauseImage(audioUrl : String)
-
+    fun onTouchForwardThirtySecIcon()
+    fun onTouchBackwardFifteenSecIcon()
 }
