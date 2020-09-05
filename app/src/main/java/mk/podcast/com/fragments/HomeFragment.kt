@@ -121,7 +121,7 @@ class HomeFragment : Fragment(), MainView {
             )
             initPlayer = false
         }
-        MyMediaPlayerHelper.playPauseMediaPlayBack(activity as Activity)
+      else{  MyMediaPlayerHelper.playPauseMediaPlayBack(activity as Activity) }
     }
 
     override fun onTouchForwardThirtySecIcon() {

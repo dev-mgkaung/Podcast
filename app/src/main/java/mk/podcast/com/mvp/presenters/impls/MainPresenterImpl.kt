@@ -1,6 +1,7 @@
 package mk.podcast.com.mvp.presenters.impls
 
 import android.content.Context
+import android.util.Log
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.Observer
 import mk.padc.share.mvp.presenters.impl.BaseAppPresenterImpl
@@ -35,7 +36,7 @@ class MainPresenterImpl : MainPresenter, BaseAppPresenterImpl<MainView>() {
     }
 
     override fun onTapPlayListItem(playListVO: PlayListVO) {
-      mView?.navigateToDetailScreen(playListVO.data.data_id)
+        mView?.navigateToDetailScreen(playListVO.data.data_id)
     }
 
     override fun onTapDownloadPodcastItem(dataVO: DataVO) {

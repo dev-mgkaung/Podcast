@@ -4,6 +4,7 @@ import android.app.Activity
 import android.media.AudioAttributes
 import android.media.AudioManager
 import android.media.MediaPlayer
+import android.media.MediaPlayer.OnPreparedListener
 import android.os.Handler
 import android.widget.ImageView
 import android.widget.SeekBar
@@ -56,10 +57,15 @@ object MyMediaPlayerHelper
                         .build()
                 )
                 setDataSource(audioUri)
-                prepare()
+           //     prepare()
             }
+        mediaPlayer.setOnPreparedListener(OnPreparedListener { // Called when the MediaPlayer is ready to play
+            playPauseMediaPlayBack(context)
+        }) // Set callback for when prepareAsync() finishes
 
-            // Seek bar change listener
+        mediaPlayer.prepareAsync() // Prepare asynchronously to not block the Main Thread
+
+        // Seek bar change listener
             mSeekBar.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
                 override fun onProgressChanged(seekBar: SeekBar, i: Int, b: Boolean) {
                     if (b) {
@@ -77,14 +83,19 @@ object MyMediaPlayerHelper
             playTime = mediaPlayer.currentPosition
             mCurrentTime.text =String.format(
                 "%d min, %d sec", TimeUnit.MILLISECONDS.toMinutes(playTime.toLong()),
-                (TimeUnit.MILLISECONDS.toSeconds(playTime.toLong()) - TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(playTime.toLong()))))
+                (TimeUnit.MILLISECONDS.toSeconds(playTime.toLong()) - TimeUnit.MINUTES.toSeconds(
+                    TimeUnit.MILLISECONDS.toMinutes(
+                        playTime.toLong()
+                    )
+                ))
+            )
             mSeekBar.progress = playTime
             handler.postDelayed(this, 100)
         }
     }
 
 
-     fun forwardMediaPlayBack(context: Activity,)
+     fun forwardMediaPlayBack(context: Activity)
     {
         if ((playTime + forwardTime) <= endTime) {
             playTime += forwardTime
@@ -135,7 +146,7 @@ object MyMediaPlayerHelper
         mediaPlayer.release()
     }
 
-     fun backwardMediaPlayBack(context: Activity,)
+     fun backwardMediaPlayBack(context: Activity)
     {
         if ((playTime - backwardTime) > 0) {
             playTime -= backwardTime

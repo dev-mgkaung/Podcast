@@ -36,7 +36,6 @@ class DetailActivity : AppCompatActivity(), DetailView {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail)
-
         setUpPresenter()
         setUpListener()
         setUpViewPod()
@@ -56,7 +55,7 @@ class DetailActivity : AppCompatActivity(), DetailView {
     override fun displayDetailData(data: DetailEpisodeVO) {
         detail_title.text = data.title
         detail_description.text = Html.fromHtml(data.description)
-        audio_time.text = data.audio_length_sec.convertMillisecondToHMS()
+        audio_time.text = "${data.audio_length_sec} sec"
         detail_image.load(data.thumbnail)
         mMiniMusicPlayerViewPod.setUpData(data.audio)
     }
@@ -71,8 +70,9 @@ class DetailActivity : AppCompatActivity(), DetailView {
                 mMiniMusicPlayerViewPod.getTotalTimeLabel()
             )
             initPlayer=false
+        }else {
+            MyMediaPlayerHelper.playPauseMediaPlayBack(this)
         }
-        MyMediaPlayerHelper.playPauseMediaPlayBack(this)
     }
 
     override fun onTouchForwardThirtySecIcon() {

@@ -21,6 +21,6 @@ fun Long.convertMillisecondToHMS() : String{
     // long seconds = (milliseconds / 1000);
     val seconds = TimeUnit.MILLISECONDS.toSeconds(this)
 
-    return  " $seconds sec"
+    return  " $minutes m $seconds sec"
 }
 
