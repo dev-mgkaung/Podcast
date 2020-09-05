@@ -70,28 +70,30 @@ class DetailActivity : AppCompatActivity(), DetailView {
 
     override fun onTouchPlayPauseIcon(audioUri: String) {
 
-        if(initPlayer) {
+              if(initPlayer) {
 
                var type= PLAYER_TYPE_STREAMING
                var mAudioUrl = audioUri
 
-            if( intent.getStringExtra(FROMPAGE).toString().equals(DOWNLOADPAGE))
-            {
+               // If download fragment pass, media player require download audio filepath
+               if( intent.getStringExtra(FROMPAGE).toString().equals(DOWNLOADPAGE))
+               {
                type= PLAYER_TYPE_FILE
                mAudioUrl= intent.getStringExtra(DOWNLOAD_AUDI_FILE_PATH).toString()
-              }
+               }
 
-            MyMediaPlayerHelper.initMediaPlayer(
+               // First time media player initialization , fix duplicate player create case
+               MyMediaPlayerHelper.initMediaPlayer(
                 this, mAudioUrl,
                 mMiniMusicPlayerViewPod.getSeekBar(),
                 mMiniMusicPlayerViewPod.getPlayPauseImage(),
                 mMiniMusicPlayerViewPod.getCurrentTimeLabel(),
-                mMiniMusicPlayerViewPod.getTotalTimeLabel(),
-                type
-            )
-            initPlayer=false
+                mMiniMusicPlayerViewPod.getTotalTimeLabel(), type)
+
+                initPlayer=false
         }else {
-            MyMediaPlayerHelper.playPauseMediaPlayBack(this)
+             //  touch event player play pause toggle
+             MyMediaPlayerHelper.playPauseMediaPlayBack(this)
         }
     }
 
@@ -103,20 +105,18 @@ class DetailActivity : AppCompatActivity(), DetailView {
         MyMediaPlayerHelper.backwardMediaPlayBack(this)
     }
 
-    private fun setUpListener() {
-        toolbar.setNavigationOnClickListener {
-            super.onBackPressed();
-        }
-    }
-
     override fun onBackPressed() {
         super.onBackPressed()
         MyMediaPlayerHelper.closeMediaPlayBack(this)
     }
 
+    private fun setUpListener() {
+        toolbar.setNavigationOnClickListener {
+            MyMediaPlayerHelper.closeMediaPlayBack(this)
+            super.onBackPressed()
+        }
+    }
     override fun showErrorMessage(error: String) {}
-
     override fun showLoading() {}
-
     override fun hideLoading() {}
 }

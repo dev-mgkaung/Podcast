@@ -104,7 +104,11 @@ object MyMediaPlayerHelper
         }
     }
 
-
+    fun mediaPlayerStopPlayBack(context: Activity)
+    {
+        mediaPlayer.stop()
+    }
+    
      fun forwardMediaPlayBack(context: Activity)
     {
         if ((playTime + forwardTime) <= endTime) {
