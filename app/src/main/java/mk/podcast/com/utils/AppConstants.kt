@@ -40,5 +40,10 @@ const val EM_NO_INTERNET_CONNECTION = "No Internet Connection"
 const val EM_NO_NEWS_AVAILABLE = "There are no data available"
 
 //Empty Image
+const val PLAYER_TYPE_STREAMING= "streaming"
+const val PLAYER_TYPE_FILE= "assetfile"
+const val HOMEPAGE = "home"
+const val DOWNLOADPAGE = "downlod"
+
 const val EMPTY_IMAGE_URL = "https://www.how2shout.com/wp-content/uploads/2018/09/Internet-Access-Error.jpg"
 const val USER_AGENT="Mozilla/5.0 (Linux; U; Android 4.1.1; en-gb; Build/KLP) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Safari/534.30"

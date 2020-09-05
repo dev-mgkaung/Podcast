@@ -91,9 +91,8 @@
             android:layout_marginLeft="@dimen/text_margin"
             android:layout_marginRight="@dimen/text_margin"
             android:layout_marginTop="@dimen/text_margin"
-            android:textStyle="normal"
             android:textColor="@color/text_color_primary"
-            android:textSize="16sp"
+            android:textSize="13sp"
             android:fontFamily="@font/contrail_one" />
         <include
             android:id="@+id/minimusicplayerviewpod"

@@ -21,6 +21,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.app_content_scrolling.*
 import kotlinx.android.synthetic.main.podcast_appbar.*
+import mk.padc.themovie.utils.HOMEPAGE
+import mk.padc.themovie.utils.PLAYER_TYPE_STREAMING
 import mk.podcast.com.R
 import mk.podcast.com.activities.DetailActivity
 import mk.podcast.com.adapters.PodcastRecyclerAdapter
@@ -103,7 +105,7 @@ class HomeFragment : Fragment(), MainView {
     }
 
     override fun navigateToDetailScreen(episodeID: String) {
-        startActivity(DetailActivity.newIntent(activity as Context, episodeID))
+        startActivity(DetailActivity.newIntent(activity as Context, episodeID,HOMEPAGE,""))
     }
 
     override fun selectedDownloadPodcastItem(data: DataVO) {
@@ -117,7 +119,8 @@ class HomeFragment : Fragment(), MainView {
                 mMusicPlayerViewPod.getSeekBar(),
                 mMusicPlayerViewPod.getPlayPauseImage(),
                 mMusicPlayerViewPod.getRemainingTime(),
-                mMusicPlayerViewPod.getRemainingTime()
+                mMusicPlayerViewPod.getRemainingTime(),
+                 PLAYER_TYPE_STREAMING
             )
             initPlayer = false
         }
@@ -151,7 +154,7 @@ class HomeFragment : Fragment(), MainView {
         if (permission != PackageManager.PERMISSION_GRANTED) {
             makeRequest()
         } else {
-            data?.let { mPresenter?.onDownloadPodcastItem(activity as Context, it) }
+            data?.let {  mPresenter?.onDownloadPodcastItem(activity as Context,it) }
         }
     }
 

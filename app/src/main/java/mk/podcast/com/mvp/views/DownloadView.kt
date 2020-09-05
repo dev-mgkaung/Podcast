@@ -6,5 +6,5 @@ import mk.podcast.com.datas.vos.PodcastVO
 
 interface DownloadView : BaseView {
     fun displayDownloadPodcastList(list: List<DownloadVO>)
-    fun navigateToDetailScreen()
+    fun navigateToDetailScreen(downloadVO: DownloadVO)
 }

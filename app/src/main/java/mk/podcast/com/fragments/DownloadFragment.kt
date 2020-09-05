@@ -1,5 +1,6 @@
 package mk.podcast.com.fragments
 
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -12,7 +13,9 @@ import kotlinx.android.synthetic.main.app_content_scrolling.*
 import kotlinx.android.synthetic.main.app_content_scrolling.podcast_recyclerview
 import kotlinx.android.synthetic.main.fragment_download.*
 import kotlinx.android.synthetic.main.fragment_download.view.*
+import mk.padc.themovie.utils.DOWNLOADPAGE
 import mk.podcast.com.R
+import mk.podcast.com.activities.DetailActivity
 import mk.podcast.com.adapters.DownloadRecyclerAdapter
 import mk.podcast.com.datas.vos.DownloadVO
 import mk.podcast.com.datas.vos.PodcastVO
@@ -63,8 +66,9 @@ class DownloadFragment : Fragment(), DownloadView {
         mAdapter.setNewData(list.toMutableList())
     }
 
-    override fun navigateToDetailScreen() {
-
+    override fun navigateToDetailScreen(downloadVO: DownloadVO) {
+        startActivity(DetailActivity.newIntent(activity as Context, downloadVO.download_id,
+            DOWNLOADPAGE,downloadVO.download_audio_path))
     }
 
     override fun showErrorMessage(error: String) {}

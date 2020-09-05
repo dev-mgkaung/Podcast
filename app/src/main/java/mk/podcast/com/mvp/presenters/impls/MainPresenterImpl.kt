@@ -41,9 +41,11 @@ class MainPresenterImpl : MainPresenter, BaseAppPresenterImpl<MainView>() {
     }
 
     override fun onTapDownloadPodcastItem(dataVO: DataVO) {
+
         val downloadVO: DownloadVO = DownloadVO(
-            dataVO.title, dataVO.description,dataVO.thumbnail, dataVO.description
-        )
+            dataVO.data_id, dataVO.title, dataVO.description,
+            dataVO.thumbnail, dataVO.title.trim().substring(0,8))
+
         mModelImpl?.saveDownloadPodcastItem(downloadVO, onSuccess = {}, onError = {})
         mView?.selectedDownloadPodcastItem(dataVO)
     }

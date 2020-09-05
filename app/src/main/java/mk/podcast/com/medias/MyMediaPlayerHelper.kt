@@ -5,11 +5,13 @@ import android.media.AudioAttributes
 import android.media.AudioManager
 import android.media.MediaPlayer
 import android.media.MediaPlayer.OnPreparedListener
+import android.os.Environment
 import android.os.Handler
 import android.widget.ImageView
 import android.widget.SeekBar
 import android.widget.TextView
 import android.widget.Toast
+import mk.padc.themovie.utils.PLAYER_TYPE_STREAMING
 import mk.podcast.com.R
 import java.util.concurrent.TimeUnit
 
@@ -17,9 +19,8 @@ import java.util.concurrent.TimeUnit
 object MyMediaPlayerHelper
 {
 
-    init { }
+    //Variable
     lateinit var mediaPlayer: MediaPlayer
-    private lateinit var seekBar: SeekBar
     private var handler: Handler = Handler()
     private var onTime: Int = 0
     private var playTime: Int = 0
@@ -27,6 +28,7 @@ object MyMediaPlayerHelper
     private var forwardTime: Int = 30000
     private var backwardTime: Int = 15000
 
+    // Android view
     lateinit var  mPlaypauseImage: ImageView
     lateinit var  mCurrentTime : TextView
     lateinit var  mTotalTime : TextView
@@ -38,59 +40,67 @@ object MyMediaPlayerHelper
         seekBar: SeekBar,
         playpauseImage: ImageView,
         currentTime: TextView,
-        totalTime: TextView
+        totalTime: TextView,
+        type: String
     ) {
 
-        //View Binding
         mCurrentTime=currentTime
         mSeekBar=seekBar
         mPlaypauseImage=playpauseImage
         mTotalTime=totalTime
 
-            //Media Player Setup
+            //Media Player create
             mediaPlayer = MediaPlayer().apply {
-                setAudioStreamType(AudioManager.STREAM_MUSIC)
-                setAudioAttributes(
-                    AudioAttributes.Builder()
+                         setAudioAttributes(
+                         AudioAttributes.Builder()
                         .setContentType(AudioAttributes.CONTENT_TYPE_MUSIC)
                         .setUsage(AudioAttributes.USAGE_MEDIA)
-                        .build()
-                )
-                setDataSource(audioUri)
-           //     prepare()
-            }
-        mediaPlayer.setOnPreparedListener(OnPreparedListener { // Called when the MediaPlayer is ready to play
-            playPauseMediaPlayBack(context)
-        }) // Set callback for when prepareAsync() finishes
+                        .build()) }
+          mediaPlayer.setOnCompletionListener {
+              mPlaypauseImage.setImageResource(R.drawable.ic_baseline_play_circle_filled_24)
+          }
 
-        mediaPlayer.prepareAsync() // Prepare asynchronously to not block the Main Thread
+            try{
+                 if(type == PLAYER_TYPE_STREAMING)
+                    {
+                       mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC)
+                       mediaPlayer.setDataSource(audioUri)
+                       mediaPlayer.prepareAsync()
+                       mCurrentTime.text= "Loading.."
+                    }
+                 else{
+                    mediaPlayer.setDataSource(Environment.getExternalStorageDirectory().absolutePath +"/Download/${audioUri}.mp3")
+                    mediaPlayer.prepare()
+                    }
+             }catch (exception: Exception){}
 
-        // Seek bar change listener
+            mediaPlayer.setOnPreparedListener(OnPreparedListener { playPauseMediaPlayBack(context) })
+
+             // Seek bar change listener
             mSeekBar.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
-                override fun onProgressChanged(seekBar: SeekBar, i: Int, b: Boolean) {
-                    if (b) {
-                        mediaPlayer.seekTo(i * 1000)
+                override fun onProgressChanged(seekBar: SeekBar, progress: Int, fromUser: Boolean) {
+                    if (fromUser) {
+                        try {
+                            mediaPlayer.seekTo(progress)
+                            }catch (e : Exception){}
                     }
                 }
-
                 override fun onStartTrackingTouch(seekBar: SeekBar) {}
                 override fun onStopTrackingTouch(seekBar: SeekBar) {}
             })
+
         }
 
-    private val updateSongTime = object : Runnable {
+     var updateSongTime = object : Runnable {
         override fun run() {
             playTime = mediaPlayer.currentPosition
             mCurrentTime.text =String.format(
                 "%d min, %d sec", TimeUnit.MILLISECONDS.toMinutes(playTime.toLong()),
-                (TimeUnit.MILLISECONDS.toSeconds(playTime.toLong()) - TimeUnit.MINUTES.toSeconds(
-                    TimeUnit.MILLISECONDS.toMinutes(
-                        playTime.toLong()
-                    )
-                ))
+                     (TimeUnit.MILLISECONDS.toSeconds(playTime.toLong()) - TimeUnit.MINUTES.toSeconds(
+                    TimeUnit.MILLISECONDS.toMinutes(playTime.toLong())))
             )
             mSeekBar.progress = playTime
-            handler.postDelayed(this, 100)
+            handler.postDelayed(this, 1000)
         }
     }
 
@@ -114,36 +124,35 @@ object MyMediaPlayerHelper
         }else
         {
             mediaPlayer.start()
-            mediaPlayer.seekTo(mediaPlayer.currentPosition)
             mPlaypauseImage.setImageResource(R.drawable.ic_baseline_pause_circle_filled_24)
             endTime = mediaPlayer.duration
             playTime = mediaPlayer.currentPosition
             mSeekBar.max = endTime
             onTime = 1
             mSeekBar.progress = playTime
-            handler.postDelayed(updateSongTime, 100)
+            handler.postDelayed(updateSongTime, 1000)
+
+            mTotalTime.text = String.format(
+                "%d min, %d sec",
+                TimeUnit.MILLISECONDS.toMinutes(endTime.toLong()),
+                TimeUnit.MILLISECONDS.toSeconds(endTime.toLong()) - TimeUnit.MINUTES.toSeconds(
+                    TimeUnit.MILLISECONDS.toMinutes(endTime.toLong())
+                )
+            )
+            mCurrentTime.text = String.format(
+                "%d min, %d sec",
+                TimeUnit.MILLISECONDS.toMinutes(playTime.toLong()),
+                TimeUnit.MILLISECONDS.toSeconds(playTime.toLong()) - TimeUnit.MINUTES.toSeconds(
+                    TimeUnit.MILLISECONDS.toMinutes(playTime.toLong())
+                )
+            )
         }
 
-        mTotalTime.text = String.format(
-            "%d min, %d sec",
-            TimeUnit.MILLISECONDS.toMinutes(endTime.toLong()),
-            TimeUnit.MILLISECONDS.toSeconds(endTime.toLong()) - TimeUnit.MINUTES.toSeconds(
-                TimeUnit.MILLISECONDS.toMinutes(endTime.toLong())
-            )
-        )
-        mCurrentTime.text = String.format(
-            "%d min, %d sec",
-            TimeUnit.MILLISECONDS.toMinutes(playTime.toLong()),
-            TimeUnit.MILLISECONDS.toSeconds(playTime.toLong()) - TimeUnit.MINUTES.toSeconds(
-                TimeUnit.MILLISECONDS.toMinutes(playTime.toLong())
-            )
-        )
     }
     fun  closeMediaPlayBack(context: Activity)
     {
-
         handler.removeCallbacksAndMessages(null)
-        if(mediaPlayer!=null)mediaPlayer.release()
+        mediaPlayer.release()
     }
 
      fun backwardMediaPlayBack(context: Activity)

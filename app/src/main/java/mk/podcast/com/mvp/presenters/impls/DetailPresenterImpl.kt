@@ -22,7 +22,7 @@ class DetailPresenterImpl : DetailPresenter, BaseAppPresenterImpl<DetailView>() 
             })
     }
 
-    override fun onTap() {}
+    override fun  onTap() {}
 
     override fun onTouchPlayPause(audioUri : String) {
         mView?.onTouchPlayPauseIcon(audioUri)

@@ -16,7 +16,7 @@ class DownloadPodcastViewHolder(itemView: View, private val mDelegate: DownloadD
     init {
         itemView.download_podcast_list_item.setOnClickListener {
             mData?.let {
-                mDelegate.onTapDownloadListItem()
+                mDelegate.onTapDownloadListItem(it)
             }
         }
     }

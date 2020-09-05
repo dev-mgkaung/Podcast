@@ -8,8 +8,10 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProviders
 import kotlinx.android.synthetic.main.activity_detail.*
 import kotlinx.android.synthetic.main.content_scrolling.*
-import mk.padc.share.utils.convertMillisecondToHMS
 import mk.padc.share.utils.load
+import mk.padc.themovie.utils.DOWNLOADPAGE
+import mk.padc.themovie.utils.PLAYER_TYPE_FILE
+import mk.padc.themovie.utils.PLAYER_TYPE_STREAMING
 import mk.podcast.com.R
 import mk.podcast.com.datas.vos.DetailEpisodeVO
 import mk.podcast.com.mvp.presenters.DetailPresenter
@@ -22,10 +24,16 @@ import mk.podcast.com.views.viewpods.MiniMusicPlayerViewPod
 class DetailActivity : AppCompatActivity(), DetailView {
 
     companion object {
+
         const val EPISODE_PARAM = "dataId"
-        fun newIntent(context: Context, dataId: String): Intent {
+        const val FROMPAGE ="fromPage"
+        const val DOWNLOAD_AUDI_FILE_PATH ="audio_file_path"
+
+        fun newIntent(context: Context, dataId: String, fromPage : String, assetFilePath : String): Intent {
             val intent = Intent(context, DetailActivity::class.java)
             intent.putExtra(EPISODE_PARAM, dataId)
+            intent.putExtra(FROMPAGE, fromPage)
+            intent.putExtra(DOWNLOAD_AUDI_FILE_PATH, assetFilePath)
             return intent
         }
     }
@@ -61,13 +69,25 @@ class DetailActivity : AppCompatActivity(), DetailView {
     }
 
     override fun onTouchPlayPauseIcon(audioUri: String) {
+
         if(initPlayer) {
+
+               var type= PLAYER_TYPE_STREAMING
+               var mAudioUrl = audioUri
+
+            if( intent.getStringExtra(FROMPAGE).toString().equals(DOWNLOADPAGE))
+            {
+               type= PLAYER_TYPE_FILE
+               mAudioUrl= intent.getStringExtra(DOWNLOAD_AUDI_FILE_PATH).toString()
+              }
+
             MyMediaPlayerHelper.initMediaPlayer(
-                this, audioUri,
+                this, mAudioUrl,
                 mMiniMusicPlayerViewPod.getSeekBar(),
                 mMiniMusicPlayerViewPod.getPlayPauseImage(),
                 mMiniMusicPlayerViewPod.getCurrentTimeLabel(),
-                mMiniMusicPlayerViewPod.getTotalTimeLabel()
+                mMiniMusicPlayerViewPod.getTotalTimeLabel(),
+                type
             )
             initPlayer=false
         }else {
@@ -91,7 +111,7 @@ class DetailActivity : AppCompatActivity(), DetailView {
 
     override fun onBackPressed() {
         super.onBackPressed()
-        if(initPlayer) MyMediaPlayerHelper.closeMediaPlayBack(this)
+        MyMediaPlayerHelper.closeMediaPlayBack(this)
     }
 
     override fun showErrorMessage(error: String) {}
