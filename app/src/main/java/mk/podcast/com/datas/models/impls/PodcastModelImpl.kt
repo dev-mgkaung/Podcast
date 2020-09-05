@@ -25,9 +25,7 @@ object PodcastModelmpl : PodcastModels, BaseModel() {
     override fun getAllPodcastFromApiAndSaveToDatabase(
         onSuccess: () -> Unit,
         onError: (String) -> Unit
-    ) {
-
-    }
+    ) {}
 
     override fun getAllPlayList(onError: (String) -> Unit): LiveData<List<PlayListVO>> {
         return mTheDB.playListDao().getAllPlayListData()

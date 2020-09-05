@@ -14,13 +14,9 @@ fun ImageView.load( dataImageUrl : String)
 
 fun Long.convertMillisecondToHMS() : String{
 
-    val hours : Long  = TimeUnit.MICROSECONDS.toHours(this)
-    // long minutes = (milliseconds / 1000) / 60;
-    val minutes = TimeUnit.MILLISECONDS.toMinutes(this)
+    val minutes = this / 1000 / 60
+    val seconds = this / 1000 % 60
 
-    // long seconds = (milliseconds / 1000);
-    val seconds = TimeUnit.MILLISECONDS.toSeconds(this)
-
-    return  " $minutes m $seconds sec"
+    return "$minutes min $seconds sec"
 }
 

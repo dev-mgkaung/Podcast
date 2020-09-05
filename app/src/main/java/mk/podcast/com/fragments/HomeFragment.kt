@@ -39,7 +39,7 @@ import mk.podcast.com.views.viewpods.MusicPlayerPlayerViewPod
 
 class HomeFragment : Fragment(), MainView {
 
-    private var initPlayer = true
+    private var initPlayer = false
     private lateinit var mAdapter: PodcastRecyclerAdapter
     private lateinit var mPresenter: MainPresenter
     private lateinit var mEmptyViewPod: EmptyViewPod
@@ -113,7 +113,7 @@ class HomeFragment : Fragment(), MainView {
     }
 
     override fun onTouchPlayPauseImage(audioUrl: String) {
-        if (initPlayer) {
+        if (!initPlayer) {
             MyMediaPlayerHelper.initMediaPlayer(
                 activity as Activity, audioUrl,
                 mMusicPlayerViewPod.getSeekBar(),
@@ -122,7 +122,7 @@ class HomeFragment : Fragment(), MainView {
                 mMusicPlayerViewPod.getRemainingTime(),
                  PLAYER_TYPE_STREAMING
             )
-            initPlayer = false
+            initPlayer = true
         }
       else{  MyMediaPlayerHelper.playPauseMediaPlayBack(activity as Activity) }
     }
@@ -143,7 +143,8 @@ class HomeFragment : Fragment(), MainView {
 
     override fun onDestroy() {
         super.onDestroy()
-        MyMediaPlayerHelper.mediaPlayerStopPlayBack(activity as Activity)
+        //if init player not create , we dont need to close , player init crash issue fix
+        if(initPlayer)  MyMediaPlayerHelper.mediaPlayerStopPlayBack(activity as Activity)
     }
 
     fun setupPermissions(data: DataVO) {

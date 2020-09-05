@@ -27,9 +27,9 @@
         android:maxLines="2"
         android:layout_marginTop="3dp"
         android:text="blah blah"
-        android:textStyle="bold"
+        android:textStyle="normal"
         android:fontFamily="@font/contrail_one"
         android:textColor="@color/text_color_primary"
-        android:textSize="16sp"/>
+        android:textSize="14sp"/>
 </LinearLayout>
 </androidx.cardview.widget.CardView>

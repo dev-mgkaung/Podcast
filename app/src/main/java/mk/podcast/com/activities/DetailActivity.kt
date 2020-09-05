@@ -37,7 +37,7 @@ class DetailActivity : AppCompatActivity(), DetailView {
             return intent
         }
     }
-    private var initPlayer=true
+    private var initPlayer=false
     private lateinit var mPresenter: DetailPresenter
     private lateinit var mMiniMusicPlayerViewPod: MiniMusicPlayerViewPod
 
@@ -70,7 +70,7 @@ class DetailActivity : AppCompatActivity(), DetailView {
 
     override fun onTouchPlayPauseIcon(audioUri: String) {
 
-              if(initPlayer) {
+              if(!initPlayer) {
 
                var type= PLAYER_TYPE_STREAMING
                var mAudioUrl = audioUri
@@ -90,7 +90,7 @@ class DetailActivity : AppCompatActivity(), DetailView {
                 mMiniMusicPlayerViewPod.getCurrentTimeLabel(),
                 mMiniMusicPlayerViewPod.getTotalTimeLabel(), type)
 
-                initPlayer=false
+                initPlayer=true
         }else {
              //  touch event player play pause toggle
              MyMediaPlayerHelper.playPauseMediaPlayBack(this)
@@ -107,12 +107,12 @@ class DetailActivity : AppCompatActivity(), DetailView {
 
     override fun onBackPressed() {
         super.onBackPressed()
-        MyMediaPlayerHelper.closeMediaPlayBack(this)
+       if(initPlayer) MyMediaPlayerHelper.closeMediaPlayBack(this)
     }
 
     private fun setUpListener() {
         toolbar.setNavigationOnClickListener {
-            MyMediaPlayerHelper.closeMediaPlayBack(this)
+            if(initPlayer)  MyMediaPlayerHelper.closeMediaPlayBack(this)
             super.onBackPressed()
         }
     }

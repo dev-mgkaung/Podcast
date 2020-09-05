@@ -108,7 +108,7 @@ object MyMediaPlayerHelper
     {
         mediaPlayer.stop()
     }
-    
+
      fun forwardMediaPlayBack(context: Activity)
     {
         if ((playTime + forwardTime) <= endTime) {
