@@ -13,6 +13,7 @@ import kotlinx.android.synthetic.main.app_content_scrolling.*
 import kotlinx.android.synthetic.main.app_content_scrolling.podcast_recyclerview
 import kotlinx.android.synthetic.main.fragment_search.*
 import kotlinx.android.synthetic.main.fragment_search.view.*
+import mk.padc.share.utils.load
 import mk.podcast.com.R
 import mk.podcast.com.adapters.CategoryRecyclerAdapter
 import mk.podcast.com.datas.vos.GenreVO
@@ -70,9 +71,8 @@ class SearchFragment : Fragment(), CategoryView {
 
     override fun displayCategoryList(list: List<GenreVO>) {
         mAdapter.setNewData(list.toMutableList())
+        if(list.size>0)category_image.load(list?.get(0).image_url)
     }
-
-
 
     override fun navigateToDetailScreen()
     {}

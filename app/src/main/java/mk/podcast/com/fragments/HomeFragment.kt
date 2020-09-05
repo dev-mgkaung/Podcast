@@ -140,7 +140,7 @@ class HomeFragment : Fragment(), MainView {
 
     override fun onDestroy() {
         super.onDestroy()
-        MyMediaPlayerHelper.closeMediaPlayBack(activity as Activity)
+       // if(initPlayer) MyMediaPlayerHelper.closeMediaPlayBack(activity as Activity)
     }
     fun setupPermissions(data: DataVO) {
         val permission = ContextCompat.checkSelfPermission(

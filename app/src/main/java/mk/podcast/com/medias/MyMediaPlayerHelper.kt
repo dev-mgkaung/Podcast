@@ -130,6 +130,7 @@ object MyMediaPlayerHelper
     }
     fun  closeMediaPlayBack(context: Activity)
     {
+
         handler.removeCallbacksAndMessages(null)
         mediaPlayer.release()
     }

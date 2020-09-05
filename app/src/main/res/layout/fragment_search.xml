@@ -36,6 +36,7 @@
                     android:layout_margin="20dp"
                     android:layout_alignParentTop="true">
                     <ImageView
+                        android:id="@+id/category_main_image"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
                         android:layout_gravity="center"

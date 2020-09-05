@@ -55,8 +55,8 @@ android {
 
     productFlavors{
         def BASE_URL_FIELD = "BASE_URL_FIELD"
-        def BASE_URL_DEV = "\"https://listen-api.listennotes.com/api/v2/\""
-        def BASE_URL_PROD = "\"https://listen-api.listennotes.com/api/v2/\""
+        def BASE_URL_DEV = "\"https://583f8e9b-a2b7-481b-95ca-d7b5bed83eb6.mock.pstmn.io\""
+        def BASE_URL_PROD ="\"https://583f8e9b-a2b7-481b-95ca-d7b5bed83eb6.mock.pstmn.io\""
 
         flavorDimensions "default"
         dev{

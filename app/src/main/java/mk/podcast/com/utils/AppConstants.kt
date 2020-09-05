@@ -30,8 +30,7 @@ const val region="us"
 const val safe_mode=0
 const val top_level_only=0
 const val sort= "recent_first"
-const val playlistId="SgTozE1ZAe3"
-
+const val playlistId="m1pe7z60bsw"
 
 // Intent Variables
 const val EPISODE_PARAM="episodeId"
