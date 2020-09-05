@@ -54,6 +54,15 @@ object PodcastModelmpl : PodcastModels, BaseModel() {
     }
 
     @SuppressLint("CheckResult")
+    override fun saveDownloadPodcastItem(
+        downloadVO : DownloadVO,
+        onSuccess: () -> Unit,
+        onError: (String) -> Unit
+    ) {
+        mTheDB.downloadDao().insertDownloadPodcastData(downloadVO)
+     }
+
+    @SuppressLint("CheckResult")
     override fun getDetailFromApiAndSaveToDatabase(
         episodeId: String,
         onSuccess: (DetailEpisodeVO) -> Unit,
@@ -115,6 +124,10 @@ object PodcastModelmpl : PodcastModels, BaseModel() {
     override fun startDownloadPodcast(context: Context,dataVO: DataVO) {
         Toast.makeText(context,"Start Downloading",Toast.LENGTH_LONG).show()
         startDownloading(context,dataVO)
+    }
+
+    override fun getDownloadPodcastList(onError: (String) -> Unit): LiveData<List<DownloadVO>> {
+        return mTheDB.downloadDao().getAllDownloadPodcastData()
     }
 
 }

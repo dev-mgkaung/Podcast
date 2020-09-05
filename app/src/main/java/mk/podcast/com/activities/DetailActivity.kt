@@ -91,7 +91,7 @@ class DetailActivity : AppCompatActivity(), DetailView {
 
     override fun onBackPressed() {
         super.onBackPressed()
-        MyMediaPlayerHelper.closeMediaPlayBack(this)
+        if(initPlayer) MyMediaPlayerHelper.closeMediaPlayBack(this)
     }
 
     override fun showErrorMessage(error: String) {}

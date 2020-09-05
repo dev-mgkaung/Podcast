@@ -1,15 +1,17 @@
 package mk.podcast.com.views.viewholders
 
+import android.text.Html
 import kotlinx.android.synthetic.main.download_podcast_listitem.view.*
 
 import android.view.View
-import com.bumptech.glide.Glide
+import kotlinx.android.synthetic.main.podcast_listitem.view.*
+import mk.padc.share.utils.load
 import mk.padc.share.views.viewholders.BaseViewHolder
-import mk.podcast.com.datas.vos.PodcastVO
+import mk.podcast.com.datas.vos.DownloadVO
 import mk.podcast.com.delegates.DownloadDelegate
 
 class DownloadPodcastViewHolder(itemView: View, private val mDelegate: DownloadDelegate)
-    : BaseViewHolder<PodcastVO>(itemView) {
+    : BaseViewHolder<DownloadVO>(itemView) {
 
     init {
         itemView.download_podcast_list_item.setOnClickListener {
@@ -19,15 +21,10 @@ class DownloadPodcastViewHolder(itemView: View, private val mDelegate: DownloadD
         }
     }
 
-    override fun bindData(data: PodcastVO) {
+    override fun bindData(data: DownloadVO) {
         mData = data
-        //  itemView.progressBar.
-//        itemView.download_img
-//        itemView.title
-//        itemView.description
-//        itemView.podcast_hour
-        Glide.with(itemView.download_podcast_img)
-            .load(data.image)
-            .into(itemView.download_podcast_img)
+        itemView.download_podcast_img.load(dataImageUrl = data.download_podcast_url)
+        itemView.download_title.text= data.donwload_podcast_title
+        itemView.download_description.text = Html.fromHtml(data.download_podcast_description)
     }
 }

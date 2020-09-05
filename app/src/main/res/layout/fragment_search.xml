@@ -39,6 +39,7 @@
                         android:id="@+id/category_main_image"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
+                        android:visibility="gone"
                         android:layout_gravity="center"
                         android:src="@drawable/bulb"/>
                     <TextView
@@ -49,7 +50,7 @@
                         android:layout_height="wrap_content"
                         android:textStyle="bold"
                         android:maxLines="2"
-                        android:text="How to influence with Tactical Empathy"
+                        android:text=""
                         android:textSize="18sp"
                         android:textColor="@color/white"/>
                 </LinearLayout>

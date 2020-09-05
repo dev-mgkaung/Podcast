@@ -9,7 +9,7 @@ import mk.podcast.com.datas.vos.*
 import mk.podcast.com.persistances.daos.*
 
 @Database(
-    entities = [PodcastVO::class, GenreVO::class, DetailEpisodeVO::class, RandomPodcastVO::class,PlayListVO::class],
+    entities = [PodcastVO::class, GenreVO::class, DetailEpisodeVO::class, RandomPodcastVO::class,PlayListVO::class,DownloadVO::class],
     version = 5,
     exportSchema = false
 )
@@ -39,4 +39,5 @@ abstract class PodcastDatabase : RoomDatabase() {
     abstract fun detailDao(): DetailDao
     abstract fun playListDao(): PlayListDao
     abstract fun randomPodCastDao(): RandomPodCastDao
+    abstract fun downloadDao() : DownloadDao
 }

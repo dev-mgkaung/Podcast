@@ -29,4 +29,6 @@ interface PodcastModels
 
     //Download Podcast
     fun startDownloadPodcast(context: Context,dataVO: DataVO)
+    fun getDownloadPodcastList(onError: (String) -> Unit) : LiveData<List<DownloadVO>>
+    fun saveDownloadPodcastItem(donwloadVO: DownloadVO, onSuccess: () -> Unit, onError: (String) -> Unit)
 }

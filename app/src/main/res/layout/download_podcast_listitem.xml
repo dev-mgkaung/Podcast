@@ -81,7 +81,7 @@
         android:layout_width="290dp"
         android:layout_height="21dp"
         android:layout_marginTop="5dp"
-        android:text="Blah Blah Blah Blah"
+        android:text=""
         android:textColor="@color/text_color_tertary"
         android:textSize="12sp"
         android:textStyle="bold"

@@ -7,13 +7,14 @@ import androidx.lifecycle.Observer
 import mk.padc.share.mvp.presenters.impl.BaseAppPresenterImpl
 import mk.podcast.com.datas.models.impls.PodcastModelmpl
 import mk.podcast.com.datas.vos.DataVO
+import mk.podcast.com.datas.vos.DownloadVO
 import mk.podcast.com.datas.vos.PlayListVO
 import mk.podcast.com.mvp.presenters.MainPresenter
 import mk.podcast.com.mvp.views.MainView
 
 class MainPresenterImpl : MainPresenter, BaseAppPresenterImpl<MainView>() {
 
-    var mModelImpl : PodcastModelmpl = PodcastModelmpl
+    var mModelImpl: PodcastModelmpl = PodcastModelmpl
 
     override fun onUiReady(lifeCycleOwner: LifecycleOwner) {
         //Step 1 Data fetch from api and save to database
@@ -23,15 +24,15 @@ class MainPresenterImpl : MainPresenter, BaseAppPresenterImpl<MainView>() {
         //Step 2 Data load from database
         mModelImpl.getAllPlayList(onError = {})
             .observe(lifeCycleOwner, Observer {
-               it?.let{
-                   mView?.displayPodcastList(it)
-                      }
+                it?.let {
+                    mView?.displayPodcastList(it)
+                }
             })
         mModelImpl.getRandomPodcastData(onError = {})
             .observe(lifeCycleOwner, Observer {
-                it?.let{
+                it?.let {
                     mView?.displayRandomPodcastData(it)
-                 }
+                }
             })
     }
 
@@ -40,18 +41,24 @@ class MainPresenterImpl : MainPresenter, BaseAppPresenterImpl<MainView>() {
     }
 
     override fun onTapDownloadPodcastItem(dataVO: DataVO) {
+        val downloadVO: DownloadVO = DownloadVO(
+            dataVO.title, dataVO.description,dataVO.thumbnail, dataVO.description
+        )
+        mModelImpl?.saveDownloadPodcastItem(downloadVO, onSuccess = {}, onError = {})
         mView?.selectedDownloadPodcastItem(dataVO)
     }
 
-    override fun onDownloadPodcastItem(context: Context,dataVO: DataVO) {
-        mModelImpl.startDownloadPodcast(context,dataVO)
+    override fun onDownloadPodcastItem(context: Context, dataVO: DataVO) {
+        mModelImpl.startDownloadPodcast(context, dataVO)
     }
 
     override fun onTapFindSomethingNew() {}
 
     override fun onTapReload() {}
 
-    override fun onTouchPlayPause(audioUrl : String) { mView?.onTouchPlayPauseImage(audioUrl) }
+    override fun onTouchPlayPause(audioUrl: String) {
+        mView?.onTouchPlayPauseImage(audioUrl)
+    }
 
 
     override fun onTouchFifteenSec() {

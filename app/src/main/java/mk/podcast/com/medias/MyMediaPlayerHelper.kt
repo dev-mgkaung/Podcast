@@ -143,7 +143,7 @@ object MyMediaPlayerHelper
     {
 
         handler.removeCallbacksAndMessages(null)
-        mediaPlayer.release()
+        if(mediaPlayer!=null)mediaPlayer.release()
     }
 
      fun backwardMediaPlayBack(context: Activity)
