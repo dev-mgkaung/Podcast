@@ -1,0 +1,187 @@
+{
+	"id": "m1pe7z60bsw",
+	"name": "My podcast playlist",
+	"description": "A curated playlist of podcasts about podcasting.",
+	"image": "https://cdn-images-1.listennotes.com/playlist/image/6907e8ff6b6c45df94cc059753f369cc.JPEG",
+	"thumbnail": "https://d3sv2eduhewoas.cloudfront.net/playlist/image/48477deae02649d7ab9d3f1b3966af38.JPEG",
+	"listennotes_url": "https://www.listennotes.com/listen/podcasts-about-podcasting-m1pe7z60bsw/?display=episode",
+	"visibility": "public",
+	"last_timestamp_ms": 1595641092907,
+	"total": 325,
+	"type": "episode_list",
+	"items": [{
+			"id": 23,
+			"type": "episode",
+			"notes": "This is a good episode.",
+			"added_at_ms": 1595567004958,
+			"data": {
+				"maybe_audio_invalid": false,
+				"pub_date_ms": 1474873200000,
+				"audio": "https://www.listennotes.com/e/p/11b34041e804491b9704d11f283c74de/",
+				"listennotes_edit_url": "https://www.listennotes.com/e/11b34041e804491b9704d11f283c74de/#edit",
+				"image": "https://cdn-images-1.listennotes.com/podcasts/exponent-ben-thompson-james-allworth-OaJSjb4xQv3.1400x1400.jpg",
+				"thumbnail": "https://cdn-images-1.listennotes.com/podcasts/exponent-ben-thompson-james-allworth-OaJSjb4xQv3.300x300.jpg",
+				"description": "<p>Disney chief Bob Iger shared news about Star Wars movies in 2020 and beyond, but some media outlets gave conflicting reports about it. Here's the real scoop. Punch it!</p> <p>***We’re listener supported! Go to http://Patreon.com/sw7x7 to donate to the Star Wars 7x7 podcast, and you’ll get some fabulous rewards for your pledge.*** </p> <p>Check out SW7x7.com for full Star Wars 7x7 show notes and links, and to comment on any of the content of this episode! If you like what you've heard, please leave us a rating or review on iTunes or Stitcher, which will also help more people discover this Star Wars podcast.</p> <p>Don't forget to join the Star Wars 7x7 fun on Facebook at Facebook.com/SW7x7, and follow the breaking news Twitter feed at Twitter.com/SW7x7Podcast. We're also on Pinterest and Instagram as \"SW7x7\" too, and we'd love to connect with you there!</p>\n",
+				"title": "Celebration Recap, Jason Fry and Christian Blauvelt Interviews – SWBW #101",
+				"explicit_content": false,
+				"listennotes_url": "https://www.listennotes.com/e/4d82e50314174754a3b603912448e812/",
+				"audio_length_sec": 567,
+				"id": "4d82e50314174754a3b603912448e812",
+				"link": "https://www.npr.org/2020/01/22/798532179/soleimanis-iran",
+				"podcast": {
+					"id": "4d3fe717742d4963a85562e9f84d8c79",
+					"title": "Star Wars 7x7 | Star Wars News, Interviews, and More!",
+					"publisher": "Planet Broadcasting",
+					"image": "https://cdn-images-1.listennotes.com/podcasts/exponent-ben-thompson-james-allworth-OaJSjb4xQv3.1400x1400.jpg",
+					"thumbnail": "https://cdn-images-1.listennotes.com/podcasts/exponent-ben-thompson-james-allworth-OaJSjb4xQv3.300x300.jpg",
+					"listennotes_url": "https://www.listennotes.com/c/4d3fe717742d4963a85562e9f84d8c79/"
+				}
+			}
+		},
+		{
+			"id": 424141,
+			"data": {
+				"id": "50d0110bec79414eac61cb472c3c1de2",
+				"link": "https://anchor.fm/caseyadams/episodes/Elise-Hu---Hosting-TED-Talks-Daily--The-Future-of-Podcasting-ecfp5b?utm_source=listennotes.com&utm_campaign=Listen+Notes&utm_medium=website",
+				"audio": "https://www.listennotes.com/e/p/50d0110bec79414eac61cb472c3c1de2/",
+				"image": "https://cdn-images-1.listennotes.com/podcasts/rise-of-the-young-casey-adams-v_hFQlZeGx2-YuarHs5lfDI.1400x1400.jpg",
+				"title": "Elise Hu - Hosting TED Talks Daily  The Future of Podcasting",
+				"podcast": {
+					"id": "11362a0682e744b29ce5ea73c920132e",
+					"image": "https://cdn-images-1.listennotes.com/podcasts/rise-of-the-young-casey-adams-v_hFQlZeGx2-YuarHs5lfDI.1400x1400.jpg",
+					"title": "Rise of The Young",
+					"publisher": "Casey Adams",
+					"thumbnail": "https://cdn-images-1.listennotes.com/podcasts/rise-of-the-young-casey-adams-VrKjhGOgkuf-YuarHs5lfDI.300x300.jpg",
+					"listennotes_url": "https://www.listennotes.com/c/11362a0682e744b29ce5ea73c920132e/"
+				},
+				"thumbnail": "https://cdn-images-1.listennotes.com/podcasts/rise-of-the-young-casey-adams-VrKjhGOgkuf-YuarHs5lfDI.300x300.jpg",
+				"description": "<p>Elise Hu is a host-at-large based at NPR West in Culver City, Calif. Previously, she explored the future with her video series, Gracie Award from the Alliance for Women in Media for her video series, <em>Elise Tries</em><a href=https://www.npr.org/2019/05/06/716414780/videos-future-you><em>Future You with Elise Hu</em></a>, and served as the founding bureau chief and International Correspondent for NPR's Seoul office. She was based in Seoul for nearly four years, responsible for the network's coverage of both Koreas and Japan, and filed from a dozen countries across Asia. Before joining NPR, she was one of the founding reporters at <a href=http://www.texastribune.org/>The Texas Tribune</a> a non-profit digital news startup devoted to politics and public policy. While at the Tribune, Hu oversaw television partnerships and multimedia projects, contributed to <em>The New York Times</em> expanded Texas coverage, and pushed for editorial innovation across platforms.Her work at NPR has earned a DuPont-Columbia award and a Her previous work has earned a Gannett Foundation Award for Innovation in Watchdog Journalism, a National Edward R. Murrow award for best online video, and beat reporting awards from the Texas Associated Press. <em>The Austin Chronicle</em> once dubiously named her the <a href =http://www.austinchronicle.com/gyrobase/Awards/BestOfAustin?Award=660138>Best TV Reporter Who Can Write < /a>.</p ><p>",
+				"pub_date_ms": 1586266731038,
+				"listennotes_url": "https://www.listennotes.com/e/50d0110bec79414eac61cb472c3c1de2/",
+				"audio_length_sec": 2445,
+				"explicit_content": false,
+				"maybe_audio_invalid": false,
+				"listennotes_edit_url": "https://www.listennotes.com/e/50d0110bec79414eac61cb472c3c1de2/edit"
+			},
+			"type": "episode",
+			"notes": "",
+			"added_at_ms": 1595791871517
+		},
+		{
+			"id": 423865,
+			"data": {
+				"id": "8f51c8e8b19a4c638ecbce12f9322ba8",
+				"link": "https://thefeed.libsyn.com/167-cleanfeed-with-a-side-of-google-podcasts?utm_source=listennotes.com&utm_campaign=Listen+Notes&utm_medium=website",
+				"audio": "https://www.listennotes.com/e/p/8f51c8e8b19a4c638ecbce12f9322ba8/",
+				"image": "https://cdn-images-1.listennotes.com/podcasts/the-feed-the-official-libsyn-podcast-elsie-0T-Y3tzFJ78-2kOexVdGJIv.1400x1400.jpg",
+				"title": "167 Cleanfeed With A Side of Google Podcasts",
+				"podcast": {
+					"id": "ce3754058c7a44a0abd574f86ff5c719",
+					"image": "https://cdn-images-1.listennotes.com/podcasts/the-feed-the-official-libsyn-podcast-elsie-0T-Y3tzFJ78-2kOexVdGJIv.1400x1400.jpg",
+					"title": "The Feed The Official Libsyn Podcast",
+					"publisher": "Elsie Escobar and Rob Walch",
+					"thumbnail": "https://cdn-images-1.listennotes.com/podcasts/the-feed-the-official-libsyn-podcast-elsie-ZQSb-a4YFmT-2kOexVdGJIv.300x300.jpg",
+					"listennotes_url": "https://www.listennotes.com/c/ce3754058c7a44a0abd574f86ff5c719/"
+				},
+				"thumbnail": "https://cdn-images-1.listennotes.com/podcasts/the-feed-the-official-libsyn-podcast-elsie-ZQSb-a4YFmT-2kOexVdGJIv.300x300.jpg",
+				"description": "<p>Tons of details on all things Google Podcasts Manager! It’s like Apple Podcasts connect but of course Google. Then, we move on to jobs in podcasting, so much about feedback about Cleanfeed, some very interesting Facebook updates, Libsyn player automation, what if someone uses YOUR podcast name, a massive breakdown of the podfader types and of course we’ve got a crazy amount of stats!</p> <p>Audience feedback drives the show. We’d love for you to email us and keep the conversation going! Email thefeed@libsyn.com or call 412–573–1934. </p>",
+				"pub_date_ms": 1588694700002,
+				"listennotes_url": "https://www.listennotes.com/e/8f51c8e8b19a4c638ecbce12f9322ba8/",
+				"audio_length_sec": 4337,
+				"explicit_content": false,
+				"maybe_audio_invalid": false,
+				"listennotes_edit_url": "https://www.listennotes.com/e/8f51c8e8b19a4c638ecbce12f9322ba8/edit"
+			},
+			"type": "episode",
+			"notes": "",
+			"added_at_ms": 1595731343450
+		},
+		{
+			"id": 345601,
+			"data": {
+				"id": "dbd3d477dfc94128982b79e8152301b4",
+				"link": "http://mschool.growtheverywhere.libsynpro.com/spotify-acquired-the-ringer-podcast-15m-in-revenues-heres-what-it-means-ep-1306?utm_source=listennotes.com&utm_campaign=Listen+Notes&utm_medium=website",
+				"audio": "https://www.listennotes.com/e/p/dbd3d477dfc94128982b79e8152301b4/",
+				"image": "https://cdn-images-1.listennotes.com/podcasts/marketing-school-digital-marketing-and-pHyiIJT4Lxl.1400x1400.jpg",
+				"title": "Spotify Acquired 'The Ringer' Podcast ($15M In Revenues) - Here's What It Means | Ep. #1306",
+				"podcast": {
+					"id": "9a2abf6b68b54554a60a32a2932febcb",
+					"image": "https://cdn-images-1.listennotes.com/podcasts/marketing-school-digital-marketing-and-pHyiIJT4Lxl.1400x1400.jpg",
+					"title": "Marketing School - Digital Marketing and Online Marketing Tips",
+					"publisher": "Eric Siu & Neil Patel",
+					"thumbnail": "https://cdn-images-1.listennotes.com/podcasts/marketing-school-digital-marketing-and-pHyiIJT4Lxl.300x300.jpg",
+					"listennotes_url": "https://www.listennotes.com/c/9a2abf6b68b54554a60a32a2932febcb/"
+				},
+				"thumbnail": "https://cdn-images-1.listennotes.com/podcasts/marketing-school-digital-marketing-and-pHyiIJT4Lxl.300x300.jpg",
+				"description": "<p>In episode #1306, we discuss Spotify’s acquisition of The Ringer. The podcasting industry is growing exponentially and Spotify wanted to make an aggressive move toward growing its market share. Tune in to hear why this was a super smart decision on their part!</p> <p>TIME-STAMPED SHOW NOTES:</p> <ul> <li>[00:25] Today’s topic: How Spotify Acquired The Ringer.  </li> <li>[00:42] The solid financial results for Spotify in Q4 of 2019.</li> <li>[00:56] How Spotify recognized exponential growth in podcast hours streamed.</li> <li>[01:24] Realizing that they needed to acquire a big podcast to double down on opportunities.   </li> <li>[01:53] The impressive retention rates of the Marketing School podcast.</li> <li>[02:09] Why Spotify’s decision makes a lot of sense. </li> <li>[02:39] Keep in mind that all good channels eventually become crowded.  </li> <li>[03:09] Spotify’s market share around podcasting and how they’re more aggressive than Apple. </li> <li>[03:48] The number of downloads The Ringer podcast is getting. </li> <li>[04:07] Start comparing your Apple Podcast and Spotify analytics for your podcast. </li> <li>[04:50] How our podcasts and Eric’s own podcast are performing.  </li> <li>[05:56] The proposed price for The Ringer stated by Bill Simmons: $100 million. </li> <li>[06:25] That’s it for today!</li> <li>[06:26] To stay updated with events and learn more about our mastermind, go to the <a href=https://marketingschool.io/growth-accelerator-mastermind > Marketing School < /a> site for more information.</li > < /ul> <p>Links Mentioned in Today’s Episode:</p > < ul > < li > < a href =https://www.spotify.com/ > Spotify < /a> </li > < li > < a href = https://www.theringer.com > The Ringer < /a></li > < li > < a href = https://www.apple.com > Apple < /a></li > < li > < a href = https://growtheverywhere.com/podcast-player/ > Leveling Up Podcast < /a></li > < li > < a href = https://twitter.com/BillSimmons?ref_src > Bill Simmons on Twitter < /a></li > < /ul> <p>Leave Some Feedback:</p > < p > < /p> <ul> <li>What should we talk about next? Please let us know in the comments below</li > < /ul> <ul> <li>Did you enjoy this episode? If so, please leave a short review.</li > < /ul> <p> </p > < p > Connect with Us: < /p> <ul> <li style=font - weight: 400;><a href=http://neilpatel.com>Neilpatel.com</a></li> <li style=font-weight: 400;><a href=https://www.quicksprout.com/>Quick Sprout</a> </li> <li style=font-weight: 400;><a href= https://growtheverywhere.com/>Growth Everywhere</a></li> <li style=font-weight: 400;><a href= https://www.singlegrain.com/>Single Grain</a></li> <li style=font-weight: 400;><a href= https://twitter.com/neilpatel>Twitter @neilpatel</a> </li> <li style=font-weight: 400;><a href= https://twitter.com/ericosiu>Twitter @ericosiu</a></li> </ul>",
+				"pub_date_ms": 1582812000138,
+				"listennotes_url": "https://www.listennotes.com/e/dbd3d477dfc94128982b79e8152301b4/",
+				"audio_length_sec": 434,
+				"explicit_content": false,
+				"maybe_audio_invalid": false,
+				"listennotes_edit_url": "https://www.listennotes.com/e/dbd3d477dfc94128982b79e8152301b4/edit"
+			},
+			"type": "episode",
+			"notes": "",
+			"added_at_ms": 1582824661788
+		},
+		{
+			"id": 337223,
+			"data": {
+				"id": "5b8b9d5851ad4634812798d25553d8d7",
+				"link": "https://www.vox.com/recode-media-podcast?utm_source=listennotes.com&utm_campaign=Listen+Notes&utm_medium=website",
+				"audio": "https://www.listennotes.com/e/p/5b8b9d5851ad4634812798d25553d8d7/",
+				"image": "https://cdn-images-1.listennotes.com/podcasts/recode-media-recode-BZlna1CAThx-1iPwTajLXlS.1400x1400.jpg",
+				"title": "Spotify, The Ringer and the future of podcasts",
+				"podcast": {
+					"id": "2aba49dc3fc04e3e96fe89f79a261798",
+					"image": "https://cdn-images-1.listennotes.com/podcasts/recode-media-recode-BZlna1CAThx-1iPwTajLXlS.1400x1400.jpg",
+					"title": "Recode Media",
+					"publisher": "Recode",
+					"thumbnail": "https://cdn-images-1.listennotes.com/podcasts/recode-media-recode-UXOHc-3mo_8-1iPwTajLXlS.300x300.jpg",
+					"listennotes_url": "https://www.listennotes.com/c/2aba49dc3fc04e3e96fe89f79a261798/"
+				},
+				"thumbnail": "https://cdn-images-1.listennotes.com/podcasts/recode-media-recode-UXOHc-3mo_8-1iPwTajLXlS.300x300.jpg",
+				"description": "<p>Spotify is buying Bill Simmons’ sports and pop culture website and podcast network, The Ringer. It’s Spotify’s fourth podcast acquisition in a year. Recode’s Peter Kafka (who broke the story) sits down with Vox Media Podcast Network producer and former Ringer staff member Zach Mack to discuss what this deal means for Spotify, The Ringer and the future of podcasts.</p><p><br></p><p><strong>Featuring</strong>: Zach Mack (<a href=https: //twitter.com/zachthemack>@zachthemack</a>), Senior Podcast Producer at Vox Media Podcast Network</p><p><strong>Host</strong>: Peter Kafka (<a href=https: //twitter.com/pkafka > @pkafka < /a>), Senior Editor at Recode</p > < p > < strong > More to explore < /strong>: <a href=https:/ / pod.link / 1080467174>Subscribe for free to Recode Media</a>, Peter Kafka, one of the media industry's most acclaimed reporters, talks to business titans, journalists, comedians, and more to get their take on today's media landscape.</p><p><strong>About Recode by Vox</strong>: Recode by Vox helps you understand how tech is changing the world — and changing us.</p><p> </p><p>Learn more about your ad choices. Visit <a href=https: //megaphone.fm/adchoices> megaphone.fm / adchoices < /a></p > ",
+				"pub_date_ms": 1581021870010,
+				"listennotes_url": "https://www.listennotes.com/e/5b8b9d5851ad4634812798d25553d8d7/",
+				"audio_length_sec": 1216,
+				"explicit_content": false,
+				"maybe_audio_invalid": false,
+				"listennotes_edit_url": "https://www.listennotes.com/e/5b8b9d5851ad4634812798d25553d8d7/edit"
+			},
+			"type": "episode",
+			"notes": "",
+			"added_at_ms": 1581032059508
+		},
+		{
+			"id": 312262,
+			"data": {
+				"id": "eaa81f7bba344ae78bcf228b88e102a7",
+				"link": "https://a16z.simplecast.com/episodes/a16z-podcast-how-what-why-500th-episode-behind-the-scenes-XgOK8aBT?utm_source=listennotes.com&utm_campaign=Listen+Notes&utm_medium=website",
+				"audio": "https://www.listennotes.com/e/p/eaa81f7bba344ae78bcf228b88e102a7/",
+				"image": "https://cdn-images-1.listennotes.com/podcasts/a16z-podcast-andreessen-horowitz-KXV3A98OyDi-IWF2alEr-9h.1400x1400.jpg",
+				"title": "How We Podcast",
+				"podcast": {
+					"id": "7c20388d8d7e45d6ae4b770c1fe36b6f",
+					"image": "https://cdn-images-1.listennotes.com/podcasts/a16z-podcast-andreessen-horowitz-KXV3A98OyDi-IWF2alEr-9h.1400x1400.jpg",
+					"title": "a16z Podcast",
+					"publisher": "Andreessen Horowitz",
+					"thumbnail": "https://cdn-images-1.listennotes.com/podcasts/a16z-podcast-andreessen-horowitz-sy3TixUoMHZ-IWF2alEr-9h.300x300.jpg",
+					"listennotes_url": "https://www.listennotes.com/c/7c20388d8d7e45d6ae4b770c1fe36b6f/"
+				},
+				"thumbnail": "https://cdn-images-1.listennotes.com/podcasts/a16z-podcast-andreessen-horowitz-sy3TixUoMHZ-IWF2alEr-9h.300x300.jpg",
+				"description": "<p>Hi everyone, welcome to the a16z Podcast... ... and welcome to our 500th episode, where, for the first time, we reveal behind-the-scenes details and the backstory of how we built this show, and the broader editorial operation. [You can also listen to episode 499, with head of marketing Margit Wennmachers, on building the a16z brand, <a href=https://a16z.com/2019/11/20/brand-building-a16z-ideas-people-marketing/ target=_blank>here</a>.]</p><p>We've talked a lot about the podcasting industry, and even done podcasts about podcasting, so for this special episode, editor-in-chief and showrunner Sonal Chokshi reveals the how, what, and why in conversation with a16z general partner (and guest-host for this special episode) <a href=https://a16z.com/2019/10/01/knowable-audio-startups/ target=_blank>podcasting</a> fan Connie Chan. We also answer some frequently asked questions that we often get (and recently <a href=https://twitter.com/smc90/status/1198026729421324289 target=_blank>got</a> via Twitter), such as:</p><ul><li>how we program podcasts</li><li>what's the process, from ideas to publishing</li><li>do we edit them and how!</li><li>do guests prep, do we have a script</li><li>technical stack</li></ul><p>...and much more. In fact, much of the conversation goes beyond the a16z Podcast and towards Sonal's broader principles of 'editorial content marketing', which hopefully helps those thinking about their own content operations and podcasts, too. Including where podcasting may be going.</p><p>Finally, we share some unexpected moments, and lessons learned along the way; our positions on tics, swear-words, and talking too fast; failed experiments, and new directions. But most importantly, we share some of the people behind the scenes who help make the a16z Podcast what it was, is, and can be... with thanks most of all to *you*, our wonderful fans</p>",
+				"pub_date_ms": 1574838000052,
+				"listennotes_url": "https://www.listennotes.com/e/eaa81f7bba344ae78bcf228b88e102a7/",
+				"audio_length_sec": 2860,
+				"explicit_content": false,
+				"maybe_audio_invalid": false,
+				"listennotes_edit_url": "https://www.listennotes.com/e/eaa81f7bba344ae78bcf228b88e102a7/edit"
+			},
+			"type": "episode",
+			"notes": "",
+			"added_at_ms": 1574917254490
+		}
+	]
+}
