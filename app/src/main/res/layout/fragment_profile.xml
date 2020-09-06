@@ -5,5 +5,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="mk.podcast.com.fragments.ProfileFragment">
 
-    <include layout="@layout/view_pod_empty"/>
+
+    <com.google.android.exoplayer2.ui.PlayerControlView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:controller_layout_id="@layout/exo_player_control_custom_view"
+        android:id="@+id/playerview"
+        />
 </FrameLayout>

@@ -106,7 +106,7 @@ class HomeFragment : Fragment(), MainView {
     }
 
     override fun navigateToDetailScreen(episodeID: String) {
-        startActivity(DetailActivity.newIntent(activity as Context, episodeID,HOMEPAGE,""))
+        startActivity(DetailActivity.newIntent(activity as Context, episodeID, HOMEPAGE, ""))
     }
 
     override fun selectedDownloadPodcastItem(data: DataVO) {
@@ -114,9 +114,9 @@ class HomeFragment : Fragment(), MainView {
     }
 
     override fun onTouchPlayPauseImage(audioUrl: String) {
-        if(!verifyAvailableNetwork(activity as Activity)) {
-            Toast.makeText(activity as Activity, "Please Check Internet Connection , This is streaming type",Toast.LENGTH_SHORT).show()
-        }else{
+        if (!verifyAvailableNetwork(activity as Activity)) {
+            Toast.makeText(activity as Activity, "Please Check Internet Connection , This is streaming type", Toast.LENGTH_SHORT).show()
+        } else {
             if (!initPlayer) {
                 MyMediaPlayerHelper.initMediaPlayer(
                     activity as Activity, audioUrl,
@@ -150,7 +150,7 @@ class HomeFragment : Fragment(), MainView {
     override fun onDestroy() {
         super.onDestroy()
         //if init player not create , we dont need to close , player init crash issue fix
-        if(initPlayer)  MyMediaPlayerHelper.mediaPlayerStopPlayBack(activity as Activity)
+        if (initPlayer) MyMediaPlayerHelper.mediaPlayerStopPlayBack(activity as Activity)
     }
 
     fun setupPermissions(data: DataVO) {
@@ -162,7 +162,7 @@ class HomeFragment : Fragment(), MainView {
         if (permission != PackageManager.PERMISSION_GRANTED) {
             makeRequest()
         } else {
-            data?.let {  mPresenter?.onDownloadPodcastItem(activity as Context,it) }
+            data?.let { mPresenter?.onDownloadPodcastItem(activity as Context, it) }
         }
     }
 
@@ -183,8 +183,7 @@ class HomeFragment : Fragment(), MainView {
         when (requestCode) {
             PERMISSION_REQUEST_CODE -> {
                 if (grantResults.isEmpty() || grantResults[0] != PackageManager.PERMISSION_GRANTED) {
-                    Toast.makeText(activity as Activity, "Permission Denied", Toast.LENGTH_SHORT)
-                        .show()
+                    Toast.makeText(activity as Activity, "Permission Denied", Toast.LENGTH_SHORT).show()
                 } else {
                     Toast.makeText(context, "Permission GRANDED", Toast.LENGTH_LONG).show()
                 }

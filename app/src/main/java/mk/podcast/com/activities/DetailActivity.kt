@@ -1,6 +1,6 @@
 package mk.podcast.com.activities
 
-import android.app.Activity
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
@@ -69,6 +69,7 @@ class DetailActivity : AppCompatActivity(), DetailView {
         mMiniMusicPlayerViewPod.setDelegate(mPresenter)
     }
 
+    @SuppressLint("SetTextI18n")
     override fun displayDetailData(data: DetailEpisodeVO) {
         detail_title.text = data.title
         detail_description.text = Html.fromHtml(data.description)
@@ -78,8 +79,8 @@ class DetailActivity : AppCompatActivity(), DetailView {
     }
 
     override fun onTouchPlayPauseIcon(audioUri: String) {
-        if (intent.getStringExtra(FROMPAGE).toString().equals(DOWNLOADPAGE)) {
-            // If download fragment pass, no need to check intentert connection
+        if (intent.getStringExtra(FROMPAGE).toString() == DOWNLOADPAGE) {
+            // If download fragment pass, no need to check internet connection
             mediaPlayerSetup(audioUri)
         } else {
             //if other fragment pass, need to check internet connection ,  this case to solve offline open player gerbage time data

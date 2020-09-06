@@ -56,9 +56,10 @@ object MyMediaPlayerHelper
                         .setContentType(AudioAttributes.CONTENT_TYPE_MUSIC)
                         .setUsage(AudioAttributes.USAGE_MEDIA)
                         .build()) }
-          mediaPlayer.setOnCompletionListener {
+
+            mediaPlayer.setOnCompletionListener {
               mPlaypauseImage.setImageResource(R.drawable.ic_baseline_play_circle_filled_24)
-          }
+           }
 
             try{
                  if(type == PLAYER_TYPE_STREAMING)
@@ -153,6 +154,7 @@ object MyMediaPlayerHelper
         }
 
     }
+
     fun  closeMediaPlayBack(context: Activity)
     {
         handler.removeCallbacksAndMessages(null)

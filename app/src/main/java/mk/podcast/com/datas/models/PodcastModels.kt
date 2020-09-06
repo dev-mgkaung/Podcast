@@ -26,7 +26,6 @@ interface PodcastModels
     fun getRandomPodcastData( onError: (String) -> Unit) : LiveData<RandomPodcastVO>
     fun getRandomPodcastFromApiAndSaveToDatabase( onSuccess: (datavo :RandomPodcastVO) -> Unit, onError: (String) -> Unit)
 
-
     //Download Podcast
     fun startDownloadPodcast(context: Context,dataVO: DataVO)
     fun getDownloadPodcastList(onError: (String) -> Unit) : LiveData<List<DownloadVO>>
