@@ -45,7 +45,10 @@ class MusicPlayerPlayerViewPod @JvmOverloads constructor(
     private fun setUpListener() {
         thirtySecBtn.setOnClickListener { mDelegate?.onTouchThirtySec() }
         fifteenSecBtn.setOnClickListener { mDelegate?.onTouchFifteenSec() }
-        playPauseBtn.setOnClickListener { mAudioUrl?.let { it1 -> mDelegate?.onTouchPlayPause(it1) } }
+
+        playPauseBtn.setOnClickListener {
+            mAudioUrl?.let { it1 -> mDelegate?.onTouchPlayPause(it1) }
+        }
     }
 
     interface Delegate {

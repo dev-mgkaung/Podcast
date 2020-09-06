@@ -21,6 +21,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.app_content_scrolling.*
 import kotlinx.android.synthetic.main.podcast_appbar.*
+import mk.padc.share.utils.verifyAvailableNetwork
 import mk.padc.themovie.utils.HOMEPAGE
 import mk.padc.themovie.utils.PLAYER_TYPE_STREAMING
 import mk.podcast.com.R
@@ -113,18 +114,23 @@ class HomeFragment : Fragment(), MainView {
     }
 
     override fun onTouchPlayPauseImage(audioUrl: String) {
-        if (!initPlayer) {
-            MyMediaPlayerHelper.initMediaPlayer(
-                activity as Activity, audioUrl,
-                mMusicPlayerViewPod.getSeekBar(),
-                mMusicPlayerViewPod.getPlayPauseImage(),
-                mMusicPlayerViewPod.getRemainingTime(),
-                mMusicPlayerViewPod.getRemainingTime(),
-                 PLAYER_TYPE_STREAMING
-            )
-            initPlayer = true
+        if(!verifyAvailableNetwork(activity as Activity)) {
+            Toast.makeText(activity as Activity, "Please Check Internet Connection , This is streaming type",Toast.LENGTH_SHORT).show()
+        }else{
+            if (!initPlayer) {
+                MyMediaPlayerHelper.initMediaPlayer(
+                    activity as Activity, audioUrl,
+                    mMusicPlayerViewPod.getSeekBar(),
+                    mMusicPlayerViewPod.getPlayPauseImage(),
+                    mMusicPlayerViewPod.getRemainingTime(),
+                    mMusicPlayerViewPod.getRemainingTime(),
+                    PLAYER_TYPE_STREAMING
+                )
+                initPlayer = true
+            } else {
+                MyMediaPlayerHelper.playPauseMediaPlayBack(activity as Activity)
+            }
         }
-      else{  MyMediaPlayerHelper.playPauseMediaPlayBack(activity as Activity) }
     }
 
     override fun onTouchForwardThirtySecIcon() {
