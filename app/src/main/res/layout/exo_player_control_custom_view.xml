@@ -11,12 +11,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <ImageView
-            android:layout_margin="5dp"
+            android:layout_margin="8dp"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:src="@drawable/placeholder"/>
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="260dp"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:layout_margin="20dp"
@@ -26,10 +26,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="18sp"
+                android:gravity="left"
+                android:layout_gravity="left"
                 android:textColor="@color/white"
                 android:text="Blah Blah Blah Blah"/>
             <TextView
                 android:textSize="14sp"
+                android:gravity="left"
+                android:layout_gravity="left"
                 android:textColor="@color/white"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -38,7 +42,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
-                android:gravity="center_vertical"
+                android:gravity="left"
+                android:layout_gravity="left"
                 android:orientation="horizontal">
 
                 <TextView

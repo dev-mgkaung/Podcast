@@ -72,10 +72,17 @@ class ProfileFragment : Fragment() {
         //4
          player.playWhenReady = true
     }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        releasePlayer()
+    }
+
      fun releasePlayer() {
         player.stop()
         player.release()
     }
+
     companion object {
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
