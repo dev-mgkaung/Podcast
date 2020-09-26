@@ -76,6 +76,7 @@ class DetailActivity : AppCompatActivity(), DetailView {
         audio_time.text = "${data.audio_length_sec} sec"
         detail_image.load(data.thumbnail)
         mMiniMusicPlayerViewPod.setUpData(data.audio)
+
     }
 
     override fun onTouchPlayPauseIcon(audioUri: String) {
