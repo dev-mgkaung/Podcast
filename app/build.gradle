@@ -3,11 +3,12 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'me.moallemi.advanced-build-version'
+apply plugin: 'com.google.gms.google-services'
 
 advancedVersioning {
     nameOptions {
         versionMajor 0
-        versionMinor 0
+        versionMinor 1
         versionPatch 1
     }
     codeOptions {
@@ -140,6 +141,11 @@ dependencies {
     implementation rootProject.ext.libraries.exoplayer_core
     implementation rootProject.ext.libraries.exoplayer_dash
     implementation rootProject.ext.libraries.exoplayer_ui
+
+    // Firebase
+    implementation rootProject.ext.libraries.firebaseAnalytics
+    implementation rootProject.ext.libraries.firebaseDatabase
+    implementation rootProject.ext.libraries.firebaseFirestore
 
     //Testing
     // Local Unit Tests
