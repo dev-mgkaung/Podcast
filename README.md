@@ -1,9 +1,5 @@
 # Podcast Reactive MVP
 
-## Constraint Layout Practice
-## Coordinator Layout Practice
-## Exoplayer Practice
-
 Podcast Api 
 (https://www.listennotes.com/api/docs/)
 
