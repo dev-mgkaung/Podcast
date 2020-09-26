@@ -24,7 +24,7 @@ object PodcastModelmpl : PodcastModels, BaseModel() {
         set(value) {}
 
     override fun getCategoryList(
-        onSuccess: (categories: List<RandomPodcastVO>) -> Unit,
+        onSuccess: (categories: List<GenreVO>) -> Unit,
         onFaiure: (String) -> Unit
     ) {
         TODO("Not yet implemented")

@@ -15,7 +15,7 @@ object PodcastFirebaseDataModelImpl : PodcastModels, BaseModel() {
 
     override var mFirebaseApi: FirebaseApi = RealtimeDatabaseFirebaseApiImpl
     override fun getCategoryList(
-        onSuccess: (List<RandomPodcastVO>) -> Unit,
+        onSuccess: (List<GenreVO>) -> Unit,
         onFaiure: (String) -> Unit
     ) {
         mFirebaseApi.getCategoryList(onSuccess, onFaiure)

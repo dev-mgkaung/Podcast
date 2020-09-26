@@ -1,12 +1,13 @@
 package mk.podcast.com.networks
 
 import mk.podcast.com.datas.vos.DetailEpisodeVO
+import mk.podcast.com.datas.vos.GenreVO
 import mk.podcast.com.datas.vos.PlayListVO
 import mk.podcast.com.datas.vos.RandomPodcastVO
 
 interface FirebaseApi {
     fun getCategoryList(
-        onSuccess: (podcast: List<RandomPodcastVO>) -> Unit,
+        onSuccess: (podcast: List<GenreVO>) -> Unit,
         onFialure: (String) -> Unit
     )
 

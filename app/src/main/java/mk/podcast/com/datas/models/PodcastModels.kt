@@ -9,7 +9,7 @@ interface PodcastModels {
     var mFirebaseApi: FirebaseApi
 
     fun getCategoryList(
-        onSuccess: (categories: List<RandomPodcastVO>) -> Unit,
+        onSuccess: (categories: List<GenreVO>) -> Unit,
         onFaiure: (String) -> Unit
     )
 
