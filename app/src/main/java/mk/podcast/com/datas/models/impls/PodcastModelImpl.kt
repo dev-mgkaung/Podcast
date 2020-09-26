@@ -13,9 +13,45 @@ import mk.padc.themovie.utils.top_level_only
 import mk.podcast.com.datas.models.BaseModel
 import mk.podcast.com.datas.models.PodcastModels
 import mk.podcast.com.datas.vos.*
+import mk.podcast.com.networks.FirebaseApi
+import mk.podcast.com.networks.PodcastApi
 import mk.podcast.com.utils.startDownloading
 
 object PodcastModelmpl : PodcastModels, BaseModel() {
+
+    override var mFirebaseApi: FirebaseApi
+        get() = TODO("Not yet implemented")
+        set(value) {}
+
+    override fun getCategoryList(
+        onSuccess: (categories: List<RandomPodcastVO>) -> Unit,
+        onFaiure: (String) -> Unit
+    ) {
+        TODO("Not yet implemented")
+    }
+
+    override fun getRandomPodcast(
+        onSuccess: (podcast: List<RandomPodcastVO>) -> Unit,
+        onFialure: (String) -> Unit
+    ) {
+        TODO("Not yet implemented")
+    }
+
+    override fun getPodcatPlayLists(
+        onSuccess: (playlist: List<PlayListVO>) -> Unit,
+        onFialure: (String) -> Unit
+    ) {
+        TODO("Not yet implemented")
+    }
+
+    override fun getPodcastDetailById(
+        podcastID: String,
+        onSuccess: (playlist: List<DetailEpisodeVO>) -> Unit,
+        onFialure: (String) -> Unit
+    ) {
+        TODO("Not yet implemented")
+    }
+
 
     override fun getAllPodCastDataList(onError: (String) -> Unit): LiveData<List<PodcastVO>> {
         return mTheDB.podcastDao().getAllPodcastData()

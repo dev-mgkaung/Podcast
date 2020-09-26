@@ -2,7 +2,6 @@ package mk.podcast.com.datas.models
 
 import android.content.Context
 import mk.padc.themovie.utils.BASE_URL
-import mk.podcast.com.BuildConfig
 import mk.podcast.com.networks.PodcastApi
 import mk.podcast.com.persistances.PodcastDatabase
 import okhttp3.OkHttpClient
