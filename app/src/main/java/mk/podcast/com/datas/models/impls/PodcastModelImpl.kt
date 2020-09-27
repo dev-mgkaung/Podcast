@@ -65,8 +65,7 @@ object PodcastModelmpl : PodcastModels, BaseModel() {
     ) {}
 
     override fun getAllPlayList(onError: (String) -> Unit): LiveData<List<PlayListVO>> {
-        //return mTheDB.playListDao().getAllPlayListData()
-        TODO("Not yet implemented")
+        return mTheDB.playListDao().getAllPlayListData()
     }
 
     @SuppressLint("CheckResult")
@@ -74,20 +73,20 @@ object PodcastModelmpl : PodcastModels, BaseModel() {
         onSuccess: () -> Unit,
         onError: (String) -> Unit
     ) {
-//        mApi.fetchPlayList(PARAM_API_ACCESS_TOKEN,playlistId)
-//            .map { it.items.toList() ?: listOf() }
-//            .subscribeOn(Schedulers.io())
-//            .observeOn(AndroidSchedulers.mainThread())
-//            .subscribe ({
-//                mTheDB.playListDao().insertPlayListData(it)
-//            },{
-//                onError(it.localizedMessage ?: EM_NO_INTERNET_CONNECTION)
-//            })
+        mApi.fetchPlayList(PARAM_API_ACCESS_TOKEN, playlistId)
+            .map { it.items.toList() ?: listOf() }
+            .subscribeOn(Schedulers.io())
+            .observeOn(AndroidSchedulers.mainThread())
+            .subscribe({
+                mTheDB.playListDao().insertPlayListData(it)
+            }, {
+                onError(it.localizedMessage ?: EM_NO_INTERNET_CONNECTION)
+            })
         TODO("Not yet implemented")
     }
 
     override fun getDetailEpisodeData(episodeId: String,onError: (String) -> Unit): LiveData<DetailEpisodeVO> {
-        //return mTheDB.detailDao().getAllDetailDataByEpisodeID(episodeId)
+        return mTheDB.detailDao().getAllDetailDataByEpisodeID(episodeId)
         TODO("Not yet implemented")
     }
 
@@ -106,15 +105,15 @@ object PodcastModelmpl : PodcastModels, BaseModel() {
         onSuccess: (DetailEpisodeVO) -> Unit,
         onError: (String) -> Unit
     ) {
-//        mApi.fetchDetailEpisodeByID(PARAM_API_ACCESS_TOKEN,episodeId)
-//            .map { it }
-//            .subscribeOn(Schedulers.io())
-//            .observeOn(AndroidSchedulers.mainThread())
-//            .subscribe ({
-//                it?.let{data-> mTheDB.detailDao().insertDetailData(data) }
-//            },{
-//                onError(it.localizedMessage ?: EM_NO_INTERNET_CONNECTION)
-//            })
+        mApi.fetchDetailEpisodeByID(PARAM_API_ACCESS_TOKEN, episodeId)
+            .map { it }
+            .subscribeOn(Schedulers.io())
+            .observeOn(AndroidSchedulers.mainThread())
+            .subscribe({
+                it?.let { data -> mTheDB.detailDao().insertDetailData(data) }
+            }, {
+                onError(it.localizedMessage ?: EM_NO_INTERNET_CONNECTION)
+            })
         TODO("Not yet implemented")
     }
 
@@ -139,8 +138,8 @@ object PodcastModelmpl : PodcastModels, BaseModel() {
     }
 
     override fun getRandomPodcastData(onError: (String) -> Unit): LiveData<RandomPodcastVO> {
-        //  return mTheDB.randomPodCastDao().getAllRandomPodCast()
-        TODO("Not yet implemented")
+        return mTheDB.randomPodCastDao().getAllRandomPodCast()
+
     }
 
     @SuppressLint("CheckResult")
@@ -148,17 +147,17 @@ object PodcastModelmpl : PodcastModels, BaseModel() {
         onSuccess: (datavo: RandomPodcastVO) -> Unit,
         onError: (String) -> Unit
     ) {
-//        mApi.fetchRandomPodcastEpisode(PARAM_API_ACCESS_TOKEN)
-//            .map { it }
-//            .subscribeOn(Schedulers.io())
-//            .observeOn(AndroidSchedulers.mainThread())
-//            .subscribe({
-//                it?.let {data ->
-//                    mTheDB.randomPodCastDao().insertRandomPodcast(data)
-//                }
-//            },{
-//                onError(it.localizedMessage ?: EM_NO_INTERNET_CONNECTION)
-//            })
+        mApi.fetchRandomPodcastEpisode(PARAM_API_ACCESS_TOKEN)
+            .map { it }
+            .subscribeOn(Schedulers.io())
+            .observeOn(AndroidSchedulers.mainThread())
+            .subscribe({
+                it?.let { data ->
+                    mTheDB.randomPodCastDao().insertRandomPodcast(data)
+                }
+            }, {
+                onError(it.localizedMessage ?: EM_NO_INTERNET_CONNECTION)
+            })
         TODO("Not yet implemented")
     }
 

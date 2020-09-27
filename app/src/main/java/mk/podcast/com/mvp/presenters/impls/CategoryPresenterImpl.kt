@@ -13,10 +13,12 @@ class CategoryPresenterImpl : CategoryPresenter, BaseAppPresenterImpl<CategoryVi
 
     override fun onUiReady(lifeCycleOwner: LifecycleOwner) {
 
-        mModelImpl.getCategoryList(onSuccess = {
-            mView?.displayCategoryList(it)
-        }, onFailure = {})
+        mModelImpl.getCategoryList(onSuccess = {}, onFailure = {})
 
+        mModelImpl.getCategoryDataList(onError = {})
+            .observe(lifeCycleOwner, Observer {
+                it?.let { mView?.displayCategoryList(it) }
+            })
     }
 
     override fun onTapCategoryListItem() {}

@@ -7,7 +7,6 @@ class PodcastApp : Application()
 {
     override fun onCreate() {
         super.onCreate()
-        //   PodcastModelmpl.initDatabase(applicationContext)
         PodcastFirebaseDataModelImpl.initDatabase(applicationContext)
     }
 }

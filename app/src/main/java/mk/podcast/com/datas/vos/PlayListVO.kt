@@ -1,9 +1,18 @@
 package mk.podcast.com.datas.vos
 
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+import androidx.room.TypeConverters
 import com.google.firebase.database.IgnoreExtraProperties
+import mk.podcast.com.persistances.converters.DataConverter
+import mk.podcast.com.persistances.converters.PodCastVOConverter
+
 @IgnoreExtraProperties
+@Entity(tableName = "playlist")
+@TypeConverters(DataConverter::class, PodCastVOConverter::class)
 data class PlayListVO(
+    @PrimaryKey
     var id: Int? = 0,
     var added_at_ms: Long? = 0,
     var data: DataVO? = null,

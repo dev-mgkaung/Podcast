@@ -11,11 +11,11 @@ import mk.podcast.com.datas.vos.PodcastVO
 
 @Dao
 interface PodcastDao {
-//
-//    @Insert(onConflict = OnConflictStrategy.REPLACE)
-//    fun insertPodcastData(podcasts: PodcastVO)
-//
-//    @Query("select * from podcast")
-//    fun getAllPodcastData(): LiveData<List<PodcastVO>>
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    fun insertPodcastData(podcasts: PodcastVO)
+
+    @Query("select * from podcast")
+    fun getAllPodcastData(): LiveData<List<PodcastVO>>
 
 }

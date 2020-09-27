@@ -10,10 +10,10 @@ import mk.podcast.com.datas.vos.DetailEpisodeVO
 @Dao
 interface DetailDao {
 
-//    @Insert(onConflict = OnConflictStrategy.REPLACE)
-//    fun insertDetailData(data: DetailEpisodeVO)
-//
-//    @Query("select * from detail WHERE id = :detail_id")
-//    fun getAllDetailDataByEpisodeID(detail_id : String): LiveData<DetailEpisodeVO>
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    fun insertDetailData(data: DetailEpisodeVO)
+
+    @Query("select * from detail WHERE id = :detail_id")
+    fun getAllDetailDataByEpisodeID(detail_id: String): LiveData<DetailEpisodeVO>
 
 }

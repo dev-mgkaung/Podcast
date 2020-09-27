@@ -2,6 +2,7 @@ package mk.podcast.com.mvp.presenters.impls
 
 import android.content.Context
 import androidx.lifecycle.LifecycleOwner
+import androidx.lifecycle.Observer
 import mk.padc.share.mvp.presenters.impl.BaseAppPresenterImpl
 import mk.podcast.com.datas.models.impls.PodcastFirebaseDataModelImpl
 import mk.podcast.com.datas.vos.DataVO
@@ -16,14 +17,22 @@ class MainPresenterImpl : MainPresenter, BaseAppPresenterImpl<MainView>() {
 
     override fun onUiReady(lifeCycleOwner: LifecycleOwner) {
 
-        mModelImpl.getPodcatPlayLists(onSuccess = {
-            mView?.displayPodcastList(it)
-        }, onFailure = {})
+        mModelImpl.getPodcatPlayLists(onSuccess = {}, onFailure = {})
 
-        mModelImpl.getRandomPodcast(onSuccess = {
-            mView?.displayRandomPodcastData(it)
-        }, onFailure = {})
+        mModelImpl.getRandomPodcast(onSuccess = {}, onFailure = {})
 
+        mModelImpl.getAllPlayList(onError = {})
+            .observe(lifeCycleOwner, Observer {
+                it?.let {
+                    mView?.displayPodcastList(it)
+                }
+            })
+        mModelImpl.getRandomPodcastData(onError = {})
+            .observe(lifeCycleOwner, Observer {
+                it?.let {
+                    mView?.displayRandomPodcastData(it)
+                }
+            })
     }
 
     override fun onTapPlayListItem(playListVO: PlayListVO) {
