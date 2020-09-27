@@ -14,8 +14,6 @@ class MainPresenterImpl : MainPresenter, BaseAppPresenterImpl<MainView>() {
     var mModelImpl: PodcastFirebaseDataModelImpl = PodcastFirebaseDataModelImpl
 
     override fun onUiReady(lifeCycleOwner: LifecycleOwner) {
-        //Step 1 Data fetch from api and save to database
-
 
         mModelImpl.getPodcatPlayLists(onSuccess = {
             mView?.displayPodcastList(it)
@@ -25,11 +23,10 @@ class MainPresenterImpl : MainPresenter, BaseAppPresenterImpl<MainView>() {
             mView?.displayRandomPodcastData(it)
         }, onFailure = {})
 
-
     }
 
     override fun onTapPlayListItem(playListVO: PlayListVO) {
-        mView?.navigateToDetailScreen(playListVO.data?.data_id)
+        mView?.navigateToDetailScreen(playListVO.data?.id)
     }
 
     override fun onTapDownloadPodcastItem(dataVO: DataVO?) {

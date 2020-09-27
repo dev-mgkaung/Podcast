@@ -5,6 +5,7 @@ import android.content.Context
 import android.content.pm.PackageManager
 import android.os.Bundle
 import android.text.Html
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -102,6 +103,7 @@ class HomeFragment : Fragment(), MainView {
     }
 
     override fun navigateToDetailScreen(episodeID: String?) {
+        Log.e("episode key=", episodeID + "")
         startActivity(episodeID?.let {
             DetailActivity.newIntent(
                 activity as Context,

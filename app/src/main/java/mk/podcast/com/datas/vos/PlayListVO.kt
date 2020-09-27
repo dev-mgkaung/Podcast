@@ -12,7 +12,7 @@ data class PlayListVO(
 )
 
 data class DataVO(
-    var data_id: String? = "",
+    var id: String? = "",
     var audio: String? = "",
     var audio_length_sec: Int? = 0,
     var description: String? = "",
@@ -22,7 +22,7 @@ data class DataVO(
     var listennotes_edit_url: String? = "",
     var listennotes_url: String? = "",
     //   var maybe_audio_invarid: Boolean ?=false,
-    //  var podcast: PodcastVO ?=null,
+    var podcast: PodcastVO? = null,
     var pub_date_ms: Long? = 0,
     var thumbnail: String? = "",
     var title: String? = ""

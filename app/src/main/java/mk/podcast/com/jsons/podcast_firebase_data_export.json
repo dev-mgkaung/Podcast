@@ -190,20 +190,18 @@
         "link": "https://www.npr.org/2020/01/22/798532179/soleimanis-iran",
         "listennotes_edit_url": "https://www.listennotes.com/e/11b34041e804491b9704d11f283c74de/#edit",
         "maybe_audio_invalid": false,
-          "podcast": [
-            {
-              "id": "4d3fe717742d4963a85562e9f84d8c79",
-              "image": "https://cdn-images-1.listennotes.com/podcasts/exponent-ben-thompson-james-allworth-OaJSjb4xQv3.1400x1400.jpg",
-              "listennotes_url": "https://www.listennotes.com/c/4d3fe717742d4963a85562e9f84d8c79/",
-              "publisher": "Planet Broadcasting",
-              "thumbnail": "https://cdn-images-1.listennotes.com/podcasts/exponent-ben-thompson-james-allworth-OaJSjb4xQv3.300x300.jpg",
-              "title": "Star Wars 7x7 | Star Wars News, Interviews, and More!"
-            }
-          ],
-          "pub_date_ms": 1474873200000,
+        "podcast": {
+          "id": "4d3fe717742d4963a85562e9f84d8c79",
+          "image": "https://cdn-images-1.listennotes.com/podcasts/exponent-ben-thompson-james-allworth-OaJSjb4xQv3.1400x1400.jpg",
+          "listennotes_url": "https://www.listennotes.com/c/4d3fe717742d4963a85562e9f84d8c79/",
+          "publisher": "Planet Broadcasting",
           "thumbnail": "https://cdn-images-1.listennotes.com/podcasts/exponent-ben-thompson-james-allworth-OaJSjb4xQv3.300x300.jpg",
-          "title": "Celebration Recap, Jason Fry and Christian Blauvelt Interviews – SWBW #101"
+          "title": "Star Wars 7x7 | Star Wars News, Interviews, and More!"
         },
+        "pub_date_ms": 1474873200000,
+        "thumbnail": "https://cdn-images-1.listennotes.com/podcasts/exponent-ben-thompson-james-allworth-OaJSjb4xQv3.300x300.jpg",
+        "title": "Celebration Recap, Jason Fry and Christian Blauvelt Interviews – SWBW #101"
+      },
       "id": 23,
       "notes": "This is a good episode.",
       "type": "episode"

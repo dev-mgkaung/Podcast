@@ -7,7 +7,7 @@ import com.google.firebase.database.IgnoreExtraProperties
 @IgnoreExtraProperties
 data class PodcastVO(
 
-    var pid: String? = "",
+    var id: String? = "",
     var country: String? = "",
     var description: String? = "",
     var earliest_pub_date_ms: Long? = 0,
@@ -31,7 +31,7 @@ data class PodcastVO(
     @Exclude
     fun toMap(): Map<String, Any?> {
         return mapOf(
-            "pid" to pid,
+            "id" to id,
             "country" to country,
             "description" to description,
             "earliest_pub_date_ms" to earliest_pub_date_ms,
