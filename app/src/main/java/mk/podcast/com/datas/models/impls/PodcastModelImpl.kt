@@ -46,7 +46,7 @@ object PodcastModelmpl : PodcastModels, BaseModel() {
 
     override fun getPodcastDetailById(
         podcastID: String,
-        onSuccess: (playlist: List<DetailEpisodeVO>) -> Unit,
+        onSuccess: (playlist: DetailEpisodeVO) -> Unit,
         onFialure: (String) -> Unit
     ) {
         TODO("Not yet implemented")
@@ -87,7 +87,8 @@ object PodcastModelmpl : PodcastModels, BaseModel() {
     }
 
     override fun getDetailEpisodeData(episodeId: String,onError: (String) -> Unit): LiveData<DetailEpisodeVO> {
-        return mTheDB.detailDao().getAllDetailDataByEpisodeID(episodeId)
+        //return mTheDB.detailDao().getAllDetailDataByEpisodeID(episodeId)
+        TODO("Not yet implemented")
     }
 
     @SuppressLint("CheckResult")
@@ -105,15 +106,16 @@ object PodcastModelmpl : PodcastModels, BaseModel() {
         onSuccess: (DetailEpisodeVO) -> Unit,
         onError: (String) -> Unit
     ) {
-        mApi.fetchDetailEpisodeByID(PARAM_API_ACCESS_TOKEN,episodeId)
-            .map { it }
-            .subscribeOn(Schedulers.io())
-            .observeOn(AndroidSchedulers.mainThread())
-            .subscribe ({
-                it?.let{data-> mTheDB.detailDao().insertDetailData(data) }
-            },{
-                onError(it.localizedMessage ?: EM_NO_INTERNET_CONNECTION)
-            })
+//        mApi.fetchDetailEpisodeByID(PARAM_API_ACCESS_TOKEN,episodeId)
+//            .map { it }
+//            .subscribeOn(Schedulers.io())
+//            .observeOn(AndroidSchedulers.mainThread())
+//            .subscribe ({
+//                it?.let{data-> mTheDB.detailDao().insertDetailData(data) }
+//            },{
+//                onError(it.localizedMessage ?: EM_NO_INTERNET_CONNECTION)
+//            })
+        TODO("Not yet implemented")
     }
 
     override fun getCategoryDataList(onError: (String) -> Unit): LiveData<List<GenreVO>> {

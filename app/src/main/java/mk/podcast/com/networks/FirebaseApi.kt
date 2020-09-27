@@ -8,22 +8,22 @@ import mk.podcast.com.datas.vos.RandomPodcastVO
 interface FirebaseApi {
     fun getCategoryList(
         onSuccess: (podcast: List<GenreVO>) -> Unit,
-        onFialure: (String) -> Unit
+        onFailure: (String) -> Unit
     )
 
     fun getRandomPodcast(
         onSuccess: (podcast: RandomPodcastVO) -> Unit,
-        onFialure: (String) -> Unit
+        onFailure: (String) -> Unit
     )
 
     fun getPodcatPlayLists(
         onSuccess: (playlist: List<PlayListVO>) -> Unit,
-        onFialure: (String) -> Unit
+        onFailure: (String) -> Unit
     )
 
     fun getPodcastDetailById(
         podcastID: String,
-        onSuccess: (playlist: List<DetailEpisodeVO>) -> Unit,
-        onFialure: (String) -> Unit
+        onSuccess: (playlist: DetailEpisodeVO) -> Unit,
+        onFailure: (String) -> Unit
     )
 }

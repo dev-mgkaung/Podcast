@@ -16,32 +16,32 @@ object PodcastFirebaseDataModelImpl : PodcastModels, BaseModel() {
     override var mFirebaseApi: FirebaseApi = RealtimeDatabaseFirebaseApiImpl
     override fun getCategoryList(
         onSuccess: (List<GenreVO>) -> Unit,
-        onFaiure: (String) -> Unit
+        onFailure: (String) -> Unit
     ) {
-        mFirebaseApi.getCategoryList(onSuccess, onFaiure)
+        mFirebaseApi.getCategoryList(onSuccess, onFailure)
     }
 
     override fun getRandomPodcast(
         onSuccess: (podcast: RandomPodcastVO) -> Unit,
-        onFialure: (String) -> Unit
+        onFailure: (String) -> Unit
     ) {
-        mFirebaseApi.getRandomPodcast(onSuccess, onFialure)
+        mFirebaseApi.getRandomPodcast(onSuccess, onFailure)
 
     }
 
     override fun getPodcatPlayLists(
         onSuccess: (playlist: List<PlayListVO>) -> Unit,
-        onFialure: (String) -> Unit
+        onFailure: (String) -> Unit
     ) {
-          mFirebaseApi.getPodcatPlayLists(onSuccess, onFialure)
+        mFirebaseApi.getPodcatPlayLists(onSuccess, onFailure)
     }
 
     override fun getPodcastDetailById(
         podcastID: String,
-        onSuccess: (playlist: List<DetailEpisodeVO>) -> Unit,
-        onFialure: (String) -> Unit
+        onSuccess: (playlist: DetailEpisodeVO) -> Unit,
+        onFailure: (String) -> Unit
     ) {
-        TODO("Not yet implemented")
+        mFirebaseApi.getPodcastDetailById(podcastID, onSuccess, onFailure)
     }
 
     override fun getAllPodCastDataList(onError: (String) -> Unit): LiveData<List<PodcastVO>> {
@@ -71,7 +71,8 @@ object PodcastFirebaseDataModelImpl : PodcastModels, BaseModel() {
         episodeId: String,
         onError: (String) -> Unit
     ): LiveData<DetailEpisodeVO> {
-        return mTheDB.detailDao().getAllDetailDataByEpisodeID(episodeId)
+        // return mTheDB.detailDao().getAllDetailDataByEpisodeID(episodeId)
+        TODO("Not yet implemented")
     }
 
     override fun getDetailFromApiAndSaveToDatabase(

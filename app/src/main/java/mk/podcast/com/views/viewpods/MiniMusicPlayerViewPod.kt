@@ -22,16 +22,17 @@ class MiniMusicPlayerViewPod @JvmOverloads constructor(
     fun getTotalTimeLabel() : TextView {
         return mini_total_time
     }
-    fun getSeekBar() : SeekBar
-    {
+
+    fun getSeekBar(): SeekBar {
         return mini_seekbar
     }
-    fun getCurrentTimeLabel() : TextView {
+
+    fun getCurrentTimeLabel(): TextView {
         return mini_current_time
     }
 
-    fun setUpData(audioUrl: String) {
-        mAudioUri=audioUrl
+    fun setUpData(audioUrl: String?) {
+        mAudioUri = audioUrl.toString()
     }
 
     fun setDelegate(delegate: Delegate) {

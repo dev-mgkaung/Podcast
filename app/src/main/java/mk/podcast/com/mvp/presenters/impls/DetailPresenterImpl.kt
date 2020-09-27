@@ -1,7 +1,6 @@
 package mk.podcast.com.mvp.presenters.impls
 
 import androidx.lifecycle.LifecycleOwner
-import androidx.lifecycle.Observer
 import mk.padc.share.mvp.presenters.impl.BaseAppPresenterImpl
 import mk.podcast.com.datas.models.impls.PodcastFirebaseDataModelImpl
 import mk.podcast.com.mvp.presenters.DetailPresenter
@@ -13,13 +12,10 @@ class DetailPresenterImpl : DetailPresenter, BaseAppPresenterImpl<DetailView>() 
 
     override fun onUiReady(lifeCycleOwner: LifecycleOwner, episodeID: String) {
 
-        mModelImpl.getDetailFromApiAndSaveToDatabase(episodeID, onSuccess = {
-        }, onError = {})
+        mModelImpl.getPodcastDetailById(episodeID, onSuccess = {
+            mView?.displayDetailData(it)
+        }, onFailure = {})
 
-        mModelImpl.getDetailEpisodeData(episodeID, onError = {})
-            .observe(lifeCycleOwner, Observer {
-                it?.let { mView?.displayDetailData(it) }
-            })
     }
 
     override fun  onTap() {}

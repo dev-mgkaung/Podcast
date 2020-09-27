@@ -10,23 +10,23 @@ interface PodcastModels {
 
     fun getCategoryList(
         onSuccess: (categories: List<GenreVO>) -> Unit,
-        onFaiure: (String) -> Unit
+        onFailure: (String) -> Unit
     )
 
     fun getRandomPodcast(
         onSuccess: (podcast: RandomPodcastVO) -> Unit,
-        onFialure: (String) -> Unit
+        onFailure: (String) -> Unit
     )
 
     fun getPodcatPlayLists(
         onSuccess: (playlist: List<PlayListVO>) -> Unit,
-        onFialure: (String) -> Unit
+        onFailure: (String) -> Unit
     )
 
     fun getPodcastDetailById(
         podcastID: String,
-        onSuccess: (playlist: List<DetailEpisodeVO>) -> Unit,
-        onFialure: (String) -> Unit
+        onSuccess: (playlist: DetailEpisodeVO) -> Unit,
+        onFailure: (String) -> Unit
     )
 
 

@@ -15,7 +15,7 @@ class CategoryPresenterImpl : CategoryPresenter, BaseAppPresenterImpl<CategoryVi
 
         mModelImpl.getCategoryList(onSuccess = {
             mView?.displayCategoryList(it)
-        }, onFaiure = {})
+        }, onFailure = {})
 
     }
 

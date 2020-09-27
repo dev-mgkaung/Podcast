@@ -19,11 +19,11 @@ class MainPresenterImpl : MainPresenter, BaseAppPresenterImpl<MainView>() {
 
         mModelImpl.getPodcatPlayLists(onSuccess = {
             mView?.displayPodcastList(it)
-        }, onFialure = {})
+        }, onFailure = {})
 
         mModelImpl.getRandomPodcast(onSuccess = {
             mView?.displayRandomPodcastData(it)
-        }, onFialure = {})
+        }, onFailure = {})
 
 
     }

@@ -92,10 +92,31 @@ object RealtimeDatabaseFirebaseApiImpl : FirebaseApi {
 
     override fun getPodcastDetailById(
         podcastID: String,
-        onSuccess: (playlist: List<DetailEpisodeVO>) -> Unit,
+        onSuccess: (detail: DetailEpisodeVO) -> Unit,
         onFialure: (String) -> Unit
     ) {
-        TODO("Not yet implemented")
+        database.child("datails").addValueEventListener(object : ValueEventListener {
+            override fun onCancelled(error: DatabaseError) {
+                onFialure(error.message)
+            }
+
+            override fun onDataChange(snapshot: DataSnapshot) {
+
+                val detail = DetailEpisodeVO()
+                for (dataSnapShot in snapshot.getChildren()) {
+//                    println("data=" + dataSnapShot.value)
+//                    val entity = PlayListVO()
+//                    entity.id = dataSnapShot.child("id").getValue(Long::class.java)?.toInt()
+//                    entity.added_at_ms = dataSnapShot.child("added_at_ms").getValue(Long::class.java)
+//                    entity.notes = dataSnapShot.child("notes").getValue(String::class.java)
+//                    entity.type = dataSnapShot.child("type").getValue(String::class.java)
+//                    entity.data = dataSnapShot.child("data").getValue(DataVO::class.java)
+//                    playlists.add(entity)
+                }
+
+                onSuccess(detail)
+            }
+        })
     }
 
 
