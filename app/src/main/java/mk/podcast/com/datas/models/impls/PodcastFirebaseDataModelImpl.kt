@@ -33,8 +33,7 @@ object PodcastFirebaseDataModelImpl : PodcastModels, BaseModel() {
         onSuccess: (playlist: List<PlayListVO>) -> Unit,
         onFialure: (String) -> Unit
     ) {
-        //   mFirebaseApi.getPodcatPlayLists(onSuccess, onFialure)
-
+          mFirebaseApi.getPodcatPlayLists(onSuccess, onFialure)
     }
 
     override fun getPodcastDetailById(

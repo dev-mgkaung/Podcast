@@ -1,17 +1,12 @@
 package mk.podcast.com.networks
 
-import android.util.Log
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.ValueEventListener
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
-import mk.podcast.com.datas.vos.DetailEpisodeVO
-import mk.podcast.com.datas.vos.GenreVO
-import mk.podcast.com.datas.vos.PlayListVO
-import mk.podcast.com.datas.vos.RandomPodcastVO
-import mk.podcast.com.networks.responses.GetPlayListResponse
+import mk.podcast.com.datas.vos.*
 
 
 object RealtimeDatabaseFirebaseApiImpl : FirebaseApi {
@@ -49,13 +44,24 @@ object RealtimeDatabaseFirebaseApiImpl : FirebaseApi {
             }
 
             override fun onDataChange(snapshot: DataSnapshot) {
-                val randomPodcast = arrayListOf<RandomPodcastVO>()
-                snapshot.children.forEach { dataSnapShot ->
-                    dataSnapShot.getValue(RandomPodcastVO::class.java)?.let {
-                        randomPodcast.add(it)
+                val randomPodcast = RandomPodcastVO()
+                for (dataSnapShot in snapshot.getChildren())  //--> At this point, ds is an iterator of dataSnapshot; it will iterate the dataSnapshot's children. In this case, the first child's type is String, thus the first iteration of ds will have a type of String.
+                {
+
+
+                    if (snapshot.getChildren().count() > 0) {
+                        randomPodcast.id = dataSnapShot.child("id").getValue(String::class.java)
+                        randomPodcast.audio =
+                            dataSnapShot.child("audio").getValue(String::class.java)
+                        randomPodcast.image =
+                            dataSnapShot.child("thumbnail").getValue(String::class.java)
+                        randomPodcast.title =
+                            dataSnapShot.child("title").getValue(String::class.java)
+                        randomPodcast.description =
+                            dataSnapShot.child("description").getValue(String::class.java)
                     }
                 }
-                onSuccess(randomPodcast.get(0))
+                onSuccess(randomPodcast)
             }
         })
     }
@@ -71,11 +77,20 @@ object RealtimeDatabaseFirebaseApiImpl : FirebaseApi {
 
             override fun onDataChange(snapshot: DataSnapshot) {
                 val playlists = arrayListOf<PlayListVO>()
-                snapshot.children.forEach { dataSnapShot ->
-                    dataSnapShot.getValue(PlayListVO::class.java)?.let {
-                        playlists.add(it)
-                    }
+
+                for (dataSnapShot in snapshot.getChildren()) {
+                    println("data=" + dataSnapShot.value)
+                    val entity = PlayListVO()
+                    entity.id = dataSnapShot.child("id").getValue(Long::class.java)?.toInt()
+                    entity.added_at_ms =
+                        dataSnapShot.child("added_at_ms").getValue(Long::class.java)
+                    entity.notes = dataSnapShot.child("notes").getValue(String::class.java)
+                    entity.type = dataSnapShot.child("type").getValue(String::class.java)
+                    entity.data = dataSnapShot.child("data").getValue(DataVO::class.java)
+                    playlists.add(entity)
+
                 }
+
                 onSuccess(playlists)
             }
         })

@@ -180,17 +180,16 @@
   "playlists": [
     {
       "added_at_ms": 1595567004958,
-      "data": [
-        {
-          "audio": "https://www.listennotes.com/e/p/11b34041e804491b9704d11f283c74de/",
-          "audio_length_sec": 567,
-          "description": "<p>Disney chief Bob Iger shared news about Star Wars movies in 2020 and beyond, but some media outlets gave conflicting reports about it. Here's the real scoop. Punch it!</p> <p>***We’re listener supported! Go to http://Patreon.com/sw7x7 to donate to the Star Wars 7x7 podcast, and you’ll get some fabulous rewards for your pledge.*** </p> <p>Check out SW7x7.com for full Star Wars 7x7 show notes and links, and to comment on any of the content of this episode! If you like what you've heard, please leave us a rating or review on iTunes or Stitcher, which will also help more people discover this Star Wars podcast.</p> <p>Don't forget to join the Star Wars 7x7 fun on Facebook at Facebook.com/SW7x7, and follow the breaking news Twitter feed at Twitter.com/SW7x7Podcast. We're also on Pinterest and Instagram as \\\"SW7x7\\\" too, and we'd love to connect with you there!</p>\\n",
-          "explicit_content": "https://www.listennotes.com/e/4d82e50314174754a3b603912448e812/",
-          "id": "4d82e50314174754a3b603912448e812",
-          "image": "https://cdn-images-1.listennotes.com/podcasts/exponent-ben-thompson-james-allworth-OaJSjb4xQv3.1400x1400.jpg",
-          "link": "https://www.npr.org/2020/01/22/798532179/soleimanis-iran",
-          "listennotes_edit_url": "https://www.listennotes.com/e/11b34041e804491b9704d11f283c74de/#edit",
-          "maybe_audio_invalid": false,
+      "data": {
+        "audio": "https://www.listennotes.com/e/p/11b34041e804491b9704d11f283c74de/",
+        "audio_length_sec": 567,
+        "description": "<p>Disney chief Bob Iger shared news about Star Wars movies in 2020 and beyond, but some media outlets gave conflicting reports about it. Here's the real scoop. Punch it!</p> <p>***We’re listener supported! Go to http://Patreon.com/sw7x7 to donate to the Star Wars 7x7 podcast, and you’ll get some fabulous rewards for your pledge.*** </p> <p>Check out SW7x7.com for full Star Wars 7x7 show notes and links, and to comment on any of the content of this episode! If you like what you've heard, please leave us a rating or review on iTunes or Stitcher, which will also help more people discover this Star Wars podcast.</p> <p>Don't forget to join the Star Wars 7x7 fun on Facebook at Facebook.com/SW7x7, and follow the breaking news Twitter feed at Twitter.com/SW7x7Podcast. We're also on Pinterest and Instagram as \\\"SW7x7\\\" too, and we'd love to connect with you there!</p>\\n",
+        "explicit_content": "https://www.listennotes.com/e/4d82e50314174754a3b603912448e812/",
+        "id": "4d82e50314174754a3b603912448e812",
+        "image": "https://cdn-images-1.listennotes.com/podcasts/exponent-ben-thompson-james-allworth-OaJSjb4xQv3.1400x1400.jpg",
+        "link": "https://www.npr.org/2020/01/22/798532179/soleimanis-iran",
+        "listennotes_edit_url": "https://www.listennotes.com/e/11b34041e804491b9704d11f283c74de/#edit",
+        "maybe_audio_invalid": false,
           "podcast": [
             {
               "id": "4d3fe717742d4963a85562e9f84d8c79",
@@ -204,8 +203,7 @@
           "pub_date_ms": 1474873200000,
           "thumbnail": "https://cdn-images-1.listennotes.com/podcasts/exponent-ben-thompson-james-allworth-OaJSjb4xQv3.300x300.jpg",
           "title": "Celebration Recap, Jason Fry and Christian Blauvelt Interviews – SWBW #101"
-        }
-      ],
+        },
       "id": 23,
       "notes": "This is a good episode.",
       "type": "episode"

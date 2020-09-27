@@ -1,13 +1,10 @@
 package mk.podcast.com.mvp.presenters.impls
 
 import android.content.Context
-import android.util.Log
 import androidx.lifecycle.LifecycleOwner
-import androidx.lifecycle.Observer
 import mk.padc.share.mvp.presenters.impl.BaseAppPresenterImpl
 import mk.podcast.com.datas.models.impls.PodcastFirebaseDataModelImpl
 import mk.podcast.com.datas.vos.DataVO
-import mk.podcast.com.datas.vos.DownloadVO
 import mk.podcast.com.datas.vos.PlayListVO
 import mk.podcast.com.mvp.presenters.MainPresenter
 import mk.podcast.com.mvp.views.MainView
@@ -23,6 +20,7 @@ class MainPresenterImpl : MainPresenter, BaseAppPresenterImpl<MainView>() {
         mModelImpl.getPodcatPlayLists(onSuccess = {
             mView?.displayPodcastList(it)
         }, onFialure = {})
+
         mModelImpl.getRandomPodcast(onSuccess = {
             mView?.displayRandomPodcastData(it)
         }, onFialure = {})
@@ -31,17 +29,17 @@ class MainPresenterImpl : MainPresenter, BaseAppPresenterImpl<MainView>() {
     }
 
     override fun onTapPlayListItem(playListVO: PlayListVO) {
-        mView?.navigateToDetailScreen(playListVO.data.data_id)
+        mView?.navigateToDetailScreen(playListVO.data?.data_id)
     }
 
-    override fun onTapDownloadPodcastItem(dataVO: DataVO) {
+    override fun onTapDownloadPodcastItem(dataVO: DataVO?) {
 
-        val downloadVO: DownloadVO = DownloadVO(
-            dataVO.data_id, dataVO.title, dataVO.description,
-            dataVO.thumbnail, dataVO.title.trim().substring(0,8))
-
-        mModelImpl?.saveDownloadPodcastItem(downloadVO, onSuccess = {}, onError = {})
-        mView?.selectedDownloadPodcastItem(dataVO)
+//        val downloadVO: DownloadVO = DownloadVO(
+//            dataVO.data_id, dataVO.title, dataVO.description,
+//            dataVO.thumbnail, dataVO.title?.trim()!!.substring(0,8))
+//
+//        mModelImpl?.saveDownloadPodcastItem(downloadVO, onSuccess = {}, onError = {})
+//        mView?.selectedDownloadPodcastItem(dataVO)
     }
 
     override fun onDownloadPodcastItem(context: Context, dataVO: DataVO) {

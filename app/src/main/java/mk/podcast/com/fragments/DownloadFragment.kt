@@ -67,8 +67,8 @@ class DownloadFragment : Fragment(), DownloadView {
     }
 
     override fun navigateToDetailScreen(downloadVO: DownloadVO) {
-        startActivity(DetailActivity.newIntent(activity as Context, downloadVO.download_id,
-            DOWNLOADPAGE,downloadVO.download_audio_path))
+//        startActivity(DetailActivity.newIntent(activity as Context, downloadVO.download_id,
+//            DOWNLOADPAGE,downloadVO.download_audio_path))
     }
 
     override fun showErrorMessage(error: String) {}

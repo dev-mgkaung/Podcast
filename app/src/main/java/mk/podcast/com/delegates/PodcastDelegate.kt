@@ -5,5 +5,5 @@ import mk.podcast.com.datas.vos.PlayListVO
 
 interface PodcastDelegate {
     fun onTapPlayListItem(playListVO: PlayListVO)
-    fun onTapDownloadPodcastItem(dataVO: DataVO)
+    fun onTapDownloadPodcastItem(dataVO: DataVO?)
 }

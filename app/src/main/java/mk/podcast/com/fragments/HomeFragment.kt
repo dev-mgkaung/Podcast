@@ -101,8 +101,13 @@ class HomeFragment : Fragment(), MainView {
         mMusicPlayerViewPod.setUpData(data.title, data.description, data.image, data.audio)
     }
 
-    override fun navigateToDetailScreen(episodeID: String) {
-        startActivity(DetailActivity.newIntent(activity as Context, episodeID, HOMEPAGE, ""))
+    override fun navigateToDetailScreen(episodeID: String?) {
+        startActivity(episodeID?.let {
+            DetailActivity.newIntent(
+                activity as Context,
+                it, HOMEPAGE, ""
+            )
+        })
     }
 
     override fun selectedDownloadPodcastItem(data: DataVO) {
@@ -111,7 +116,11 @@ class HomeFragment : Fragment(), MainView {
 
     override fun onTouchPlayPauseImage(audioUrl: String) {
         if (!verifyAvailableNetwork(activity as Activity)) {
-            Toast.makeText(activity as Activity, "Please Check Internet Connection , This is streaming type", Toast.LENGTH_SHORT).show()
+            Toast.makeText(
+                activity as Activity,
+                "Please Check Internet Connection , This is streaming type",
+                Toast.LENGTH_SHORT
+            ).show()
         } else {
             if (!initPlayer) {
                 MyMediaPlayerHelper.initMediaPlayer(
