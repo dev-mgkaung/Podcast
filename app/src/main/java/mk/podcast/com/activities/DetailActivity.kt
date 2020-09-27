@@ -36,7 +36,7 @@ class DetailActivity : AppCompatActivity(), DetailView {
             context: Context,
             dataId: String,
             fromPage: String,
-            assetFilePath: String
+            assetFilePath: String?
         ): Intent {
             val intent = Intent(context, DetailActivity::class.java)
             intent.putExtra(EPISODE_PARAM, dataId)

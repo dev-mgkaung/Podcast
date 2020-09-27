@@ -8,9 +8,9 @@ import com.google.firebase.database.IgnoreExtraProperties
 @Entity(tableName = "downloadtable")
 data class DownloadVO(
     @PrimaryKey
-    val download_id: Int,
-    val donwload_podcast_title: String,
-    val download_podcast_description: String,
-    val download_podcast_url: String,
-    val download_audio_path: String,
+    val download_id: String,
+    val donwload_podcast_title: String? = "",
+    val download_podcast_description: String? = "",
+    val download_podcast_url: String? = "",
+    val download_audio_path: String? = "",
 )
