@@ -14,7 +14,7 @@ data class RandomPodcastVO(
     var listennotes_edit_url: String? = "",
     var listennotes_url: String? = "",
     var maybe_audio_invalid: Boolean? = false,
-    // var podcast: Map<String, PodcastVO> = mapOf() ,
+    var podcast: PodcastVO? = null,
     var pub_date_ms: Long? = 0,
     var thumbnail: String? = "",
     var title: String? = ""

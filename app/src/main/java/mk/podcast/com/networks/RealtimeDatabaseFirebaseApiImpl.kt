@@ -1,7 +1,5 @@
 package mk.podcast.com.networks
 
-import android.content.ContentValues.TAG
-import android.util.Log
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.DatabaseReference
@@ -46,16 +44,11 @@ object RealtimeDatabaseFirebaseApiImpl : FirebaseApi {
             }
 
             override fun onDataChange(snapshot: DataSnapshot) {
-                val randomPodcast = RandomPodcastVO()
-                for (dataSnapShot in snapshot.getChildren())  //--> At this point, ds is an iterator of dataSnapshot; it will iterate the dataSnapshot's children. In this case, the first child's type is String, thus the first iteration of ds will have a type of String.
-                {
-                    randomPodcast.id = dataSnapShot.child("id").getValue(String::class.java)
-                    randomPodcast.audio = dataSnapShot.child("audio").getValue(String::class.java)
-                    randomPodcast.image =
-                        dataSnapShot.child("thumbnail").getValue(String::class.java)
-                    randomPodcast.title = dataSnapShot.child("title").getValue(String::class.java)
-                    randomPodcast.description =
-                        dataSnapShot.child("description").getValue(String::class.java)
+                var randomPodcast = RandomPodcastVO()
+                snapshot.children.forEach { dataSnapShot ->
+                    dataSnapShot.getValue(RandomPodcastVO::class.java)?.let {
+                        randomPodcast = it
+                    }
                 }
                 onSuccess(randomPodcast)
             }
@@ -75,19 +68,11 @@ object RealtimeDatabaseFirebaseApiImpl : FirebaseApi {
 
                 val playlists = arrayListOf<PlayListVO>()
 
-                for (dataSnapShot in snapshot.getChildren()) {
-                    println("data=" + dataSnapShot.value)
-
-                    val entity = PlayListVO()
-                    entity.id = dataSnapShot.child("id").getValue(Long::class.java)?.toInt()
-                    entity.added_at_ms =
-                        dataSnapShot.child("added_at_ms").getValue(Long::class.java)
-
-                    entity.data = dataSnapShot.child("data").getValue(DataVO::class.java)
-
-                    playlists.add(entity)
+                snapshot.children.forEach { dataSnapShot ->
+                    dataSnapShot.getValue(PlayListVO::class.java)?.let {
+                        playlists.add(it)
+                    }
                 }
-
                 onSuccess(playlists)
             }
         })
