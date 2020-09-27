@@ -9,7 +9,7 @@ import mk.podcast.com.datas.vos.*
 import mk.podcast.com.persistances.daos.*
 
 @Database(
-    entities = [PodcastVO::class, GenreVO::class, DetailEpisodeVO::class, RandomPodcastVO::class,PlayListVO::class,DownloadVO::class],
+    entities = [GenreVO::class, DetailEpisodeVO::class, DownloadVO::class],
     version = 5,
     exportSchema = false
 )

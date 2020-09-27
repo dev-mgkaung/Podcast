@@ -4,7 +4,6 @@ import android.text.Html
 import kotlinx.android.synthetic.main.download_podcast_listitem.view.*
 
 import android.view.View
-import kotlinx.android.synthetic.main.podcast_listitem.view.*
 import mk.padc.share.utils.load
 import mk.padc.share.views.viewholders.BaseViewHolder
 import mk.podcast.com.datas.vos.DownloadVO

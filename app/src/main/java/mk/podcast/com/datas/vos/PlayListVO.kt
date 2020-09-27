@@ -1,37 +1,39 @@
 package mk.podcast.com.datas.vos
 
+import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import androidx.room.TypeConverters
-import com.google.gson.annotations.SerializedName
+import com.google.firebase.database.IgnoreExtraProperties
 import mk.podcast.com.persistances.converters.DataConverter
 import mk.podcast.com.persistances.converters.PodCastVOConverter
 
+@IgnoreExtraProperties
 @Entity(tableName = "playlist")
 @TypeConverters(DataConverter::class, PodCastVOConverter::class)
 data class PlayListVO(
     @PrimaryKey
-    @SerializedName("id") val plid: Int,
-    @SerializedName("added_at_ms") val added_at_ms: Long,
-    @SerializedName("data") val data: DataVO,
-    @SerializedName("notes") val notes: String,
-    @SerializedName("type") val type: String
+    val plid: Int,
+    val added_at_ms: Long,
+    val data: DataVO,
+    val notes: String,
+    val type: String
 )
 
 data class DataVO(
-    @SerializedName("id")var data_id: String,
-    @SerializedName("audio")var audio: String,
-    @SerializedName("audio_length_sec")var audio_length_sec: Int,
-    @SerializedName("description")var description: String,
-    @SerializedName("explicit_content")var explicit_content: Boolean,
-    @SerializedName("image")var image: String,
-    @SerializedName("link")var link: String,
-    @SerializedName("listennotes_edit_url")var listennotes_edit_url: String,
-    @SerializedName("listennotes_url")var listennotes_url: String,
-    @SerializedName("maybe_audio_invarid")var maybe_audio_invarid: Boolean,
-    @SerializedName("podcast")var podcast: PodcastVO,
-    @SerializedName("pub_date_ms")var pub_date_ms: Long,
-    @SerializedName("thumbnail")var thumbnail: String,
-    @SerializedName("title")var title: String
+    var data_id: String,
+    var audio: String,
+    var audio_length_sec: Int,
+    var description: String,
+    var explicit_content: Boolean,
+    var image: String,
+    var link: String,
+    var listennotes_edit_url: String,
+    var listennotes_url: String,
+    var maybe_audio_invarid: Boolean,
+    var podcast: PodcastVO,
+    var pub_date_ms: Long,
+    var thumbnail: String,
+    var title: String
 )
 

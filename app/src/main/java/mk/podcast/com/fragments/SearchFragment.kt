@@ -5,14 +5,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import kotlinx.android.synthetic.main.app_content_scrolling.*
-import kotlinx.android.synthetic.main.app_content_scrolling.podcast_recyclerview
 import kotlinx.android.synthetic.main.fragment_search.*
-import kotlinx.android.synthetic.main.fragment_search.view.*
 import mk.padc.share.utils.load
 import mk.podcast.com.R
 import mk.podcast.com.adapters.CategoryRecyclerAdapter
@@ -71,7 +67,7 @@ class SearchFragment : Fragment(), CategoryView {
 
     override fun displayCategoryList(list: List<GenreVO>) {
         mAdapter.setNewData(list.toMutableList())
-        if(list.size>0)category_image.load(list?.get(0).image_url)
+        if (list.size > 0) list?.get(0).image_url?.let { category_image.load(it) }
     }
 
     override fun navigateToDetailScreen()

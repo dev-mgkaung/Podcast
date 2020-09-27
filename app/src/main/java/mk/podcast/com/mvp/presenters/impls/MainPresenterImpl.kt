@@ -5,7 +5,7 @@ import android.util.Log
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.Observer
 import mk.padc.share.mvp.presenters.impl.BaseAppPresenterImpl
-import mk.podcast.com.datas.models.impls.PodcastModelmpl
+import mk.podcast.com.datas.models.impls.PodcastFirebaseDataModelImpl
 import mk.podcast.com.datas.vos.DataVO
 import mk.podcast.com.datas.vos.DownloadVO
 import mk.podcast.com.datas.vos.PlayListVO
@@ -14,26 +14,20 @@ import mk.podcast.com.mvp.views.MainView
 
 class MainPresenterImpl : MainPresenter, BaseAppPresenterImpl<MainView>() {
 
-    var mModelImpl: PodcastModelmpl = PodcastModelmpl
+    var mModelImpl: PodcastFirebaseDataModelImpl = PodcastFirebaseDataModelImpl
 
     override fun onUiReady(lifeCycleOwner: LifecycleOwner) {
         //Step 1 Data fetch from api and save to database
-        mModelImpl.getAllPlayListFromApiAndSaveToDatabase(onSuccess = {}, onError = {})
-        mModelImpl.getRandomPodcastFromApiAndSaveToDatabase(onSuccess = {}, onError = {})
 
-        //Step 2 Data load from database
-        mModelImpl.getAllPlayList(onError = {})
-            .observe(lifeCycleOwner, Observer {
-                it?.let {
-                    mView?.displayPodcastList(it)
-                }
-            })
-        mModelImpl.getRandomPodcastData(onError = {})
-            .observe(lifeCycleOwner, Observer {
-                it?.let {
-                    mView?.displayRandomPodcastData(it)
-                }
-            })
+
+        mModelImpl.getPodcatPlayLists(onSuccess = {
+            mView?.displayPodcastList(it)
+        }, onFialure = {})
+        mModelImpl.getRandomPodcast(onSuccess = {
+            mView?.displayRandomPodcastData(it)
+        }, onFialure = {})
+
+
     }
 
     override fun onTapPlayListItem(playListVO: PlayListVO) {

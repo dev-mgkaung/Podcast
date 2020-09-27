@@ -1,7 +1,6 @@
 package mk.podcast.com.views.viewholders
 
 import android.view.View
-import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.podcast_listitem.view.*
 import mk.padc.share.utils.convertMillisecondToHMS
 import mk.padc.share.utils.load

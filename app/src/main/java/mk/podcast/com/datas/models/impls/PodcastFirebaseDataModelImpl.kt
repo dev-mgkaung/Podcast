@@ -22,7 +22,7 @@ object PodcastFirebaseDataModelImpl : PodcastModels, BaseModel() {
     }
 
     override fun getRandomPodcast(
-        onSuccess: (podcast: List<RandomPodcastVO>) -> Unit,
+        onSuccess: (podcast: RandomPodcastVO) -> Unit,
         onFialure: (String) -> Unit
     ) {
         mFirebaseApi.getRandomPodcast(onSuccess, onFialure)
@@ -33,7 +33,7 @@ object PodcastFirebaseDataModelImpl : PodcastModels, BaseModel() {
         onSuccess: (playlist: List<PlayListVO>) -> Unit,
         onFialure: (String) -> Unit
     ) {
-        mFirebaseApi.getPodcatPlayLists(onSuccess, onFialure)
+        //   mFirebaseApi.getPodcatPlayLists(onSuccess, onFialure)
 
     }
 
@@ -46,7 +46,8 @@ object PodcastFirebaseDataModelImpl : PodcastModels, BaseModel() {
     }
 
     override fun getAllPodCastDataList(onError: (String) -> Unit): LiveData<List<PodcastVO>> {
-        return mTheDB.podcastDao().getAllPodcastData()
+        //  return mTheDB.podcastDao().getAllPodcastData()
+        TODO("Not yet implemented")
     }
 
     override fun getAllPodcastFromApiAndSaveToDatabase(
@@ -56,7 +57,8 @@ object PodcastFirebaseDataModelImpl : PodcastModels, BaseModel() {
     }
 
     override fun getAllPlayList(onError: (String) -> Unit): LiveData<List<PlayListVO>> {
-        return mTheDB.playListDao().getAllPlayListData()
+        //return mTheDB.playListDao().getAllPlayListData()
+        TODO("Not yet implemented")
     }
 
     override fun getAllPlayListFromApiAndSaveToDatabase(
@@ -93,7 +95,8 @@ object PodcastFirebaseDataModelImpl : PodcastModels, BaseModel() {
     }
 
     override fun getRandomPodcastData(onError: (String) -> Unit): LiveData<RandomPodcastVO> {
-        return mTheDB.randomPodCastDao().getAllRandomPodCast()
+        //    return mTheDB.randomPodCastDao().getAllRandomPodCast()
+        TODO("Not yet implemented")
     }
 
     override fun getRandomPodcastFromApiAndSaveToDatabase(

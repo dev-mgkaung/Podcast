@@ -2,8 +2,10 @@ package mk.podcast.com.datas.vos
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import com.google.firebase.database.IgnoreExtraProperties
 import com.google.gson.annotations.SerializedName
 
+@IgnoreExtraProperties
 @Entity(tableName = "downloadtable")
 data class DownloadVO(
        @PrimaryKey

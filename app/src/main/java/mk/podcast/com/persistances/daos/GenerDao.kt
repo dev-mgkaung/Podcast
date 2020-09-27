@@ -7,7 +7,6 @@ import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import mk.podcast.com.datas.vos.GenreVO
 
-
 @Dao
 interface GenerDao {
 

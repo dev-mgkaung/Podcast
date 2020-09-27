@@ -14,7 +14,7 @@ interface PodcastModels {
     )
 
     fun getRandomPodcast(
-        onSuccess: (podcast: List<RandomPodcastVO>) -> Unit,
+        onSuccess: (podcast: RandomPodcastVO) -> Unit,
         onFialure: (String) -> Unit
     )
 

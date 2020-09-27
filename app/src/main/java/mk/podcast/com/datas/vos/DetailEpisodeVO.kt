@@ -1,27 +1,30 @@
 package mk.podcast.com.datas.vos
 
+import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import androidx.room.TypeConverters
+import com.google.firebase.database.IgnoreExtraProperties
 import com.google.gson.annotations.SerializedName
 import mk.podcast.com.persistances.converters.PodCastVOConverter
 
+@IgnoreExtraProperties
 @Entity(tableName = "detail")
 @TypeConverters(PodCastVOConverter::class)
 data class DetailEpisodeVO(
     @PrimaryKey
-    @SerializedName("id") val id: String,
-    @SerializedName("audio")  val audio: String,
-    @SerializedName("audio_length_sec")  val audio_length_sec: Long,
-    @SerializedName("description") val description: String,
-    @SerializedName("explicit_content") val explicit_content: Boolean,
-    @SerializedName("image")  val image: String,
-    @SerializedName("link")   val link: String,
-    @SerializedName("listennotes_edit_url") val listennotes_edit_url: String,
-    @SerializedName("listennotes_url") val listennotes_url: String,
-    @SerializedName("maybe_audio_invalid") val maybe_audio_invalid: Boolean,
-    @SerializedName("podcast") val podcast: PodcastVO,
-    @SerializedName("pub_date_ms") val pub_date_ms: Long,
-    @SerializedName("thumbnail") val thumbnail: String,
-    @SerializedName("title")  val title: String
+    val id: String,
+    val audio: String,
+    val audio_length_sec: Long,
+    val description: String,
+    val explicit_content: Boolean,
+    val image: String,
+    val link: String,
+    val listennotes_edit_url: String,
+    val listennotes_url: String,
+    val maybe_audio_invalid: Boolean,
+    val podcast: PodcastVO,
+    val pub_date_ms: Long,
+    val thumbnail: String,
+    val title: String
 )

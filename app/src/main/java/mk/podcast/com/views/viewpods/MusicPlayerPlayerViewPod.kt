@@ -20,11 +20,11 @@ class MusicPlayerPlayerViewPod @JvmOverloads constructor(
         setUpListener()
     }
 
-    fun setUpData(mtitle: String, mdesc: String,mimageUrl: String, maudioUrl : String) {
-        podcast_title.text= mtitle
-        podcast_description.text= Html.fromHtml(mdesc)
+    fun setUpData(mtitle: String?, mdesc: String?, mimageUrl: String?, maudioUrl: String?) {
+        podcast_title.text = mtitle
+        podcast_description.text = Html.fromHtml(mdesc)
         podcast_ImageView.load(mimageUrl)
-        mAudioUrl=maudioUrl
+        mAudioUrl = maudioUrl
     }
 
     fun getPlayPauseImage() : ImageView{

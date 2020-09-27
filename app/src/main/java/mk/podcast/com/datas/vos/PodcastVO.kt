@@ -1,59 +1,67 @@
 package mk.podcast.com.datas.vos
 
+import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import androidx.room.TypeConverters
+import com.google.firebase.database.IgnoreExtraProperties
 import com.google.gson.annotations.SerializedName
 import mk.podcast.com.persistances.converters.ExtraConverter
 import mk.podcast.com.persistances.converters.GenreIdListConverter
 import mk.podcast.com.persistances.converters.LookingForConverter
 
-@Entity(tableName = "podcast")
-@TypeConverters(ExtraConverter::class, LookingForConverter::class,GenreIdListConverter::class)
+@IgnoreExtraProperties
+//@Entity(tableName = "podcast")
+//@TypeConverters(ExtraConverter::class, LookingForConverter::class, GenreIdListConverter::class)
 data class PodcastVO(
-    @PrimaryKey
-    @SerializedName("id") var pid: String,
-    @SerializedName("country") var country: String,
-    @SerializedName("description") var description: String,
-    @SerializedName("earliest_pub_date_ms") var earliest_pub_date_ms: Long,
-    @SerializedName("email") var email: String,
-    @SerializedName("explicit_content") var explicit_content: Boolean,
-    @SerializedName("extra") var extra: Extra,
-    @SerializedName("genre_ids") var genre_ids: List<Int>,
-    @SerializedName("image") var image: String,
-    @SerializedName("is_claimed") var is_claimed: Boolean,
-    @SerializedName("itunes_id") var itunes_id: Int,
-    @SerializedName("language") var language: String,
-    @SerializedName("latest_pub_date_ms") var latest_pub_date_ms: Long,
-    @SerializedName("listennotes_url") var listennotes_url: String,
-    @SerializedName("looking_for") var looking_for: LookingFor,
-    @SerializedName("publisher") var publisher: String,
-    @SerializedName("rss") var rss: String,
-    @SerializedName("thumbnail") var thumbnail: String,
-    @SerializedName("title") var title: String,
-    @SerializedName("total_episodes") var total_episodes: Int,
-    @SerializedName("type") var type: String,
-    @SerializedName("website") var website: String
-)
 
+    var pid: String? = "",
+    var country: String? = "",
+    var description: String? = "",
+    var earliest_pub_date_ms: Long? = 0,
+    var email: String? = "",
+    var explicit_content: Boolean? = false,
+    //  var extra: Extra ?= null,
+    // var genre_ids: List<Int> ?= null,
+    var image: String? = "",
+    var is_claimed: Boolean? = false,
+    var itunes_id: Int? = 0,
+    var language: String? = "",
+    var latest_pub_date_ms: Long? = 0,
+    var listennotes_url: String? = "",
+    // var looking_for: LookingFor ?= null,
+    var publisher: String? = "",
+    var rss: String? = "",
+    var thumbnail: String? = "",
+    var title: String? = "",
+    var total_episodes: Int? = 0,
+    var type: String? = "",
+    var website: String? = ""
+) {
+    @PrimaryKey(autoGenerate = true)
+    var podcastsId: Int = 0
+}
+
+@IgnoreExtraProperties
 data class LookingFor(
-    @SerializedName("cohosts") val cohosts: Boolean,
-    @SerializedName("cross_promotion") val cross_promotion: Boolean,
-    @SerializedName("guests") val guests: Boolean,
-    @SerializedName("sponsors")  val sponsors: Boolean
+    var cohosts: Boolean? = false,
+    var cross_promotion: Boolean? = false,
+    var guests: Boolean? = false,
+    var sponsors: Boolean? = false
 )
 
+@IgnoreExtraProperties
 data class Extra(
-    @SerializedName("facebook_handle") val facebook_handle: String,
-    @SerializedName("google_url") val google_url: String,
-    @SerializedName("instagram_handle") val instagram_handle: String,
-    @SerializedName("linkedin_url") val linkedin_url: String,
-    @SerializedName("patreon_handle") val patreon_handle: String,
-    @SerializedName("spotify_url")  val spotify_url: String,
-    @SerializedName("twitter_handle") val twitter_handle: String,
-    @SerializedName("url1") val url1: String,
-    @SerializedName("url2") val url2: String,
-    @SerializedName("url3")val url3: String,
-    @SerializedName("wechat_handle")val wechat_handle: String,
-    @SerializedName("youtube_url") val youtube_url: String
+    var facebook_handle: String? = "",
+    var google_url: String? = "",
+    var instagram_handle: String? = "",
+    var linkedin_url: String? = "",
+    var patreon_handle: String? = "",
+    var spotify_url: String? = "",
+    var twitter_handle: String? = "",
+    var url1: String? = "",
+    var url2: String? = "",
+    var url3: String? = "",
+    var wechat_handle: String? = "",
+    var youtube_url: String? = ""
 )

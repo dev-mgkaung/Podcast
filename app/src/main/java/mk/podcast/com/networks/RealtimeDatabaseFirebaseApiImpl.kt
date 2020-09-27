@@ -1,5 +1,6 @@
 package mk.podcast.com.networks
 
+import android.util.Log
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.DatabaseReference
@@ -20,6 +21,7 @@ object RealtimeDatabaseFirebaseApiImpl : FirebaseApi {
         onSuccess: (podcast: List<GenreVO>) -> Unit,
         onFialure: (String) -> Unit
     ) {
+        ;
         database.child("categories").addValueEventListener(object : ValueEventListener {
             override fun onCancelled(error: DatabaseError) {
                 onFialure(error.message)
@@ -38,7 +40,7 @@ object RealtimeDatabaseFirebaseApiImpl : FirebaseApi {
     }
 
     override fun getRandomPodcast(
-        onSuccess: (podcast: List<RandomPodcastVO>) -> Unit,
+        onSuccess: (podcast: RandomPodcastVO) -> Unit,
         onFialure: (String) -> Unit
     ) {
         database.child("random_podcast").addValueEventListener(object : ValueEventListener {
@@ -53,7 +55,7 @@ object RealtimeDatabaseFirebaseApiImpl : FirebaseApi {
                         randomPodcast.add(it)
                     }
                 }
-                onSuccess(randomPodcast)
+                onSuccess(randomPodcast.get(0))
             }
         })
     }

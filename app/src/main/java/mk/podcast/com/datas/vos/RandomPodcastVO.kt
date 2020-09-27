@@ -1,28 +1,33 @@
 package mk.podcast.com.datas.vos
 
+import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import androidx.room.TypeConverters
+import com.google.firebase.database.IgnoreExtraProperties
 import com.google.gson.annotations.SerializedName
 import mk.podcast.com.persistances.converters.PodCastVOConverter
 
-@Entity(tableName = "randompodcast")
-@TypeConverters( PodCastVOConverter::class)
+@IgnoreExtraProperties
+//@Entity(tableName = "randompodcast")
+//@TypeConverters( PodCastVOConverter::class)
 
 data class RandomPodcastVO(
-    @PrimaryKey
-    @SerializedName("id") val id: String,
-    @SerializedName("audio") val audio: String,
-    @SerializedName("audio_length_sec")val audio_length_sec: Int,
-    @SerializedName("description")val description: String,
-    @SerializedName("explicit_content")val explicit_content: Boolean,
-    @SerializedName("image")val image: String,
-    @SerializedName("link")val link: String,
-    @SerializedName("listennotes_edit_url") val listennotes_edit_url: String,
-    @SerializedName("listennotes_url") val listennotes_url: String,
-    @SerializedName("maybe_audio_invalid") val maybe_audio_invalid: Boolean,
-    @SerializedName("podcast") val podcast: PodcastVO,
-    @SerializedName("pub_date_ms") val pub_date_ms: Long,
-    @SerializedName("thumbnail") val thumbnail: String,
-    @SerializedName("title") val title: String
-)
+    var id: String? = "",
+    var audio: String? = "",
+    var audio_length_sec: Int? = 0,
+    var description: String? = "",
+    var explicit_content: Boolean? = false,
+    var image: String? = "",
+    var link: String? = "",
+    var listennotes_edit_url: String? = "",
+    var listennotes_url: String? = "",
+    var maybe_audio_invalid: Boolean? = false,
+    //var podcast: HashMap<String, PodcastVO> = hashMapOf() ,
+    var pub_date_ms: Long? = 0,
+    var thumbnail: String? = "",
+    var title: String? = ""
+) {
+    @PrimaryKey(autoGenerate = true)
+    var podcastId: Int = 0
+}

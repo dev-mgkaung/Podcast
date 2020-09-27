@@ -3,13 +3,13 @@ package mk.podcast.com.mvp.presenters.impls
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.Observer
 import mk.padc.share.mvp.presenters.impl.BaseAppPresenterImpl
-import mk.podcast.com.datas.models.impls.PodcastModelmpl
+import mk.podcast.com.datas.models.impls.PodcastFirebaseDataModelImpl
 import mk.podcast.com.mvp.presenters.DetailPresenter
 import mk.podcast.com.mvp.views.DetailView
 
 class DetailPresenterImpl : DetailPresenter, BaseAppPresenterImpl<DetailView>() {
 
-    var mModelImpl: PodcastModelmpl = PodcastModelmpl
+    var mModelImpl: PodcastFirebaseDataModelImpl = PodcastFirebaseDataModelImpl
 
     override fun onUiReady(lifeCycleOwner: LifecycleOwner, episodeID: String) {
 
