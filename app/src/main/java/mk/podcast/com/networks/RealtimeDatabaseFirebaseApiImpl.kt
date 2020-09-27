@@ -108,15 +108,11 @@ object RealtimeDatabaseFirebaseApiImpl : FirebaseApi {
 
                 var detail = DetailEpisodeVO()
                 for (dataSnapShot in snapshot.getChildren()) {
-
-                    Log.e(TAG, "mkey=" + dataSnapShot.getKey()); //displays
-                    Log.e(TAG, "mkey=" + "$podcastID ")// the key for the node
                     if (podcastID == dataSnapShot.key) {
                         detail = dataSnapShot.child("data").getValue(DetailEpisodeVO::class.java)!!
-                        break;
+                        break
                     }
                 }
-
                 onSuccess(detail)
             }
         })
