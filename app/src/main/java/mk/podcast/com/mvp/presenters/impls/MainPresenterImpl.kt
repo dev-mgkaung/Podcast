@@ -19,9 +19,7 @@ class MainPresenterImpl : MainPresenter, BaseAppPresenterImpl<MainView>() {
 
     override fun onUiReady(lifeCycleOwner: LifecycleOwner) {
 
-        mModelImpl.getAllEpisodesFromFirebase(onSuccess = {
-
-        }, onFailure = {})
+        mModelImpl.getAllEpisodesFromFirebase(onSuccess = {}, onFailure = {})
 
 
         mModelImpl.getAllEpisodeFromDB(onError = {})
