@@ -44,61 +44,65 @@ object MyMediaPlayerHelper
         type: String
     ) {
 
-        mCurrentTime=currentTime
-        mSeekBar=seekBar
-        mPlaypauseImage=playpauseImage
-        mTotalTime=totalTime
+        mCurrentTime = currentTime
+        mSeekBar = seekBar
+        mPlaypauseImage = playpauseImage
+        mTotalTime = totalTime
 
-            //Media Player create
-            mediaPlayer = MediaPlayer().apply {
-                         setAudioAttributes(
-                         AudioAttributes.Builder()
-                        .setContentType(AudioAttributes.CONTENT_TYPE_MUSIC)
-                        .setUsage(AudioAttributes.USAGE_MEDIA)
-                        .build()) }
-
-            mediaPlayer.setOnCompletionListener {
-              mPlaypauseImage.setImageResource(R.drawable.ic_baseline_play_circle_filled_24)
-           }
-
-            try{
-                 if(type == PLAYER_TYPE_STREAMING)
-                    {
-                       mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC)
-                       mediaPlayer.setDataSource(audioUri)
-                       mediaPlayer.prepareAsync()
-                       mCurrentTime.text= "Loading.."
-                    }
-                 else{
-                    mediaPlayer.setDataSource(Environment.getExternalStorageDirectory().absolutePath +"/Download/${audioUri}.mp3")
-                    mediaPlayer.prepare()
-                    }
-             }catch (exception: Exception){}
-
-            mediaPlayer.setOnPreparedListener(OnPreparedListener { playPauseMediaPlayBack(context) })
-
-             // Seek bar change listener
-            mSeekBar.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
-                override fun onProgressChanged(seekBar: SeekBar, progress: Int, fromUser: Boolean) {
-                    if (fromUser) {
-                        try {
-                            mediaPlayer.seekTo(progress)
-                            }catch (e : Exception){}
-                    }
-                }
-                override fun onStartTrackingTouch(seekBar: SeekBar) {}
-                override fun onStopTrackingTouch(seekBar: SeekBar) {}
-            })
-
+        //Media Player create
+        mediaPlayer = MediaPlayer().apply {
+            setAudioAttributes(
+                AudioAttributes.Builder()
+                    .setContentType(AudioAttributes.CONTENT_TYPE_MUSIC)
+                    .setUsage(AudioAttributes.USAGE_MEDIA)
+                    .build()
+            )
         }
 
-     var updateSongTime = object : Runnable {
+        mediaPlayer.setOnCompletionListener {
+            mPlaypauseImage.setImageResource(R.drawable.ic_baseline_play_circle_filled_24)
+        }
+
+        try {
+            if (type == PLAYER_TYPE_STREAMING) {
+                mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC)
+                mediaPlayer.setDataSource(audioUri)
+                mediaPlayer.prepareAsync()
+                mCurrentTime.text = "Loading.."
+            } else {
+                mediaPlayer.setDataSource(Environment.getExternalStorageDirectory().absolutePath + "/Download/${audioUri}.mp3")
+                mediaPlayer.prepare()
+            }
+        } catch (exception: Exception) {
+        }
+
+        mediaPlayer.setOnPreparedListener(OnPreparedListener { playPauseMediaPlayBack(context) })
+
+        // Seek bar change listener
+        mSeekBar.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
+            override fun onProgressChanged(seekBar: SeekBar, progress: Int, fromUser: Boolean) {
+                if (fromUser) {
+                    try {
+                        mediaPlayer.seekTo(progress)
+                    } catch (e: Exception) {
+                    }
+                }
+            }
+
+            override fun onStartTrackingTouch(seekBar: SeekBar) {}
+            override fun onStopTrackingTouch(seekBar: SeekBar) {}
+        })
+
+    }
+
+    var updateSongTime = object : Runnable {
         override fun run() {
             playTime = mediaPlayer.currentPosition
-            mCurrentTime.text =String.format(
+            mCurrentTime.text = String.format(
                 "%d min, %d sec", TimeUnit.MILLISECONDS.toMinutes(playTime.toLong()),
-                     (TimeUnit.MILLISECONDS.toSeconds(playTime.toLong()) - TimeUnit.MINUTES.toSeconds(
-                    TimeUnit.MILLISECONDS.toMinutes(playTime.toLong())))
+                (TimeUnit.MILLISECONDS.toSeconds(playTime.toLong()) - TimeUnit.MINUTES.toSeconds(
+                    TimeUnit.MILLISECONDS.toMinutes(playTime.toLong())
+                ))
             )
             mSeekBar.progress = playTime
             handler.postDelayed(this, 1000)
@@ -110,8 +114,7 @@ object MyMediaPlayerHelper
         mediaPlayer.stop()
     }
 
-     fun forwardMediaPlayBack(context: Activity)
-    {
+    fun forwardMediaPlayBack(context: Activity) {
         if ((playTime + forwardTime) <= endTime) {
             playTime += forwardTime
             mediaPlayer.seekTo(playTime)
@@ -161,8 +164,7 @@ object MyMediaPlayerHelper
         mediaPlayer.release()
     }
 
-     fun backwardMediaPlayBack(context: Activity)
-    {
+    fun backwardMediaPlayBack(context: Activity) {
         if ((playTime - backwardTime) > 0) {
             playTime -= backwardTime
             mediaPlayer.seekTo(playTime)

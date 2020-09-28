@@ -1,15 +1,17 @@
 package mk.podcast.com.mvp.presenters.impls
 
 import android.content.Context
+import android.util.Log
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.Observer
 import mk.padc.share.mvp.presenters.impl.BaseAppPresenterImpl
+import mk.padc.share.utils.randomNumber
 import mk.podcast.com.datas.models.impls.PodcastFirebaseDataModelImpl
-import mk.podcast.com.datas.vos.DataVO
 import mk.podcast.com.datas.vos.DownloadVO
-import mk.podcast.com.datas.vos.PlayListVO
+import mk.podcast.com.datas.vos.EpisodeVO
 import mk.podcast.com.mvp.presenters.MainPresenter
 import mk.podcast.com.mvp.views.MainView
+import mk.podcast.com.utils.SharedPreferenceHelper
 
 class MainPresenterImpl : MainPresenter, BaseAppPresenterImpl<MainView>() {
 
@@ -17,29 +19,33 @@ class MainPresenterImpl : MainPresenter, BaseAppPresenterImpl<MainView>() {
 
     override fun onUiReady(lifeCycleOwner: LifecycleOwner) {
 
-        mModelImpl.getPodcatPlayLists(onSuccess = {}, onFailure = {})
+        mModelImpl.getAllEpisodesFromFirebase(onSuccess = {
 
-        mModelImpl.getRandomPodcast(onSuccess = {}, onFailure = {})
+        }, onFailure = {})
 
-        mModelImpl.getAllPlayList(onError = {})
+
+        mModelImpl.getAllEpisodeFromDB(onError = {})
             .observe(lifeCycleOwner, Observer {
+                mView?.displayPodcastList(it)
                 it?.let {
-                    mView?.displayPodcastList(it)
-                }
-            })
-        mModelImpl.getRandomPodcastData(onError = {})
-            .observe(lifeCycleOwner, Observer {
-                it?.let {
-                    mView?.displayRandomPodcastData(it)
+                    val result = randomNumber(0, it.size)
+                    randomPodcast(lifeCycleOwner, it.get(result).id)
                 }
             })
     }
 
-    override fun onTapPlayListItem(playListVO: PlayListVO) {
-        mView?.navigateToDetailScreen(playListVO.data?.id)
+    fun randomPodcast(lifeCycleOwner: LifecycleOwner, episodeID: String) {
+        mModelImpl.getDetailEpisodeDataByID(episodeID, onError = {})
+            .observe(lifeCycleOwner, Observer {
+                mView?.displayRandomPodcastData(it)
+            })
     }
 
-    override fun onTapDownloadPodcastItem(dataVO: DataVO?) {
+    override fun onTapPlayListItem(playListVO: EpisodeVO) {
+        mView?.navigateToDetailScreen(playListVO?.id)
+    }
+
+    override fun onTapDownloadPodcastItem(dataVO: EpisodeVO?) {
 
         val downloadVO: DownloadVO = DownloadVO(
             dataVO!!.id.toString(), dataVO?.title, dataVO?.description,
@@ -50,7 +56,7 @@ class MainPresenterImpl : MainPresenter, BaseAppPresenterImpl<MainView>() {
         mView?.selectedDownloadPodcastItem(dataVO)
     }
 
-    override fun onDownloadPodcastItem(context: Context, dataVO: DataVO) {
+    override fun onDownloadPodcastItem(context: Context, dataVO: EpisodeVO) {
         mModelImpl.startDownloadPodcast(context, dataVO)
     }
 

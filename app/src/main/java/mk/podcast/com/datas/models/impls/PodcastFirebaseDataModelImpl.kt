@@ -14,7 +14,7 @@ import mk.podcast.com.utils.startDownloading
 object PodcastFirebaseDataModelImpl : PodcastModels, BaseModel() {
 
     override var mFirebaseApi: FirebaseApi = RealtimeDatabaseFirebaseApiImpl
-    override fun getCategoryList(
+    override fun getCategoryListFromFirebase(
         onSuccess: (List<GenreVO>) -> Unit,
         onFailure: (String) -> Unit
     ) {
@@ -23,37 +23,17 @@ object PodcastFirebaseDataModelImpl : PodcastModels, BaseModel() {
         }, onFailure = { onFailure(it) })
     }
 
-    override fun getRandomPodcast(
-        onSuccess: (podcast: RandomPodcastVO) -> Unit,
+
+    override fun getAllEpisodesFromFirebase(
+        onSuccess: (playlist: List<EpisodeVO>) -> Unit,
         onFailure: (String) -> Unit
     ) {
-        mFirebaseApi.getRandomPodcast(onSuccess = {
-            mTheDB.randomPodCastDao().insertRandomPodcast(it)
-        }, onFailure =
-        { onFailure(it) })
-
-    }
-
-    override fun getPodcatPlayLists(
-        onSuccess: (playlist: List<PlayListVO>) -> Unit,
-        onFailure: (String) -> Unit
-    ) {
-        mFirebaseApi.getPodcatPlayLists(onSuccess = {
-            mTheDB.playListDao().insertPlayListData(it)
+        mFirebaseApi.getAllEpisodes(onSuccess = {
+            mTheDB.episodeDao().insertAllEpisodes(it)
         }, onFailure =
         { onFailure(it) })
     }
 
-    override fun getPodcastDetailById(
-        podcastID: String,
-        onSuccess: (playlist: DetailEpisodeVO) -> Unit,
-        onFailure: (String) -> Unit
-    ) {
-        mFirebaseApi.getPodcastDetailById(podcastID, onSuccess = {
-            mTheDB.detailDao().insertDetailData(it)
-        },
-            onFailure = { onFailure(it) })
-    }
 
     override fun getAllPodCastDataList(onError: (String) -> Unit): LiveData<List<PodcastVO>> {
         return mTheDB.podcastDao().getAllPodcastData()
@@ -65,8 +45,8 @@ object PodcastFirebaseDataModelImpl : PodcastModels, BaseModel() {
     ) {
     }
 
-    override fun getAllPlayList(onError: (String) -> Unit): LiveData<List<PlayListVO>> {
-        return mTheDB.playListDao().getAllPlayListData()
+    override fun getAllEpisodeFromDB(onError: (String) -> Unit): LiveData<List<EpisodeVO>> {
+        return mTheDB.episodeDao().getAllEpisodes()
     }
 
     override fun getAllPlayListFromApiAndSaveToDatabase(
@@ -76,17 +56,16 @@ object PodcastFirebaseDataModelImpl : PodcastModels, BaseModel() {
         TODO("Not yet implemented")
     }
 
-    override fun getDetailEpisodeData(
+    override fun getDetailEpisodeDataByID(
         episodeId: String,
         onError: (String) -> Unit
-    ): LiveData<DetailEpisodeVO> {
-        return mTheDB.detailDao().getAllDetailDataByEpisodeID(episodeId)
-
+    ): LiveData<EpisodeVO> {
+        return mTheDB.episodeDao().getAllDetailDataByEpisodeID(episodeId)
     }
 
     override fun getDetailFromApiAndSaveToDatabase(
         episodeId: String,
-        onSuccess: (detailVO: DetailEpisodeVO) -> Unit,
+        onSuccess: (detailVO: EpisodeVO) -> Unit,
         onError: (String) -> Unit
     ) {
         TODO("Not yet implemented")
@@ -103,19 +82,18 @@ object PodcastFirebaseDataModelImpl : PodcastModels, BaseModel() {
         TODO("Not yet implemented")
     }
 
-    override fun getRandomPodcastData(onError: (String) -> Unit): LiveData<RandomPodcastVO> {
-        return mTheDB.randomPodCastDao().getAllRandomPodCast()
-
+    override fun getRandomPodcastData(onError: (String) -> Unit): LiveData<List<EpisodeVO>> {
+        return mTheDB.episodeDao().getAllEpisodes()
     }
 
     override fun getRandomPodcastFromApiAndSaveToDatabase(
-        onSuccess: (datavo: RandomPodcastVO) -> Unit,
+        onSuccess: (datavo: EpisodeVO) -> Unit,
         onError: (String) -> Unit
     ) {
         TODO("Not yet implemented")
     }
 
-    override fun startDownloadPodcast(context: Context, dataVO: DataVO) {
+    override fun startDownloadPodcast(context: Context, dataVO: EpisodeVO) {
         Toast.makeText(context, "Start Downloading", Toast.LENGTH_LONG).show()
         startDownloading(context, dataVO)
     }

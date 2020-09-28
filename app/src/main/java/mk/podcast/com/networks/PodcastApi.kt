@@ -2,8 +2,7 @@ package mk.podcast.com.networks
 
 import io.reactivex.Observable
 import mk.padc.themovie.utils.*
-import mk.podcast.com.datas.vos.DetailEpisodeVO
-import mk.podcast.com.datas.vos.RandomPodcastVO
+import mk.podcast.com.datas.vos.EpisodeVO
 import mk.podcast.com.networks.responses.GetBestPodcastResponse
 import mk.podcast.com.networks.responses.GetGenericsResponse
 import mk.podcast.com.networks.responses.GetPlayListResponse
@@ -26,7 +25,7 @@ interface PodcastApi {
     fun fetchDetailEpisodeByID(
         @Header(API_KEY_PARAM) apiKey: String,
         @Path(ID_PARAM) id: String,
-    ): Observable<DetailEpisodeVO>
+    ): Observable<EpisodeVO>
 
 
     /* Fetch a list of podcast genres */
@@ -52,7 +51,7 @@ interface PodcastApi {
     @GET(GET_JUST_LISTEN)
     fun fetchRandomPodcastEpisode(
         @Header(API_KEY_PARAM) apiKey: String,
-    ): Observable<RandomPodcastVO>
+    ): Observable<EpisodeVO>
 
 
 }

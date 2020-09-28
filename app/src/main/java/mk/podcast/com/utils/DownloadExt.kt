@@ -4,12 +4,11 @@ import android.app.DownloadManager
 import android.content.Context
 import android.net.Uri
 import android.os.Environment
-import mk.podcast.com.datas.vos.DataVO
+import mk.podcast.com.datas.vos.EpisodeVO
 
-fun startDownloading(context: Context,data : DataVO)
-{
+fun startDownloading(context: Context, data: EpisodeVO) {
     //download request
-    val request  = DownloadManager.Request(Uri.parse(data.audio))
+    val request = DownloadManager.Request(Uri.parse(data.audio))
         .apply {
             setAllowedNetworkTypes(DownloadManager.Request.NETWORK_WIFI or DownloadManager.Request.NETWORK_MOBILE)
             setTitle(data.title)

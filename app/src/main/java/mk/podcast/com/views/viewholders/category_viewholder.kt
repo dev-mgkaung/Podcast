@@ -22,7 +22,6 @@ class CategoryViewHolder(itemView: View, private val mDelegate: CategoryDelegate
     override fun bindData(data: GenreVO) {
         mData = data
         itemView.cateogry_title.text=mData?.name
-        mData?.image_url?.let { itemView.category_image.load(it) }
     }
 
 }

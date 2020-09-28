@@ -13,9 +13,7 @@ class DetailPresenterImpl : DetailPresenter, BaseAppPresenterImpl<DetailView>() 
 
     override fun onUiReady(lifeCycleOwner: LifecycleOwner, episodeID: String) {
 
-        mModelImpl.getPodcastDetailById(episodeID, onSuccess = {}, onFailure = {})
-
-        mModelImpl.getDetailEpisodeData(episodeID, onError = {})
+        mModelImpl.getDetailEpisodeDataByID(episodeID, onError = {})
             .observe(lifeCycleOwner, Observer {
                 it?.let { mView?.displayDetailData(it) }
             })

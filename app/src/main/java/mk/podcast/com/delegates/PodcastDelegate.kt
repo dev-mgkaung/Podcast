@@ -1,9 +1,9 @@
 package mk.podcast.com.delegates
 
-import mk.podcast.com.datas.vos.DataVO
-import mk.podcast.com.datas.vos.PlayListVO
+import mk.podcast.com.datas.vos.EpisodeVO
+
 
 interface PodcastDelegate {
-    fun onTapPlayListItem(playListVO: PlayListVO)
-    fun onTapDownloadPodcastItem(dataVO: DataVO?)
+    fun onTapPlayListItem(episodeVO: EpisodeVO)
+    fun onTapDownloadPodcastItem(episodeVO: EpisodeVO?)
 }

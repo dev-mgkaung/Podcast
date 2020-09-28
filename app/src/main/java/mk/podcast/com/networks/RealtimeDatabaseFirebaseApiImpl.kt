@@ -17,7 +17,7 @@ object RealtimeDatabaseFirebaseApiImpl : FirebaseApi {
         onFialure: (String) -> Unit
     ) {
         ;
-        database.child("categories").addValueEventListener(object : ValueEventListener {
+        database.child("genres").addValueEventListener(object : ValueEventListener {
             override fun onCancelled(error: DatabaseError) {
                 onFialure(error.message)
             }
@@ -34,42 +34,21 @@ object RealtimeDatabaseFirebaseApiImpl : FirebaseApi {
         })
     }
 
-    override fun getRandomPodcast(
-        onSuccess: (podcast: RandomPodcastVO) -> Unit,
+    override fun getAllEpisodes(
+        onSuccess: (playlist: List<EpisodeVO>) -> Unit,
         onFialure: (String) -> Unit
     ) {
-        database.child("random_podcast").addValueEventListener(object : ValueEventListener {
-            override fun onCancelled(error: DatabaseError) {
-                onFialure(error.message)
-            }
-
-            override fun onDataChange(snapshot: DataSnapshot) {
-                var randomPodcast = RandomPodcastVO()
-                snapshot.children.forEach { dataSnapShot ->
-                    dataSnapShot.getValue(RandomPodcastVO::class.java)?.let {
-                        randomPodcast = it
-                    }
-                }
-                onSuccess(randomPodcast)
-            }
-        })
-    }
-
-    override fun getPodcatPlayLists(
-        onSuccess: (playlist: List<PlayListVO>) -> Unit,
-        onFialure: (String) -> Unit
-    ) {
-        database.child("playlists").addValueEventListener(object : ValueEventListener {
+        database.child("latest_episodes").addValueEventListener(object : ValueEventListener {
             override fun onCancelled(error: DatabaseError) {
                 onFialure(error.message)
             }
 
             override fun onDataChange(snapshot: DataSnapshot) {
 
-                val playlists = arrayListOf<PlayListVO>()
+                val playlists = arrayListOf<EpisodeVO>()
 
                 snapshot.children.forEach { dataSnapShot ->
-                    dataSnapShot.getValue(PlayListVO::class.java)?.let {
+                    dataSnapShot.getValue(EpisodeVO::class.java)?.let {
                         playlists.add(it)
                     }
                 }
@@ -77,31 +56,5 @@ object RealtimeDatabaseFirebaseApiImpl : FirebaseApi {
             }
         })
     }
-
-    override fun getPodcastDetailById(
-        podcastID: String,
-        onSuccess: (detail: DetailEpisodeVO) -> Unit,
-        onFialure: (String) -> Unit
-    ) {
-
-        database.child("details").addValueEventListener(object : ValueEventListener {
-            override fun onCancelled(error: DatabaseError) {
-                onFialure(error.message)
-            }
-
-            override fun onDataChange(snapshot: DataSnapshot) {
-
-                var detail = DetailEpisodeVO()
-                for (dataSnapShot in snapshot.getChildren()) {
-                    if (podcastID == dataSnapShot.key) {
-                        detail = dataSnapShot.child("data").getValue(DetailEpisodeVO::class.java)!!
-                        break
-                    }
-                }
-                onSuccess(detail)
-            }
-        })
-    }
-
 
 }

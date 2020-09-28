@@ -25,15 +25,15 @@ import mk.podcast.com.views.viewpods.EmptyViewPod
 
 class ProfileFragment : Fragment() {
 
-    private var playWhenReady = false
-    private var currentWindow = 0
-    private var playbackPosition: Long = 0
-    private lateinit var player: SimpleExoPlayer
-    private lateinit var mplayerview : PlayerControlView
-    private  var audioUrl= "https://www.listennotes.com/e/p/50d0110bec79414eac61cb472c3c1de2/"
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
+//    private var playWhenReady = false
+//    private var currentWindow = 0
+//    private var playbackPosition: Long = 0
+//    private lateinit var player: SimpleExoPlayer
+//    private lateinit var mplayerview : PlayerControlView
+//    private  var audioUrl= "https://www.listennotes.com/e/p/50d0110bec79414eac61cb472c3c1de2/"
+override fun onCreate(savedInstanceState: Bundle?) {
+    super.onCreate(savedInstanceState)
+}
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -44,43 +44,42 @@ class ProfileFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        mplayerview = playerview as PlayerControlView
-        initPlayer()
+        //  mplayerview = playerview as PlayerControlView
+        // initPlayer()
     }
 
-    fun initPlayer()
-    {
-        val trackSelector = DefaultTrackSelector()
-        val loadControl = DefaultLoadControl()
-        val renderersFactory = DefaultRenderersFactory(activity as Context)
-        player = ExoPlayerFactory.newSimpleInstance(activity as Context, renderersFactory, trackSelector, loadControl)
-        play(audioUrl)
+    fun initPlayer() {
+//        val trackSelector = DefaultTrackSelector()
+//        val loadControl = DefaultLoadControl()
+//        val renderersFactory = DefaultRenderersFactory(activity as Context)
+//        player = ExoPlayerFactory.newSimpleInstance(activity as Context, renderersFactory, trackSelector, loadControl)
+//        play(audioUrl)
     }
 
      fun play(url: String) {
-         mplayerview.setPlayer(player)
-        //1
-        val userAgent = USER_AGENT
-        //2
-        val mediaSource = ExtractorMediaSource
-            .Factory(DefaultDataSourceFactory(context, userAgent))
-            .setExtractorsFactory(DefaultExtractorsFactory())
-            .createMediaSource(Uri.parse(url))
-        //3
-        player.prepare(mediaSource)
-        //4
-         player.playWhenReady = true
-    }
+//         mplayerview.setPlayer(player)
+//        //1
+//        val userAgent = USER_AGENT
+//        //2
+//        val mediaSource = ExtractorMediaSource
+//            .Factory(DefaultDataSourceFactory(context, userAgent))
+//            .setExtractorsFactory(DefaultExtractorsFactory())
+//            .createMediaSource(Uri.parse(url))
+//        //3
+//        player.prepare(mediaSource)
+//        //4
+//         player.playWhenReady = true
+     }
 
     override fun onDestroy() {
         super.onDestroy()
-        releasePlayer()
+        // releasePlayer()
     }
 
      fun releasePlayer() {
-        player.stop()
-        player.release()
-    }
+         //  player.stop()
+         //   player.release()
+     }
 
     companion object {
         @JvmStatic

@@ -1,380 +1,726 @@
 {
-  "categories": [
+  "podcasts": [
     {
-      "id": 140,
-      "image_url": "https://assets.blubrry.com/coverart/orig/401454.jpg",
-      "name": "Web Design",
-      "parent_id": 127
-    },
-    {
-      "id": 150,
-      "image_url": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts113/v4/a8/88/ec/a888ec29-28c8-b919-c4de-2d83c87b5614/mza_2439586863345304303.jpg/600x600bb.jpg",
-      "name": "Art Design",
-      "parent_id": 128
-    },
-    {
-      "id": 160,
-      "image_url": "https://ssl-static.libsyn.com/p/assets/3/2/f/b/32fbb6133d06dd5b/The_Fearless_CEO.jpg",
-      "name": "Mobile Design",
-      "parent_id": 129
-    },
-    {
-      "id": 170,
-      "image_url": "https://megaphone.imgix.net/podcasts/c3e3e56c-0241-11e9-8252-ab12ef566332/image/uploads_2F1557246281502-92z8orlej4-a08f643ed8cc04b016aba8b506c20783_2FTrinet_5BPivot_5D-Podcast_5BRecode_5D-180925-km.jpg?ixlib=rails-2.1.2",
-      "name": "Destop Design",
-      "parent_id": 130
-    }
-  ],
-  "details": {
-    "4d82e50314174754a3b603912448e812": {
-      "data": {
-        "audio": "https://www.listennotes.com/e/p/11b34041e804491b9704d11f283c74de/",
-        "audio_length_sec": 567,
-        "description": "<p>Disney chief Bob Iger shared news about Star Wars movies in 2020 and beyond, but some media outlets gave conflicting reports about it. Here's the real scoop. Punch it!</p> <p>***We’re listener supported! Go to http://Patreon.com/sw7x7 to donate to the Star Wars 7x7 podcast, and you’ll get some fabulous rewards for your pledge.*** </p> <p>Check out SW7x7.com for full Star Wars 7x7 show notes and links, and to comment on any of the content of this episode! If you like what you've heard, please leave us a rating or review on iTunes or Stitcher, which will also help more people discover this Star Wars podcast.</p> <p>Don't forget to join the Star Wars 7x7 fun on Facebook at Facebook.com/SW7x7, and follow the breaking news Twitter feed at Twitter.com/SW7x7Podcast. We're also on Pinterest and Instagram as \"SW7x7\" too, and we'd love to connect with you there!</p>\n",
-        "explicit_content": false,
-        "id": "4d82e50314174754a3b603912448e812",
-        "image": "https://cdn-images-1.listennotes.com/podcasts/exponent-ben-thompson-james-allworth-OaJSjb4xQv3.1400x1400.jpg",
-        "link": "https://www.npr.org/2020/01/22/798532179/soleimanis-iran",
-        "listennotes_edit_url": "https://www.listennotes.com/e/11b34041e804491b9704d11f283c74de/#edit",
-        "listennotes_url": "https://www.listennotes.com/e/4d82e50314174754a3b603912448e812/",
-        "maybe_audio_invalid": false,
-        "podcast": {
-          "id": "4d3fe717742d4963a85562e9f84d8c79",
-          "image": "https://cdn-images-1.listennotes.com/podcasts/exponent-ben-thompson-james-allworth-OaJSjb4xQv3.1400x1400.jpg",
-          "listennotes_url": "https://www.listennotes.com/c/4d3fe717742d4963a85562e9f84d8c79/",
-          "publisher": "Planet Broadcasting",
-          "thumbnail": "https://cdn-images-1.listennotes.com/podcasts/exponent-ben-thompson-james-allworth-OaJSjb4xQv3.300x300.jpg",
-          "title": "Star Wars 7x7 | Star Wars News, Interviews, and More!"
-        },
-        "pub_date_ms": 1474873200000,
-        "thumbnail": "https://cdn-images-1.listennotes.com/podcasts/exponent-ben-thompson-james-allworth-OaJSjb4xQv3.300x300.jpg",
-        "title": "Celebration Recap, Jason Fry and Christian Blauvelt Interviews – SWBW #101"
-      }
-    },
-    "50d0110bec79414eac61cb472c3c1de2": {
-      "data": {
-        "audio": "https://www.listennotes.com/e/p/50d0110bec79414eac61cb472c3c1de2/",
-        "audio_length_sec": 2445,
-        "description": "<p>Elise Hu is a host-at-large based at NPR West in Culver City, Calif. Previously, she explored the future with her video series, Gracie Award from the Alliance for Women in Media for her video series, <em>Elise Tries</em><a href=https://www.npr.org/2019/05/06/716414780/videos-future-you><em>Future You with Elise Hu</em></a>, and served as the founding bureau chief and International Correspondent for NPR's Seoul office. She was based in Seoul for nearly four years, responsible for the network's coverage of both Koreas and Japan, and filed from a dozen countries across Asia. Before joining NPR, she was one of the founding reporters at <a href=http://www.texastribune.org/>The Texas Tribune</a> a non-profit digital news startup devoted to politics and public policy. While at the Tribune, Hu oversaw television partnerships and multimedia projects, contributed to <em>The New York Times</em> expanded Texas coverage, and pushed for editorial innovation across platforms.Her work at NPR has earned a DuPont-Columbia award and a Her previous work has earned a Gannett Foundation Award for Innovation in Watchdog Journalism, a National Edward R. Murrow award for best online video, and beat reporting awards from the Texas Associated Press. <em>The Austin Chronicle</em> once dubiously named her the <a href =http://www.austinchronicle.com/gyrobase/Awards/BestOfAustin?Award=660138>Best TV Reporter Who Can Write < /a>.</p ><p>",
-        "explicit_content": false,
-        "id": "50d0110bec79414eac61cb472c3c1de2",
-        "image": "https://cdn-images-1.listennotes.com/podcasts/rise-of-the-young-casey-adams-v_hFQlZeGx2-YuarHs5lfDI.1400x1400.jpg",
-        "link": "https://anchor.fm/caseyadams/episodes/Elise-Hu---Hosting-TED-Talks-Daily--The-Future-of-Podcasting-ecfp5b?utm_source=listennotes.com&utm_campaign=Listen+Notes&utm_medium=website",
-        "listennotes_edit_url": "https://www.listennotes.com/e/50d0110bec79414eac61cb472c3c1de2/edit",
-        "listennotes_url": "https://www.listennotes.com/e/50d0110bec79414eac61cb472c3c1de2/",
-        "maybe_audio_invalid": false,
-        "podcast": {
-          "id": "11362a0682e744b29ce5ea73c920132e",
-          "image": "https://cdn-images-1.listennotes.com/podcasts/rise-of-the-young-casey-adams-v_hFQlZeGx2-YuarHs5lfDI.1400x1400.jpg",
-          "listennotes_url": "https://www.listennotes.com/c/11362a0682e744b29ce5ea73c920132e/",
-          "publisher": "Casey Adams",
-          "thumbnail": "https://cdn-images-1.listennotes.com/podcasts/rise-of-the-young-casey-adams-VrKjhGOgkuf-YuarHs5lfDI.300x300.jpg",
-          "title": "Rise of The Young"
-        },
-        "pub_date_ms": 1586266731038,
-        "thumbnail": "https://cdn-images-1.listennotes.com/podcasts/rise-of-the-young-casey-adams-VrKjhGOgkuf-YuarHs5lfDI.300x300.jpg",
-        "title": "Elise Hu - Hosting TED Talks Daily  The Future of Podcasting"
-      }
-    },
-    "5b8b9d5851ad4634812798d25553d8d7": {
-      "data": {
-        "audio": "https://www.listennotes.com/e/p/5b8b9d5851ad4634812798d25553d8d7/",
-        "audio_length_sec": 1216,
-        "description": "<p>Spotify is buying Bill Simmons’ sports and pop culture website and podcast network, The Ringer. It’s Spotify’s fourth podcast acquisition in a year. Recode’s Peter Kafka (who broke the story) sits down with Vox Media Podcast Network producer and former Ringer staff member Zach Mack to discuss what this deal means for Spotify, The Ringer and the future of podcasts.</p><p><br></p><p><strong>Featuring</strong>: Zach Mack (<a href=https: //twitter.com/zachthemack>@zachthemack</a>), Senior Podcast Producer at Vox Media Podcast Network</p><p><strong>Host</strong>: Peter Kafka (<a href=https: //twitter.com/pkafka > @pkafka < /a>), Senior Editor at Recode</p > < p > < strong > More to explore < /strong>: <a href=https:/ / pod.link / 1080467174>Subscribe for free to Recode Media</a>, Peter Kafka, one of the media industry's most acclaimed reporters, talks to business titans, journalists, comedians, and more to get their take on today's media landscape.</p><p><strong>About Recode by Vox</strong>: Recode by Vox helps you understand how tech is changing the world — and changing us.</p><p> </p><p>Learn more about your ad choices. Visit <a href=https: //megaphone.fm/adchoices> megaphone.fm / adchoices < /a></p > ",
-        "explicit_content": false,
-        "id": "5b8b9d5851ad4634812798d25553d8d7",
-        "image": "https://cdn-images-1.listennotes.com/podcasts/recode-media-recode-BZlna1CAThx-1iPwTajLXlS.1400x1400.jpg",
-        "link": "https://www.vox.com/recode-media-podcast?utm_source=listennotes.com&utm_campaign=Listen+Notes&utm_medium=website",
-        "listennotes_edit_url": "https://www.listennotes.com/e/5b8b9d5851ad4634812798d25553d8d7/edit",
-        "listennotes_url": "https://www.listennotes.com/e/5b8b9d5851ad4634812798d25553d8d7/",
-        "maybe_audio_invalid": false,
-        "podcast": {
-          "id": "2aba49dc3fc04e3e96fe89f79a261798",
-          "image": "https://cdn-images-1.listennotes.com/podcasts/recode-media-recode-BZlna1CAThx-1iPwTajLXlS.1400x1400.jpg",
-          "listennotes_url": "https://www.listennotes.com/c/2aba49dc3fc04e3e96fe89f79a261798/",
-          "publisher": "Recode",
-          "thumbnail": "https://cdn-images-1.listennotes.com/podcasts/recode-media-recode-UXOHc-3mo_8-1iPwTajLXlS.300x300.jpg",
-          "title": "Recode Media"
-        },
-        "pub_date_ms": 1581021870010,
-        "thumbnail": "https://cdn-images-1.listennotes.com/podcasts/recode-media-recode-UXOHc-3mo_8-1iPwTajLXlS.300x300.jpg",
-        "title": "Spotify, The Ringer and the future of podcasts"
-      }
-    },
-    "8f51c8e8b19a4c638ecbce12f9322ba8": {
-      "data": {
-        "audio": "https://www.listennotes.com/e/p/8f51c8e8b19a4c638ecbce12f9322ba8/",
-        "audio_length_sec": 4337,
-        "description": "<p>Tons of details on all things Google Podcasts Manager! It’s like Apple Podcasts connect but of course Google. Then, we move on to jobs in podcasting, so much about feedback about Cleanfeed, some very interesting Facebook updates, Libsyn player automation, what if someone uses YOUR podcast name, a massive breakdown of the podfader types and of course we’ve got a crazy amount of stats!</p> <p>Audience feedback drives the show. We’d love for you to email us and keep the conversation going! Email thefeed@libsyn.com or call 412–573–1934. </p>",
-        "explicit_content": false,
-        "id": "8f51c8e8b19a4c638ecbce12f9322ba8",
-        "image": "https://cdn-images-1.listennotes.com/podcasts/the-feed-the-official-libsyn-podcast-elsie-0T-Y3tzFJ78-2kOexVdGJIv.1400x1400.jpg",
-        "link": "https://thefeed.libsyn.com/167-cleanfeed-with-a-side-of-google-podcasts?utm_source=listennotes.com&utm_campaign=Listen+Notes&utm_medium=website",
-        "listennotes_edit_url": "https://www.listennotes.com/e/8f51c8e8b19a4c638ecbce12f9322ba8/edit",
-        "listennotes_url": "https://www.listennotes.com/e/8f51c8e8b19a4c638ecbce12f9322ba8/",
-        "maybe_audio_invalid": false,
-        "podcast": {
-          "id": "ce3754058c7a44a0abd574f86ff5c719",
-          "image": "https://cdn-images-1.listennotes.com/podcasts/the-feed-the-official-libsyn-podcast-elsie-0T-Y3tzFJ78-2kOexVdGJIv.1400x1400.jpg",
-          "listennotes_url": "https://www.listennotes.com/c/ce3754058c7a44a0abd574f86ff5c719/",
-          "publisher": "Elsie Escobar and Rob Walch",
-          "thumbnail": "https://cdn-images-1.listennotes.com/podcasts/the-feed-the-official-libsyn-podcast-elsie-ZQSb-a4YFmT-2kOexVdGJIv.300x300.jpg",
-          "title": "The Feed The Official Libsyn Podcast"
-        },
-        "pub_date_ms": 1588694700002,
-        "thumbnail": "https://cdn-images-1.listennotes.com/podcasts/the-feed-the-official-libsyn-podcast-elsie-ZQSb-a4YFmT-2kOexVdGJIv.300x300.jpg",
-        "title": "167 Cleanfeed With A Side of Google Podcasts"
-      }
-    },
-    "dbd3d477dfc94128982b79e8152301b4": {
-      "data": {
-        "audio": "https://www.listennotes.com/e/p/dbd3d477dfc94128982b79e8152301b4/",
-        "audio_length_sec": 434,
-        "description": "<p>In episode #1306, we discuss Spotify’s acquisition of The Ringer. The podcasting industry is growing exponentially and Spotify wanted to make an aggressive move toward growing its market share. Tune in to hear why this was a super smart decision on their part!</p> <p>TIME-STAMPED SHOW NOTES:</p> <ul> <li>[00:25] Today’s topic: How Spotify Acquired The Ringer.  </li> <li>[00:42] The solid financial results for Spotify in Q4 of 2019.</li> <li>[00:56] How Spotify recognized exponential growth in podcast hours streamed.</li> <li>[01:24] Realizing that they needed to acquire a big podcast to double down on opportunities.   </li> <li>[01:53] The impressive retention rates of the Marketing School podcast.</li> <li>[02:09] Why Spotify’s decision makes a lot of sense. </li> <li>[02:39] Keep in mind that all good channels eventually become crowded.  </li> <li>[03:09] Spotify’s market share around podcasting and how they’re more aggressive than Apple. </li> <li>[03:48] The number of downloads The Ringer podcast is getting. </li> <li>[04:07] Start comparing your Apple Podcast and Spotify analytics for your podcast. </li> <li>[04:50] How our podcasts and Eric’s own podcast are performing.  </li> <li>[05:56] The proposed price for The Ringer stated by Bill Simmons: $100 million. </li> <li>[06:25] That’s it for today!</li> <li>[06:26] To stay updated with events and learn more about our mastermind, go to the <a href=https://marketingschool.io/growth-accelerator-mastermind > Marketing School < /a> site for more information.</li > < /ul> <p>Links Mentioned in Today’s Episode:</p > < ul > < li > < a href =https://www.spotify.com/ > Spotify < /a> </li > < li > < a href = https://www.theringer.com > The Ringer < /a></li > < li > < a href = https://www.apple.com > Apple < /a></li > < li > < a href = https://growtheverywhere.com/podcast-player/ > Leveling Up Podcast < /a></li > < li > < a href = https://twitter.com/BillSimmons?ref_src > Bill Simmons on Twitter < /a></li > < /ul> <p>Leave Some Feedback:</p > < p > < /p> <ul> <li>What should we talk about next? Please let us know in the comments below</li > < /ul> <ul> <li>Did you enjoy this episode? If so, please leave a short review.</li > < /ul> <p> </p > < p > Connect with Us: < /p> <ul> <li style=font - weight: 400;><a href=http://neilpatel.com>Neilpatel.com</a></li> <li style=font-weight: 400;><a href=https://www.quicksprout.com/>Quick Sprout</a> </li> <li style=font-weight: 400;><a href= https://growtheverywhere.com/>Growth Everywhere</a></li> <li style=font-weight: 400;><a href= https://www.singlegrain.com/>Single Grain</a></li> <li style=font-weight: 400;><a href= https://twitter.com/neilpatel>Twitter @neilpatel</a> </li> <li style=font-weight: 400;><a href= https://twitter.com/ericosiu>Twitter @ericosiu</a></li> </ul>",
-        "explicit_content": false,
-        "id": "dbd3d477dfc94128982b79e8152301b4",
-        "image": "https://cdn-images-1.listennotes.com/podcasts/marketing-school-digital-marketing-and-pHyiIJT4Lxl.1400x1400.jpg",
-        "link": "http://mschool.growtheverywhere.libsynpro.com/spotify-acquired-the-ringer-podcast-15m-in-revenues-heres-what-it-means-ep-1306?utm_source=listennotes.com&utm_campaign=Listen+Notes&utm_medium=website",
-        "listennotes_edit_url": "https://www.listennotes.com/e/dbd3d477dfc94128982b79e8152301b4/edit",
-        "listennotes_url": "https://www.listennotes.com/e/dbd3d477dfc94128982b79e8152301b4/",
-        "maybe_audio_invalid": false,
-        "podcast": {
-          "id": "9a2abf6b68b54554a60a32a2932febcb",
-          "image": "https://cdn-images-1.listennotes.com/podcasts/marketing-school-digital-marketing-and-pHyiIJT4Lxl.1400x1400.jpg",
-          "listennotes_url": "https://www.listennotes.com/c/9a2abf6b68b54554a60a32a2932febcb/",
-          "publisher": "Eric Siu & Neil Patel",
-          "thumbnail": "https://cdn-images-1.listennotes.com/podcasts/marketing-school-digital-marketing-and-pHyiIJT4Lxl.300x300.jpg",
-          "title": "Marketing School - Digital Marketing and Online Marketing Tips"
-        },
-        "pub_date_ms": 1582812000138,
-        "thumbnail": "https://cdn-images-1.listennotes.com/podcasts/marketing-school-digital-marketing-and-pHyiIJT4Lxl.300x300.jpg",
-        "title": "Spotify Acquired 'The Ringer' Podcast ($15M In Revenues) - Here's What It Means | Ep. #1306"
-      }
-    },
-    "eaa81f7bba344ae78bcf228b88e102a7": {
-      "data": {
-        "audio": "https://www.listennotes.com/e/p/eaa81f7bba344ae78bcf228b88e102a7/",
-        "audio_length_sec": 2860,
-        "description": "<p>Hi everyone, welcome to the a16z Podcast... ... and welcome to our 500th episode, where, for the first time, we reveal behind-the-scenes details and the backstory of how we built this show, and the broader editorial operation. [You can also listen to episode 499, with head of marketing Margit Wennmachers, on building the a16z brand, <a href=https://a16z.com/2019/11/20/brand-building-a16z-ideas-people-marketing/ target=_blank>here</a>.]</p><p>We've talked a lot about the podcasting industry, and even done podcasts about podcasting, so for this special episode, editor-in-chief and showrunner Sonal Chokshi reveals the how, what, and why in conversation with a16z general partner (and guest-host for this special episode) <a href=https://a16z.com/2019/10/01/knowable-audio-startups/ target=_blank>podcasting</a> fan Connie Chan. We also answer some frequently asked questions that we often get (and recently <a href=https://twitter.com/smc90/status/1198026729421324289 target=_blank>got</a> via Twitter), such as:</p><ul><li>how we program podcasts</li><li>what's the process, from ideas to publishing</li><li>do we edit them and how!</li><li>do guests prep, do we have a script</li><li>technical stack</li></ul><p>...and much more. In fact, much of the conversation goes beyond the a16z Podcast and towards Sonal's broader principles of 'editorial content marketing', which hopefully helps those thinking about their own content operations and podcasts, too. Including where podcasting may be going.</p><p>Finally, we share some unexpected moments, and lessons learned along the way; our positions on tics, swear-words, and talking too fast; failed experiments, and new directions. But most importantly, we share some of the people behind the scenes who help make the a16z Podcast what it was, is, and can be... with thanks most of all to *you*, our wonderful fans</p>",
-        "explicit_content": false,
-        "id": "eaa81f7bba344ae78bcf228b88e102a7",
-        "image": "https://cdn-images-1.listennotes.com/podcasts/a16z-podcast-andreessen-horowitz-KXV3A98OyDi-IWF2alEr-9h.1400x1400.jpg",
-        "link": "https://a16z.simplecast.com/episodes/a16z-podcast-how-what-why-500th-episode-behind-the-scenes-XgOK8aBT?utm_source=listennotes.com&utm_campaign=Listen+Notes&utm_medium=website",
-        "listennotes_edit_url": "https://www.listennotes.com/e/eaa81f7bba344ae78bcf228b88e102a7/edit",
-        "listennotes_url": "https://www.listennotes.com/e/eaa81f7bba344ae78bcf228b88e102a7/",
-        "maybe_audio_invalid": false,
-        "podcast": {
-          "id": "7c20388d8d7e45d6ae4b770c1fe36b6f",
-          "image": "https://cdn-images-1.listennotes.com/podcasts/a16z-podcast-andreessen-horowitz-KXV3A98OyDi-IWF2alEr-9h.1400x1400.jpg",
-          "listennotes_url": "https://www.listennotes.com/c/7c20388d8d7e45d6ae4b770c1fe36b6f/",
-          "publisher": "Andreessen Horowitz",
-          "thumbnail": "https://cdn-images-1.listennotes.com/podcasts/a16z-podcast-andreessen-horowitz-sy3TixUoMHZ-IWF2alEr-9h.300x300.jpg",
-          "title": "a16z Podcast"
-        },
-        "pub_date_ms": 1574838000052,
-        "thumbnail": "https://cdn-images-1.listennotes.com/podcasts/a16z-podcast-andreessen-horowitz-sy3TixUoMHZ-IWF2alEr-9h.300x300.jpg",
-        "title": "How We Podcast"
-      }
-    }
-  },
-  "playlists": [
-    {
-      "added_at_ms": 1595567004958,
-      "data": {
-        "audio": "https://www.listennotes.com/e/p/11b34041e804491b9704d11f283c74de/",
-        "audio_length_sec": 567,
-        "description": "<p>Disney chief Bob Iger shared news about Star Wars movies in 2020 and beyond, but some media outlets gave conflicting reports about it. Here's the real scoop. Punch it!</p> <p>***We’re listener supported! Go to http://Patreon.com/sw7x7 to donate to the Star Wars 7x7 podcast, and you’ll get some fabulous rewards for your pledge.*** </p> <p>Check out SW7x7.com for full Star Wars 7x7 show notes and links, and to comment on any of the content of this episode! If you like what you've heard, please leave us a rating or review on iTunes or Stitcher, which will also help more people discover this Star Wars podcast.</p> <p>Don't forget to join the Star Wars 7x7 fun on Facebook at Facebook.com/SW7x7, and follow the breaking news Twitter feed at Twitter.com/SW7x7Podcast. We're also on Pinterest and Instagram as \\\"SW7x7\\\" too, and we'd love to connect with you there!</p>\\n",
-        "explicit_content": "https://www.listennotes.com/e/4d82e50314174754a3b603912448e812/",
-        "id": "4d82e50314174754a3b603912448e812",
-        "image": "https://cdn-images-1.listennotes.com/podcasts/exponent-ben-thompson-james-allworth-OaJSjb4xQv3.1400x1400.jpg",
-        "link": "https://www.npr.org/2020/01/22/798532179/soleimanis-iran",
-        "listennotes_edit_url": "https://www.listennotes.com/e/11b34041e804491b9704d11f283c74de/#edit",
-        "maybe_audio_invalid": false,
-        "podcast": {
-          "id": "4d3fe717742d4963a85562e9f84d8c79",
-          "image": "https://cdn-images-1.listennotes.com/podcasts/exponent-ben-thompson-james-allworth-OaJSjb4xQv3.1400x1400.jpg",
-          "listennotes_url": "https://www.listennotes.com/c/4d3fe717742d4963a85562e9f84d8c79/",
-          "publisher": "Planet Broadcasting",
-          "thumbnail": "https://cdn-images-1.listennotes.com/podcasts/exponent-ben-thompson-james-allworth-OaJSjb4xQv3.300x300.jpg",
-          "title": "Star Wars 7x7 | Star Wars News, Interviews, and More!"
-        },
-        "pub_date_ms": 1474873200000,
-        "thumbnail": "https://cdn-images-1.listennotes.com/podcasts/exponent-ben-thompson-james-allworth-OaJSjb4xQv3.300x300.jpg",
-        "title": "Celebration Recap, Jason Fry and Christian Blauvelt Interviews – SWBW #101"
+      "id": "9cf19c590ff0484d97b18b329fed0c6a",
+      "rss": "https://rss.art19.com/binge-mode-game-of-thrones",
+      "type": "serial",
+      "email": "info@theringer.com",
+      "extra": {
+        "url1": "",
+        "url2": "",
+        "url3": "",
+        "google_url": "",
+        "spotify_url": "",
+        "youtube_url": "",
+        "linkedin_url": "",
+        "wechat_handle": "",
+        "patreon_handle": "",
+        "twitter_handle": "binge_mode",
+        "facebook_handle": "",
+        "instagram_handle": ""
       },
-      "id": 23,
-      "notes": "This is a good episode.",
-      "type": "episode"
+      "image": "https://cdn-images-1.listennotes.com/podcasts/binge-mode-weekly-the-ringer--2UA3xt4RHr-BdPpshCaFDu.1400x1400.jpg",
+      "title": "Binge Mode: Weekly",
+      "country": "United States",
+      "website": "https://art19.com/shows/binge-mode-game-of-thrones?utm_source=listennotes.com&utm_campaign=Listen+Notes&utm_medium=website",
+      "language": "English",
+      "genre_ids": [
+        122,
+        162,
+        67,
+        68
+      ],
+      "itunes_id": 1243247464,
+      "publisher": "The Ringer",
+      "thumbnail": "https://cdn-images-1.listennotes.com/podcasts/binge-mode-weekly-the-ringer-fjD3P9QaLnV-BdPpshCaFDu.300x300.jpg",
+      "is_claimed": false,
+      "description": "Join Mallory Rubin and Jason Concepcion every week as they explore their favorite topics of the moment.",
+      "looking_for": {
+        "guests": false,
+        "cohosts": false,
+        "sponsors": false,
+        "cross_promotion": false
+      },
+      "total_episodes": 223,
+      "listennotes_url": "https://www.listennotes.com/c/9cf19c590ff0484d97b18b329fed0c6a/",
+      "explicit_content": true,
+      "latest_pub_date_ms": 1595043717000,
+      "earliest_pub_date_ms": 1496277111221
     },
     {
-      "added_at_ms": 1595791871517,
-      "data": {
-        "audio": "https://www.listennotes.com/e/p/50d0110bec79414eac61cb472c3c1de2/",
-        "audio_length_sec": 2445,
-        "description": "<p>Elise Hu is a host-at-large based at NPR West in Culver City, Calif. Previously, she explored the future with her video series, Gracie Award from the Alliance for Women in Media for her video series, <em>Elise Tries</em><a href=https://www.npr.org/2019/05/06/716414780/videos-future-you><em>Future You with Elise Hu</em></a>, and served as the founding bureau chief and International Correspondent for NPR's Seoul office. She was based in Seoul for nearly four years, responsible for the network's coverage of both Koreas and Japan, and filed from a dozen countries across Asia. Before joining NPR, she was one of the founding reporters at <a href=http://www.texastribune.org/>The Texas Tribune</a> a non-profit digital news startup devoted to politics and public policy. While at the Tribune, Hu oversaw television partnerships and multimedia projects, contributed to <em>The New York Times</em> expanded Texas coverage, and pushed for editorial innovation across platforms.Her work at NPR has earned a DuPont-Columbia award and a Her previous work has earned a Gannett Foundation Award for Innovation in Watchdog Journalism, a National Edward R. Murrow award for best online video, and beat reporting awards from the Texas Associated Press. <em>The Austin Chronicle</em> once dubiously named her the <a href =http://www.austinchronicle.com/gyrobase/Awards/BestOfAustin?Award=660138>Best TV Reporter Who Can Write < /a>.</p ><p>",
-        "explicit_content": false,
-        "id": "50d0110bec79414eac61cb472c3c1de2",
-        "image": "https://cdn-images-1.listennotes.com/podcasts/rise-of-the-young-casey-adams-v_hFQlZeGx2-YuarHs5lfDI.1400x1400.jpg",
-        "link": "https://anchor.fm/caseyadams/episodes/Elise-Hu---Hosting-TED-Talks-Daily--The-Future-of-Podcasting-ecfp5b?utm_source=listennotes.com&utm_campaign=Listen+Notes&utm_medium=website",
-        "listennotes_edit_url": "https://www.listennotes.com/e/50d0110bec79414eac61cb472c3c1de2/edit",
-        "listennotes_url": "https://www.listennotes.com/e/50d0110bec79414eac61cb472c3c1de2/",
-        "maybe_audio_invalid": false,
-        "podcast": {
-          "id": "11362a0682e744b29ce5ea73c920132e",
-          "image": "https://cdn-images-1.listennotes.com/podcasts/rise-of-the-young-casey-adams-v_hFQlZeGx2-YuarHs5lfDI.1400x1400.jpg",
-          "listennotes_url": "https://www.listennotes.com/c/11362a0682e744b29ce5ea73c920132e/",
-          "publisher": "Casey Adams",
-          "thumbnail": "https://cdn-images-1.listennotes.com/podcasts/rise-of-the-young-casey-adams-VrKjhGOgkuf-YuarHs5lfDI.300x300.jpg",
-          "title": "Rise of The Young"
-        },
-        "pub_date_ms": 1586266731038,
-        "thumbnail": "https://cdn-images-1.listennotes.com/podcasts/rise-of-the-young-casey-adams-VrKjhGOgkuf-YuarHs5lfDI.300x300.jpg",
-        "title": "Elise Hu - Hosting TED Talks Daily  The Future of Podcasting"
+      "id": "37589a3e121e40debe4cef3d9638932a",
+      "rss": "http://exponent.fm/feed/",
+      "type": "episodic",
+      "email": "bjthompson@mac.com",
+      "extra": {
+        "url1": "",
+        "url2": "",
+        "url3": "",
+        "google_url": "",
+        "spotify_url": "",
+        "youtube_url": "",
+        "linkedin_url": "",
+        "wechat_handle": "",
+        "patreon_handle": "",
+        "twitter_handle": "exponentfm",
+        "facebook_handle": "",
+        "instagram_handle": ""
       },
-      "id": 424141,
-      "notes": "",
-      "type": "episode"
-    },
-    {
-      "added_at_ms": 1595731343450,
-      "data": {
-        "audio": "https://www.listennotes.com/e/p/8f51c8e8b19a4c638ecbce12f9322ba8/",
-        "audio_length_sec": 4337,
-        "description": "<p>Tons of details on all things Google Podcasts Manager! It�s like Apple Podcasts connect but of course Google. Then, we move on to jobs in podcasting, so much about feedback about Cleanfeed, some very interesting Facebook updates, Libsyn player automation, what if someone uses YOUR podcast name, a massive breakdown of the podfader types and of course we�ve got a crazy amount of stats!</p> <p>Audience feedback drives the show. We�d love for you to email us and keep the conversation going! Email thefeed@libsyn.com or call 412�573�1934. </p>",
-        "explicit_content": false,
-        "id": "8f51c8e8b19a4c638ecbce12f9322ba8",
-        "image": "https://cdn-images-1.listennotes.com/podcasts/the-feed-the-official-libsyn-podcast-elsie-0T-Y3tzFJ78-2kOexVdGJIv.1400x1400.jpg",
-        "link": "https://thefeed.libsyn.com/167-cleanfeed-with-a-side-of-google-podcasts?utm_source=listennotes.com&utm_campaign=Listen+Notes&utm_medium=website",
-        "listennotes_edit_url": "https://www.listennotes.com/e/8f51c8e8b19a4c638ecbce12f9322ba8/edit",
-        "listennotes_url": "https://www.listennotes.com/e/8f51c8e8b19a4c638ecbce12f9322ba8/",
-        "maybe_audio_invalid": false,
-        "podcast": {
-          "id": "ce3754058c7a44a0abd574f86ff5c719",
-          "image": "https://cdn-images-1.listennotes.com/podcasts/the-feed-the-official-libsyn-podcast-elsie-0T-Y3tzFJ78-2kOexVdGJIv.1400x1400.jpg",
-          "listennotes_url": "https://www.listennotes.com/c/ce3754058c7a44a0abd574f86ff5c719/",
-          "publisher": "Elsie Escobar and Rob Walch",
-          "thumbnail": "https://cdn-images-1.listennotes.com/podcasts/the-feed-the-official-libsyn-podcast-elsie-ZQSb-a4YFmT-2kOexVdGJIv.300x300.jpg",
-          "title": "The Feed The Official Libsyn Podcast"
-        },
-        "pub_date_ms": 1588694700002,
-        "thumbnail": "https://cdn-images-1.listennotes.com/podcasts/the-feed-the-official-libsyn-podcast-elsie-ZQSb-a4YFmT-2kOexVdGJIv.300x300.jpg",
-        "title": "167 Cleanfeed With A Side of Google Podcasts"
-      },
-      "id": 423865,
-      "notes": "",
-      "type": "episode"
-    },
-    {
-      "added_at_ms": 1582824661788,
-      "data": {
-        "audio": "https://www.listennotes.com/e/p/dbd3d477dfc94128982b79e8152301b4/",
-        "audio_length_sec": 434,
-        "description": "<p>In episode #1306, we discuss Spotify�s acquisition of The Ringer. The podcasting industry is growing exponentially and Spotify wanted to make an aggressive move toward growing its market share. Tune in to hear why this was a super smart decision on their part!</p> <p>TIME-STAMPED SHOW NOTES:</p> <ul> <li>[00:25] Today�s topic: How Spotify Acquired The Ringer.  </li> <li>[00:42] The solid financial results for Spotify in Q4 of 2019.</li> <li>[00:56] How Spotify recognized exponential growth in podcast hours streamed.</li> <li>[01:24] Realizing that they needed to acquire a big podcast to double down on opportunities.   </li> <li>[01:53] The impressive retention rates of the Marketing School podcast.</li> <li>[02:09] Why Spotify�s decision makes a lot of sense. </li> <li>[02:39] Keep in mind that all good channels eventually become crowded.  </li> <li>[03:09] Spotify�s market share around podcasting and how they�re more aggressive than Apple. </li> <li>[03:48] The number of downloads The Ringer podcast is getting. </li> <li>[04:07] Start comparing your Apple Podcast and Spotify analytics for your podcast. </li> <li>[04:50] How our podcasts and Eric�s own podcast are performing.  </li> <li>[05:56] The proposed price for The Ringer stated by Bill Simmons: $100 million. </li> <li>[06:25] That�s it for today!</li> <li>[06:26] To stay updated with events and learn more about our mastermind, go to the <a href=https://marketingschool.io/growth-accelerator-mastermind > Marketing School < /a> site for more information.</li > < /ul> <p>Links Mentioned in Today�s Episode:</p > < ul > < li > < a href =https://www.spotify.com/ > Spotify < /a> </li > < li > < a href = https://www.theringer.com > The Ringer < /a></li > < li > < a href = https://www.apple.com > Apple < /a></li > < li > < a href = https://growtheverywhere.com/podcast-player/ > Leveling Up Podcast < /a></li > < li > < a href = https://twitter.com/BillSimmons?ref_src > Bill Simmons on Twitter < /a></li > < /ul> <p>Leave Some Feedback:</p > < p > < /p> <ul> <li>What should we talk about next? Please let us know in the comments below</li > < /ul> <ul> <li>Did you enjoy this episode? If so, please leave a short review.</li > < /ul> <p> </p > < p > Connect with Us: < /p> <ul> <li style=font - weight: 400;><a href=http://neilpatel.com>Neilpatel.com</a></li> <li style=font-weight: 400;><a href=https://www.quicksprout.com/>Quick Sprout</a> </li> <li style=font-weight: 400;><a href= https://growtheverywhere.com/>Growth Everywhere</a></li> <li style=font-weight: 400;><a href= https://www.singlegrain.com/>Single Grain</a></li> <li style=font-weight: 400;><a href= https://twitter.com/neilpatel>Twitter @neilpatel</a> </li> <li style=font-weight: 400;><a href= https://twitter.com/ericosiu>Twitter @ericosiu</a></li> </ul>",
-        "explicit_content": false,
-        "id": "dbd3d477dfc94128982b79e8152301b4",
-        "image": "https://cdn-images-1.listennotes.com/podcasts/marketing-school-digital-marketing-and-pHyiIJT4Lxl.1400x1400.jpg",
-        "link": "http://mschool.growtheverywhere.libsynpro.com/spotify-acquired-the-ringer-podcast-15m-in-revenues-heres-what-it-means-ep-1306?utm_source=listennotes.com&utm_campaign=Listen+Notes&utm_medium=website",
-        "listennotes_edit_url": "https://www.listennotes.com/e/dbd3d477dfc94128982b79e8152301b4/edit",
-        "listennotes_url": "https://www.listennotes.com/e/dbd3d477dfc94128982b79e8152301b4/",
-        "maybe_audio_invalid": false,
-        "podcast": {
-          "id": "9a2abf6b68b54554a60a32a2932febcb",
-          "image": "https://cdn-images-1.listennotes.com/podcasts/marketing-school-digital-marketing-and-pHyiIJT4Lxl.1400x1400.jpg",
-          "listennotes_url": "https://www.listennotes.com/c/9a2abf6b68b54554a60a32a2932febcb/",
-          "publisher": "Eric Siu & Neil Patel",
-          "thumbnail": "https://cdn-images-1.listennotes.com/podcasts/marketing-school-digital-marketing-and-pHyiIJT4Lxl.300x300.jpg",
-          "title": "Marketing School - Digital Marketing and Online Marketing Tips"
-        },
-        "pub_date_ms": 1582812000138,
-        "thumbnail": "https://cdn-images-1.listennotes.com/podcasts/marketing-school-digital-marketing-and-pHyiIJT4Lxl.300x300.jpg",
-        "title": "Spotify Acquired 'The Ringer' Podcast ($15M In Revenues) - Here's What It Means | Ep. #1306"
-      },
-      "id": 345601,
-      "notes": "",
-      "type": "episode"
-    },
-    {
-      "added_at_ms": 1581032059508,
-      "data": {
-        "audio": "https://www.listennotes.com/e/p/5b8b9d5851ad4634812798d25553d8d7/",
-        "audio_length_sec": 1216,
-        "description": "<p>Spotify is buying Bill Simmons� sports and pop culture website and podcast network, The Ringer. It�s Spotify�s fourth podcast acquisition in a year. Recode�s Peter Kafka (who broke the story) sits down with Vox Media Podcast Network producer and former Ringer staff member Zach Mack to discuss what this deal means for Spotify, The Ringer and the future of podcasts.</p><p><br></p><p><strong>Featuring</strong>: Zach Mack (<a href=https: //twitter.com/zachthemack>@zachthemack</a>), Senior Podcast Producer at Vox Media Podcast Network</p><p><strong>Host</strong>: Peter Kafka (<a href=https: //twitter.com/pkafka > @pkafka < /a>), Senior Editor at Recode</p > < p > < strong > More to explore < /strong>: <a href=https:/ / pod.link / 1080467174>Subscribe for free to Recode Media</a>, Peter Kafka, one of the media industry's most acclaimed reporters, talks to business titans, journalists, comedians, and more to get their take on today's media landscape.</p><p><strong>About Recode by Vox</strong>: Recode by Vox helps you understand how tech is changing the world � and changing us.</p><p> </p><p>Learn more about your ad choices. Visit <a href=https: //megaphone.fm/adchoices> megaphone.fm / adchoices < /a></p > ",
-        "explicit_content": false,
-        "id": "5b8b9d5851ad4634812798d25553d8d7",
-        "image": "https://cdn-images-1.listennotes.com/podcasts/recode-media-recode-BZlna1CAThx-1iPwTajLXlS.1400x1400.jpg",
-        "link": "https://www.vox.com/recode-media-podcast?utm_source=listennotes.com&utm_campaign=Listen+Notes&utm_medium=website",
-        "listennotes_edit_url": "https://www.listennotes.com/e/5b8b9d5851ad4634812798d25553d8d7/edit",
-        "listennotes_url": "https://www.listennotes.com/e/5b8b9d5851ad4634812798d25553d8d7/",
-        "maybe_audio_invalid": false,
-        "podcast": {
-          "id": "2aba49dc3fc04e3e96fe89f79a261798",
-          "image": "https://cdn-images-1.listennotes.com/podcasts/recode-media-recode-BZlna1CAThx-1iPwTajLXlS.1400x1400.jpg",
-          "listennotes_url": "https://www.listennotes.com/c/2aba49dc3fc04e3e96fe89f79a261798/",
-          "publisher": "Recode",
-          "thumbnail": "https://cdn-images-1.listennotes.com/podcasts/recode-media-recode-UXOHc-3mo_8-1iPwTajLXlS.300x300.jpg",
-          "title": "Recode Media"
-        },
-        "pub_date_ms": 1581021870010,
-        "thumbnail": "https://cdn-images-1.listennotes.com/podcasts/recode-media-recode-UXOHc-3mo_8-1iPwTajLXlS.300x300.jpg",
-        "title": "Spotify, The Ringer and the future of podcasts"
-      },
-      "id": 337223,
-      "notes": "",
-      "type": "episode"
-    },
-    {
-      "added_at_ms": 1574917254490,
-      "data": {
-        "audio": "https://www.listennotes.com/e/p/eaa81f7bba344ae78bcf228b88e102a7/",
-        "audio_length_sec": 2860,
-        "description": "<p>Hi everyone, welcome to the a16z Podcast... ... and welcome to our 500th episode, where, for the first time, we reveal behind-the-scenes details and the backstory of how we built this show, and the broader editorial operation. [You can also listen to episode 499, with head of marketing Margit Wennmachers, on building the a16z brand, <a href=https://a16z.com/2019/11/20/brand-building-a16z-ideas-people-marketing/ target=_blank>here</a>.]</p><p>We've talked a lot about the podcasting industry, and even done podcasts about podcasting, so for this special episode, editor-in-chief and showrunner Sonal Chokshi reveals the how, what, and why in conversation with a16z general partner (and guest-host for this special episode) <a href=https://a16z.com/2019/10/01/knowable-audio-startups/ target=_blank>podcasting</a> fan Connie Chan. We also answer some frequently asked questions that we often get (and recently <a href=https://twitter.com/smc90/status/1198026729421324289 target=_blank>got</a> via Twitter), such as:</p><ul><li>how we program podcasts</li><li>what's the process, from ideas to publishing</li><li>do we edit them and how!</li><li>do guests prep, do we have a script</li><li>technical stack</li></ul><p>...and much more. In fact, much of the conversation goes beyond the a16z Podcast and towards Sonal's broader principles of 'editorial content marketing', which hopefully helps those thinking about their own content operations and podcasts, too. Including where podcasting may be going.</p><p>Finally, we share some unexpected moments, and lessons learned along the way; our positions on tics, swear-words, and talking too fast; failed experiments, and new directions. But most importantly, we share some of the people behind the scenes who help make the a16z Podcast what it was, is, and can be... with thanks most of all to *you*, our wonderful fans</p>",
-        "explicit_content": false,
-        "id": "eaa81f7bba344ae78bcf228b88e102a7",
-        "image": "https://cdn-images-1.listennotes.com/podcasts/a16z-podcast-andreessen-horowitz-KXV3A98OyDi-IWF2alEr-9h.1400x1400.jpg",
-        "link": "https://a16z.simplecast.com/episodes/a16z-podcast-how-what-why-500th-episode-behind-the-scenes-XgOK8aBT?utm_source=listennotes.com&utm_campaign=Listen+Notes&utm_medium=website",
-        "listennotes_edit_url": "https://www.listennotes.com/e/eaa81f7bba344ae78bcf228b88e102a7/edit",
-        "listennotes_url": "https://www.listennotes.com/e/eaa81f7bba344ae78bcf228b88e102a7/",
-        "maybe_audio_invalid": false,
-        "podcast": {
-          "id": "7c20388d8d7e45d6ae4b770c1fe36b6f",
-          "image": "https://cdn-images-1.listennotes.com/podcasts/a16z-podcast-andreessen-horowitz-KXV3A98OyDi-IWF2alEr-9h.1400x1400.jpg",
-          "listennotes_url": "https://www.listennotes.com/c/7c20388d8d7e45d6ae4b770c1fe36b6f/",
-          "publisher": "Andreessen Horowitz",
-          "thumbnail": "https://cdn-images-1.listennotes.com/podcasts/a16z-podcast-andreessen-horowitz-sy3TixUoMHZ-IWF2alEr-9h.300x300.jpg",
-          "title": "a16z Podcast"
-        },
-        "pub_date_ms": 1574838000052,
-        "thumbnail": "https://cdn-images-1.listennotes.com/podcasts/a16z-podcast-andreessen-horowitz-sy3TixUoMHZ-IWF2alEr-9h.300x300.jpg",
-        "title": "How We Podcast"
-      },
-      "id": 312262,
-      "notes": "",
-      "type": "episode"
-    }
-  ],
-  "random_podcast": [
-    {
-      "audio": "https://www.listennotes.com/e/p/11b34041e804491b9704d11f283c74de/",
-      "audio_length_sec": 567,
-      "description": "<p>Disney chief Bob Iger shared news about Star Wars movies in 2020 and beyond, but some media outlets gave conflicting reports about it. Here's the real scoop. Punch it!</p> <p>***We’re listener supported! Go to http://Patreon.com/sw7x7 to donate to the Star Wars 7x7 podcast, and you’ll get some fabulous rewards for your pledge.*** </p> <p>Check out SW7x7.com for full Star Wars 7x7 show notes and links, and to comment on any of the content of this episode! If you like what you've heard, please leave us a rating or review on iTunes or Stitcher, which will also help more people discover this Star Wars podcast.</p> <p>Don't forget to join the Star Wars 7x7 fun on Facebook at Facebook.com/SW7x7, and follow the breaking news Twitter feed at Twitter.com/SW7x7Podcast. We're also on Pinterest and Instagram as \\\"SW7x7\\\" too, and we'd love to connect with you there!</p>\\n",
-      "explicit_content": false,
-      "id": "4d82e50314174754a3b603912448e812",
       "image": "https://cdn-images-1.listennotes.com/podcasts/exponent-ben-thompson-james-allworth-OaJSjb4xQv3.1400x1400.jpg",
-      "link": "https://www.npr.org/2020/01/22/798532179/soleimanis-iran",
-      "listennotes_edit_url": "https://www.listennotes.com/e/11b34041e804491b9704d11f283c74de/#edit",
-      "listennotes_url": "https://www.listennotes.com/e/4d82e50314174754a3b603912448e812/",
-      "maybe_audio_invalid": false,
-      "podcast": {
-        "id": "4d3fe717742d4963a85562e9f84d8c79",
-        "image": "https://cdn-images-1.listennotes.com/podcasts/exponent-ben-thompson-james-allworth-OaJSjb4xQv3.1400x1400.jpg",
-        "listennotes_url": "https://www.listennotes.com/c/4d3fe717742d4963a85562e9f84d8c79/",
-        "publisher": "Planet Broadcasting",
-        "thumbnail": "https://cdn-images-1.listennotes.com/podcasts/exponent-ben-thompson-james-allworth-OaJSjb4xQv3.300x300.jpg",
-        "title": "Star Wars 7x7 | Star Wars News, Interviews, and More!"
-      },
-      "pub_date_ms": 1474873200000,
+      "title": "Exponent",
+      "country": "United States",
+      "website": "http://exponent.fm?utm_source=listennotes.com&utm_campaign=Listen+Notes&utm_medium=website",
+      "language": "English",
+      "genre_ids": [
+        149,
+        157,
+        67,
+        127,
+        129,
+        93
+      ],
+      "itunes_id": 826420969,
+      "publisher": "Ben Thompson / James Allworth",
       "thumbnail": "https://cdn-images-1.listennotes.com/podcasts/exponent-ben-thompson-james-allworth-OaJSjb4xQv3.300x300.jpg",
-      "title": "Celebration Recap, Jason Fry and Christian Blauvelt Interviews – SWBW #101"
+      "is_claimed": false,
+      "description": "A podcast about tech and society, hosted by Ben Thompson and James Allworth",
+      "looking_for": {
+        "guests": false,
+        "cohosts": false,
+        "sponsors": false,
+        "cross_promotion": false
+      },
+      "total_episodes": 189,
+      "listennotes_url": "https://www.listennotes.com/c/37589a3e121e40debe4cef3d9638932a/",
+      "explicit_content": false,
+      "latest_pub_date_ms": 1594396333000,
+      "earliest_pub_date_ms": 1392899826186
+    },
+    {
+      "id": "68faf62be97149c280ebcc25178aa731",
+      "rss": "https://feeds.megaphone.fm/business-unusual-with-barbara-corcoran",
+      "type": "episodic",
+      "email": "businessunusual@barbaracorcoran.com",
+      "extra": {
+        "url1": "",
+        "url2": "",
+        "url3": "",
+        "google_url": "",
+        "spotify_url": "",
+        "youtube_url": "",
+        "linkedin_url": "",
+        "wechat_handle": "",
+        "patreon_handle": "",
+        "twitter_handle": "BarbaraCorcoran",
+        "facebook_handle": "TheBarbaraCorcoran",
+        "instagram_handle": ""
+      },
+      "image": "https://cdn-images-1.listennotes.com/podcasts/business-unusual-with-barbara-corcoran-JZARkcmsnKd-aZPn3Ic47rx.1400x1400.jpg",
+      "title": "Business Unusual with Barbara Corcoran",
+      "country": "United States",
+      "website": "https://cms.megaphone.fm/channel/business-unusual-with-barbara-corcoran?utm_source=listennotes.com&utm_campaign=Listen+Notes&utm_medium=website",
+      "language": "English",
+      "genre_ids": [
+        157,
+        98,
+        94,
+        93,
+        67
+      ],
+      "itunes_id": 1378685290,
+      "publisher": "Barbara Corcoran",
+      "thumbnail": "https://cdn-images-1.listennotes.com/podcasts/business-unusual-with-barbara-corcoran-VniBL5IJxjR-aZPn3Ic47rx.300x300.jpg",
+      "is_claimed": false,
+      "description": "I’m smart at getting to where I want to go, and I can teach you how to do it! I had 22 jobs before starting my real estate company with a $1000 loan and built it into a $5 billion business. Today I’m a ’Shark’ on ABC’s hit show \"Shark Tank.\" It didn’t take a fancy degree to get here but took street smarts and a lot of courage. Life is too short to waste your time practicing someone else’s fancy theory on success. I give you the straight talk and the confidence to get there. Follow Business Unusual with Barbara Corcoran on iHeartRadio, or subscribe wherever you listen to podcasts.",
+      "looking_for": {
+        "guests": false,
+        "cohosts": false,
+        "sponsors": false,
+        "cross_promotion": false
+      },
+      "total_episodes": 89,
+      "listennotes_url": "https://www.listennotes.com/c/68faf62be97149c280ebcc25178aa731/",
+      "explicit_content": false,
+      "latest_pub_date_ms": 1594094400000,
+      "earliest_pub_date_ms": 1525202794087
+    },
+    {
+      "id": "3302bc71139541baa46ecb27dbf6071a",
+      "rss": "https://feeds.megaphone.fm/listen-money-matters",
+      "type": "episodic",
+      "email": "listenmoneymatters@gmail.com",
+      "extra": {
+        "url1": "",
+        "url2": "",
+        "url3": "",
+        "google_url": "",
+        "spotify_url": "",
+        "youtube_url": "",
+        "linkedin_url": "",
+        "wechat_handle": "",
+        "patreon_handle": "",
+        "twitter_handle": "MoneyMattersMan",
+        "facebook_handle": "ListenMoneyMatters",
+        "instagram_handle": "listenmoneymatters"
+      },
+      "image": "https://cdn-images-1.listennotes.com/podcasts/listen-money-matters-free-your-inner-7gAv31w6e5z-SJEHNr84kVg.1400x1400.jpg",
+      "title": "Listen Money Matters - Free your inner financial badass. All the stuff you should know about personal finance.",
+      "country": "United States",
+      "website": "https://www.listenmoneymatters.com?utm_source=listennotes.com&utm_campaign=Listen+Notes&utm_medium=website",
+      "language": "English",
+      "genre_ids": [
+        144,
+        98,
+        111,
+        67,
+        93,
+        127,
+        128
+      ],
+      "itunes_id": 736826307,
+      "publisher": "ListenMoneyMatters.com | Andrew Fiebert and Matt Giovanisci",
+      "thumbnail": "https://cdn-images-1.listennotes.com/podcasts/listen-money-matters-free-your-inner-Uo_qv9RYI6A-SJEHNr84kVg.300x300.jpg",
+      "is_claimed": false,
+      "description": "Honest and uncensored - this is not your father’s boring finance show. This show brings much needed ACTIONABLE advice to a people who hate being lectured about personal finance from the out-of-touch one percent. Andrew and Matt are relatable, funny, and brash. Their down-to-earth discussions about money are entertaining whether you’re a financial whiz or just starting out. To be a part of the show and get your financial questions answered, send an email to listenmoneymatters@gmail.com.",
+      "looking_for": {
+        "guests": false,
+        "cohosts": false,
+        "sponsors": false,
+        "cross_promotion": false
+      },
+      "total_episodes": 546,
+      "listennotes_url": "https://www.listennotes.com/c/3302bc71139541baa46ecb27dbf6071a/",
+      "explicit_content": true,
+      "latest_pub_date_ms": 1589169600000,
+      "earliest_pub_date_ms": 1374314413000
+    },
+    {
+      "id": "f2eb196b20884b0490cc60a58b05bbb6",
+      "rss": "http://rss.art19.com/the-daily",
+      "type": "episodic",
+      "email": "thedaily@nytimes.com",
+      "extra": {
+        "url1": "",
+        "url2": "",
+        "url3": "",
+        "google_url": "",
+        "spotify_url": "",
+        "youtube_url": "",
+        "linkedin_url": "",
+        "wechat_handle": "",
+        "patreon_handle": "",
+        "twitter_handle": "mikiebarb",
+        "facebook_handle": "nytimes",
+        "instagram_handle": ""
+      },
+      "image": "https://cdn-images-1.listennotes.com/podcasts/the-daily-the-new-york-times-Kd-b9ukB7ya-xp7nhsmSkX2.1400x1400.jpg",
+      "title": "The Daily",
+      "country": "United States",
+      "website": "https://www.nytimes.com/the-daily?utm_source=listennotes.com&utm_campaign=Listen+Notes&utm_medium=website",
+      "language": "English",
+      "genre_ids": [
+        216,
+        99,
+        93,
+        67
+      ],
+      "itunes_id": 1200361736,
+      "publisher": "The New York Times",
+      "thumbnail": "https://cdn-images-1.listennotes.com/podcasts/the-daily-the-new-york-times-_iFAjsBZIXt-xp7nhsmSkX2.300x300.jpg",
+      "is_claimed": true,
+      "description": " <p>This is what the news should sound like. The biggest stories of our time, told by the best journalists in the world. Hosted by Michael Barbaro. Twenty minutes a day, five days a week, ready by 6 a.m.</p> ",
+      "looking_for": {
+        "guests": false,
+        "cohosts": false,
+        "sponsors": false,
+        "cross_promotion": false
+      },
+      "total_episodes": 973,
+      "listennotes_url": "https://www.listennotes.com/c/f2eb196b20884b0490cc60a58b05bbb6/",
+      "explicit_content": false,
+      "latest_pub_date_ms": 1595843787000,
+      "earliest_pub_date_ms": 1484687987000
+    },
+    {
+      "id": "c5ce6c02cbf1486496206829f7d42e8e",
+      "rss": "http://feeds.feedburner.com/marketsnacks-daily",
+      "type": "episodic",
+      "email": "podcasts@cadence13.com",
+      "extra": {
+        "url1": "http://www.marketsnacks.com/",
+        "url2": "",
+        "url3": "",
+        "google_url": "",
+        "spotify_url": "",
+        "youtube_url": "",
+        "linkedin_url": "",
+        "wechat_handle": "",
+        "patreon_handle": "",
+        "twitter_handle": "marketsnacks",
+        "facebook_handle": "MarketSnacks",
+        "instagram_handle": ""
+      },
+      "image": "https://cdn-images-1.listennotes.com/podcasts/snacks-daily-robinhood-financial-llc-hu4HiXUtv3y-kmx0XIZTAys.1400x1400.jpg",
+      "title": "Snacks Daily",
+      "country": "United States",
+      "website": "https://snacks.robinhood.com/?utm_source=listennotes.com&utm_campaign=Listen+Notes&utm_medium=website",
+      "language": "English",
+      "genre_ids": [
+        98,
+        95,
+        93,
+        67
+      ],
+      "itunes_id": 1386234384,
+      "publisher": "Robinhood Financial, LLC",
+      "thumbnail": "https://cdn-images-1.listennotes.com/podcasts/snacks-daily-robinhood-financial-llc-3qgUaLoWpvA-kmx0XIZTAys.300x300.jpg",
+      "is_claimed": false,
+      "description": "Digestible financial news. Get smarter fast with an entertaining breakdown of our top 3 business stories in 15 minutes. Pairs perfectly with your commute, workout, or morning oatmeal ritual. Hosted by Jack Kramer and Nick Martell.",
+      "looking_for": {
+        "guests": false,
+        "cohosts": false,
+        "sponsors": false,
+        "cross_promotion": false
+      },
+      "total_episodes": 323,
+      "listennotes_url": "https://www.listennotes.com/c/c5ce6c02cbf1486496206829f7d42e8e/",
+      "explicit_content": false,
+      "latest_pub_date_ms": 1595840400000,
+      "earliest_pub_date_ms": 1553519100236
+    },
+    {
+      "id": "3a2a6ddd549f4df0b876e7315fa1a319",
+      "rss": "https://philosophizethis.libsyn.com/rss",
+      "type": "episodic",
+      "email": "steve@stephenwestshow.com",
+      "extra": {
+        "url1": "http://philosophizethis.org/",
+        "url2": "",
+        "url3": "",
+        "google_url": "https://play.google.com/music/listen?u=0&gclid=COmlsNrWmc0CFcimfgodxAYFGw&gclsrc=ds#/ps/Iszi3nzoe3p22hsxpoe3i2jmxxy",
+        "spotify_url": "https://open.spotify.com/show/2Shpxw7dPoxRJCdfFXTWLE",
+        "youtube_url": "https://www.youtube.com/channel/UCjnpuIGovFFUBLG5BeHzTag",
+        "linkedin_url": "",
+        "wechat_handle": "",
+        "patreon_handle": "philosophizethis",
+        "twitter_handle": "iamstephenwest",
+        "facebook_handle": "Philosophizethisshow",
+        "instagram_handle": ""
+      },
+      "image": "https://cdn-images-1.listennotes.com/podcasts/philosophize-this-stephen-west-Y2PvRelyrIN-ivQCfmkqM_h.1400x1400.jpg",
+      "title": "Philosophize This!",
+      "country": "United States",
+      "website": "http://www.philosophizethis.org?utm_source=listennotes.com&utm_campaign=Listen+Notes&utm_medium=website",
+      "language": "English",
+      "genre_ids": [
+        111,
+        125,
+        126,
+        67,
+        122,
+        133
+      ],
+      "itunes_id": 659155419,
+      "publisher": "Stephen West",
+      "thumbnail": "https://cdn-images-1.listennotes.com/podcasts/philosophize-this-stephen-west-oSuiCW7Bz8T-ivQCfmkqM_h.300x300.jpg",
+      "is_claimed": false,
+      "description": "Beginner friendly if listened to in order! For anyone interested in an educational podcast about philosophy where you don't need to be a graduate-level philosopher to understand it. In chronological order, the thinkers and ideas that forged the world we live in are broken down and explained.",
+      "looking_for": {
+        "guests": false,
+        "cohosts": false,
+        "sponsors": false,
+        "cross_promotion": false
+      },
+      "total_episodes": 144,
+      "listennotes_url": "https://www.listennotes.com/c/3a2a6ddd549f4df0b876e7315fa1a319/",
+      "explicit_content": false,
+      "latest_pub_date_ms": 1593397659000,
+      "earliest_pub_date_ms": 1370556600143
+    },
+    {
+      "id": "bacb2f7ca7a04ed0b21efd21192f5014",
+      "rss": "https://feeds.megaphone.fm/espionage",
+      "type": "episodic",
+      "email": "support@parcast.com",
+      "extra": {
+        "url1": "",
+        "url2": "",
+        "url3": "",
+        "google_url": "",
+        "spotify_url": "",
+        "youtube_url": "",
+        "linkedin_url": "",
+        "wechat_handle": "",
+        "patreon_handle": "",
+        "twitter_handle": "ParcastNetwork",
+        "facebook_handle": "parcast",
+        "instagram_handle": "parcast"
+      },
+      "image": "https://cdn-images-1.listennotes.com/podcasts/espionage-parcast-network-N3huymaIeW0-ReK0QUN-VP_.1400x1400.jpg",
+      "title": "Espionage",
+      "country": "United States",
+      "website": "https://www.parcast.com/espionage?utm_source=listennotes.com&utm_campaign=Listen+Notes&utm_medium=website",
+      "language": "English",
+      "genre_ids": [
+        99,
+        67
+      ],
+      "itunes_id": 1457514703,
+      "publisher": "Parcast Network",
+      "thumbnail": "https://cdn-images-1.listennotes.com/podcasts/espionage-parcast-network-6wo5f_EZCT3-ReK0QUN-VP_.300x300.jpg",
+      "is_claimed": false,
+      "description": "Not all spies look like James Bond and Ethan Hunt. Most of them look like ordinary people, which makes them all the more dangerous... So what does it really take to be a spy? Every week, we cover a real-life spy mission: the stakes, the deception, the gadgets, and how it changed the course of history. Each two-part series follows one mission of a historic spy, and if they made it out alive. Espionage is a production of Cutler Media and part of the Parcast Network.",
+      "looking_for": {
+        "guests": false,
+        "cohosts": false,
+        "sponsors": false,
+        "cross_promotion": false
+      },
+      "total_episodes": 78,
+      "listennotes_url": "https://www.listennotes.com/c/bacb2f7ca7a04ed0b21efd21192f5014/",
+      "explicit_content": false,
+      "latest_pub_date_ms": 1588921260000,
+      "earliest_pub_date_ms": 1553471173023
+    }
+  ],
+  "latest_episodes": [
+    {
+      "id": "9447ce07dd2345618054b04b733e4ad5",
+      "link": "https://snacks.robinhood.com/?utm_source=listennotes.com&utm_campaign=Listen+Notes&utm_medium=website",
+      "audio": "https://www.listennotes.com/e/p/9447ce07dd2345618054b04b733e4ad5/",
+      "image": "https://cdn-images-1.listennotes.com/podcasts/snacks-daily-robinhood-financial-llc-hu4HiXUtv3y-kmx0XIZTAys.1400x1400.jpg",
+      "title": "Google’s $399 smartphone, Crocs’ comeback, and GM’s robotaxi Cruise snags $1B",
+      "podcast": {
+        "id": "c5ce6c02cbf1486496206829f7d42e8e",
+        "image": "https://cdn-images-1.listennotes.com/podcasts/snacks-daily-robinhood-financial-llc-hu4HiXUtv3y-kmx0XIZTAys.1400x1400.jpg",
+        "title": "Snacks Daily",
+        "publisher": "Robinhood Financial, LLC",
+        "thumbnail": "https://cdn-images-1.listennotes.com/podcasts/snacks-daily-robinhood-financial-llc-3qgUaLoWpvA-kmx0XIZTAys.300x300.jpg",
+        "listennotes_url": "https://www.listennotes.com/c/c5ce6c02cbf1486496206829f7d42e8e/"
+      },
+      "thumbnail": "https://cdn-images-1.listennotes.com/podcasts/snacks-daily-robinhood-financial-llc-3qgUaLoWpvA-kmx0XIZTAys.300x300.jpg",
+      "description": "<p>Google’s I/O event day enjoyed protests, AI tech to screen fake calls, and a $399 Pixel phone. General Motors acquired self-driving car startup Cruise when it was worth $1B — Now it’s worth $19B, and wants robotaxis on streets this year. And Crocs shares have nearly doubled in the past year, so we look at why.</p>",
+      "pub_date_ms": 1557309360205,
+      "listennotes_url": "https://www.listennotes.com/e/9447ce07dd2345618054b04b733e4ad5/",
+      "audio_length_sec": 916,
+      "explicit_content": false,
+      "maybe_audio_invalid": false,
+      "listennotes_edit_url": "https://www.listennotes.com/e/9447ce07dd2345618054b04b733e4ad5/#edit"
+    },
+    {
+      "id": "73d2176ac3fd4f03bfa15c1b3e4511e2",
+      "link": "https://www.nytimes.com/the-daily?utm_source=listennotes.com&utm_campaign=Listen+Notes&utm_medium=website",
+      "audio": "https://www.listennotes.com/e/p/73d2176ac3fd4f03bfa15c1b3e4511e2/",
+      "image": "https://cdn-images-1.listennotes.com/podcasts/the-daily-the-new-york-times-Kd-b9ukB7ya-xp7nhsmSkX2.1400x1400.jpg",
+      "title": "$1 Billion in Losses: A Decade of Trump’s Taxes",
+      "podcast": {
+        "id": "f2eb196b20884b0490cc60a58b05bbb6",
+        "image": "https://cdn-images-1.listennotes.com/podcasts/the-daily-the-new-york-times-Kd-b9ukB7ya-xp7nhsmSkX2.1400x1400.jpg",
+        "title": "The Daily",
+        "publisher": "The New York Times",
+        "thumbnail": "https://cdn-images-1.listennotes.com/podcasts/the-daily-the-new-york-times-_iFAjsBZIXt-xp7nhsmSkX2.300x300.jpg",
+        "listennotes_url": "https://www.listennotes.com/c/f2eb196b20884b0490cc60a58b05bbb6/"
+      },
+      "thumbnail": "https://cdn-images-1.listennotes.com/podcasts/the-daily-the-new-york-times-_iFAjsBZIXt-xp7nhsmSkX2.300x300.jpg",
+      "description": "<p>In October, The New York Times published an investigation into the tax returns of President Trump’s father, revealing the president’s past involvement in tax evasion and stark inconsistencies in his account of his success. Two reporters who broke that story are back with new information about the president’s own taxes. Guests: Russ Buettner and Susanne Craig, investigative reporters for The Times. For more information on today’s episode, visit <a href=\"https: //www.nytimes.com/thedaily\" target=\"_blank\">nytimes.com/thedaily</a>. </p><p>Background reading: </p><ul><li>The Times has obtained figures from President Trump’s federal income tax returns from 1985 through 1994. They<a href=\"https://www.nytimes.com/interactive/2019/05/07/us/politics/donald-trump-taxes.html?smid=pc-thedaily\" target=\"_blank\"> paint a far bleaker picture of his financial condition than was previously known</a>.</li><li>Here are<a href=\"https://www.nytimes.com/2019/05/07/us/trump-tax-figures.html?smid=pc-thedaily\" target=\"_blank\"> five takeaways of what the numbers show</a>.</li><li>Listen to an episode of “The Daily” about<a href=\"https://www.nytimes.com/2018/10/03/podcasts/the-daily/donald-trump-fred-trump-tax-money.html?smid=pc-thedaily\" target=\"_blank\"> Mr. Trump’s participation in dubious tax schemes during the 1990s</a>. </li></ul>",
+      "pub_date_ms": 1557309161361,
+      "listennotes_url": "https://www.listennotes.com/e/73d2176ac3fd4f03bfa15c1b3e4511e2/",
+      "audio_length_sec": 1382,
+      "explicit_content": false,
+      "maybe_audio_invalid": false,
+      "listennotes_edit_url": "https://www.listennotes.com/e/73d2176ac3fd4f03bfa15c1b3e4511e2/#edit"
+    },
+    {
+      "id": "b43812faf6bb4009aeeb25a1909c5c88",
+      "link": "https://www.nytimes.com/the-daily?utm_source=listennotes.com&utm_campaign=Listen+Notes&utm_medium=website",
+      "audio": "https://www.listennotes.com/e/p/b43812faf6bb4009aeeb25a1909c5c88/",
+      "image": "https://cdn-images-1.listennotes.com/podcasts/the-daily-the-new-york-times-Kd-b9ukB7ya-xp7nhsmSkX2.1400x1400.jpg",
+      "title": "The Chinese Surveillance State, Part 2",
+      "podcast": {
+        "id": "f2eb196b20884b0490cc60a58b05bbb6",
+        "image": "https://cdn-images-1.listennotes.com/podcasts/the-daily-the-new-york-times-Kd-b9ukB7ya-xp7nhsmSkX2.1400x1400.jpg",
+        "title": "The Daily",
+        "publisher": "The New York Times",
+        "thumbnail": "https://cdn-images-1.listennotes.com/podcasts/the-daily-the-new-york-times-_iFAjsBZIXt-xp7nhsmSkX2.300x300.jpg",
+        "listennotes_url": "https://www.listennotes.com/c/f2eb196b20884b0490cc60a58b05bbb6/"
+      },
+      "thumbnail": "https://cdn-images-1.listennotes.com/podcasts/the-daily-the-new-york-times-_iFAjsBZIXt-xp7nhsmSkX2.300x300.jpg",
+      "description": "<p>In Part 2 of our series, we tell the story of an American citizen whose family members have been detained in Chinese re-education camps for Uighurs and members of other Muslim minority groups. We look at what his efforts to free them reveal about the global reach of China’s surveillance. Guest: Paul Mozur, a technology reporter for The New York Times based in Shanghai, spoke with Ferkat Jawdat, a Uighur and American citizen who lives in Virginia. For more information on today’s episode, visit <a href=\"https: //www.nytimes.com/thedaily\" target=\"_blank\">nytimes.com/thedaily</a>. </p><p>Background reading: </p><ul><li>Ethnic Uighurs and other Muslim minorities<a href=\"https://www.nytimes.com/2018/09/08/world/asia/china-uighur-muslim-detention-camp.html?smid=pc-thedaily\" target=\"_blank\"> have been sent to camps in vast numbers</a> in what is China’s most sweeping internment operation since the Mao era.</li><li>Chinese officers<a href=\"https://www.nytimes.com/2018/10/18/world/asia/uighur-muslims-china-detainment.html?smid=pc-thedaily\" target=\"_blank\"> have attempted to suppress opposition from Uighurs abroad</a> by detaining their relatives.</li><li>The Trump administration<a href=\"https://www.nytimes.com/2019/05/04/world/asia/trump-china-uighurs-trade-deal.html?smid=pc-thedaily\" target=\"_blank\"> has avoided addressing the persecution of the Uighurs during trade talks with China</a>, fearing such a move could jeopardize a deal.</li></ul>",
+      "pub_date_ms": 1557223755362,
+      "listennotes_url": "https://www.listennotes.com/e/b43812faf6bb4009aeeb25a1909c5c88/",
+      "audio_length_sec": 1651,
+      "explicit_content": false,
+      "maybe_audio_invalid": false,
+      "listennotes_edit_url": "https://www.listennotes.com/e/b43812faf6bb4009aeeb25a1909c5c88/#edit"
+    },
+    {
+      "id": "68d378e5b029431dbaca6acf7ce396f2",
+      "link": "https://snacks.robinhood.com/?utm_source=listennotes.com&utm_campaign=Listen+Notes&utm_medium=website",
+      "audio": "https://www.listennotes.com/e/p/68d378e5b029431dbaca6acf7ce396f2/",
+      "image": "https://cdn-images-1.listennotes.com/podcasts/snacks-daily-robinhood-financial-llc-hu4HiXUtv3y-kmx0XIZTAys.1400x1400.jpg",
+      "title": "Big Trade War update, Apple’s bought 20+ companies in 6 months, and the largest VC investment in Latin America ever",
+      "podcast": {
+        "id": "c5ce6c02cbf1486496206829f7d42e8e",
+        "image": "https://cdn-images-1.listennotes.com/podcasts/snacks-daily-robinhood-financial-llc-hu4HiXUtv3y-kmx0XIZTAys.1400x1400.jpg",
+        "title": "Snacks Daily",
+        "publisher": "Robinhood Financial, LLC",
+        "thumbnail": "https://cdn-images-1.listennotes.com/podcasts/snacks-daily-robinhood-financial-llc-3qgUaLoWpvA-kmx0XIZTAys.300x300.jpg",
+        "listennotes_url": "https://www.listennotes.com/c/c5ce6c02cbf1486496206829f7d42e8e/"
+      },
+      "thumbnail": "https://cdn-images-1.listennotes.com/podcasts/snacks-daily-robinhood-financial-llc-3qgUaLoWpvA-kmx0XIZTAys.300x300.jpg",
+      "description": "<p>The Trade War was supposed to end this week with a peace deal. That’s not looking likely, and we’ll tell you why. Apple’s CEO casually dropped that the company’s bought over 20 startups over the last six months. And super delivery app Rappi just raised $1B from Softbank, making it the biggest Latin American venture investment ever.</p>",
+      "pub_date_ms": 1557222960206,
+      "listennotes_url": "https://www.listennotes.com/e/68d378e5b029431dbaca6acf7ce396f2/",
+      "audio_length_sec": 1039,
+      "explicit_content": false,
+      "maybe_audio_invalid": false,
+      "listennotes_edit_url": "https://www.listennotes.com/e/68d378e5b029431dbaca6acf7ce396f2/#edit"
+    },
+    {
+      "id": "402e67e65e2a4575ab2704a977a2b4b5",
+      "link": "https://cms.megaphone.fm/channel/business-unusual-with-barbara-corcoran?utm_source=listennotes.com&utm_campaign=Listen+Notes&utm_medium=website",
+      "audio": "https://www.listennotes.com/e/p/402e67e65e2a4575ab2704a977a2b4b5/",
+      "image": "https://cdn-images-1.listennotes.com/podcasts/business-unusual-with-barbara-corcoran-JZARkcmsnKd-aZPn3Ic47rx.1400x1400.jpg",
+      "title": "53: Something About Mary",
+      "podcast": {
+        "id": "68faf62be97149c280ebcc25178aa731",
+        "image": "https://cdn-images-1.listennotes.com/podcasts/business-unusual-with-barbara-corcoran-JZARkcmsnKd-aZPn3Ic47rx.1400x1400.jpg",
+        "title": "Business Unusual with Barbara Corcoran",
+        "publisher": "Barbara Corcoran",
+        "thumbnail": "https://cdn-images-1.listennotes.com/podcasts/business-unusual-with-barbara-corcoran-VniBL5IJxjR-aZPn3Ic47rx.300x300.jpg",
+        "listennotes_url": "https://www.listennotes.com/c/68faf62be97149c280ebcc25178aa731/"
+      },
+      "thumbnail": "https://cdn-images-1.listennotes.com/podcasts/business-unusual-with-barbara-corcoran-VniBL5IJxjR-aZPn3Ic47rx.300x300.jpg",
+      "description": "<p><strong>CNBC Producer Mary Hanan has the TV business dream job. I met Mary when she interviewed me for CNBC's \"The Brave Ones \" and I knew immediately I had to have her on the show. So I turned the tables on Mary and put her in the hot seat to learn how she worked her way up to the top, and she shared many of the interesting situations she found herself in along the way.Got a question for me? Call me at 888-BARBARA to ask a question for a future episode. Follow Business Unusual with Barbara Corcoran on iHeartRadio, or subscribe wherever you listen to podcasts. </strong> <strong>This episode of Business Unusual with Barbara Corcoran is presented by OnDeck Business Loans (</strong><a href=\"https: //urldefense.proofpoint.com/v2/url?u=http-3A__www.ondeck.com_Barbara&amp;d=DwMFaQ&amp;c=GC0NZZhaEw6GOQSjMHI2g15k_drElRoPmOYiK2k0eZ8&amp;r=xy9pRdG6lpZ6ogtRUMNvODnG4DdmLUxjZ2d9xbUZdbU5UshE20nENw68An-bhaS4&amp;m=b7G5z-S4fY6jYnVJoDD0IxLhdkIPrFOrNN2yLnt3Odc&amp;s=ecKEHfTJ9QtY2QfvkGL3kNIB-ZJ848-poG_hR6akhwQ&amp;e=\"><strong>http://www.ondeck.com/Barbara</strong></a><strong>)</strong></p>",
+      "pub_date_ms": 1557201660034,
+      "listennotes_url": "https://www.listennotes.com/e/402e67e65e2a4575ab2704a977a2b4b5/",
+      "audio_length_sec": 2188,
+      "explicit_content": false,
+      "maybe_audio_invalid": false,
+      "listennotes_edit_url": "https://www.listennotes.com/e/402e67e65e2a4575ab2704a977a2b4b5/#edit"
+    },
+    {
+      "id": "d6ff153d632f428195dfd54f002b0990",
+      "link": "https://snacks.robinhood.com/?utm_source=listennotes.com&utm_campaign=Listen+Notes&utm_medium=website",
+      "audio": "https://www.listennotes.com/e/p/d6ff153d632f428195dfd54f002b0990/",
+      "image": "https://cdn-images-1.listennotes.com/podcasts/snacks-daily-robinhood-financial-llc-hu4HiXUtv3y-kmx0XIZTAys.1400x1400.jpg",
+      "title": "Warren Buffett’s epic annual event, Planet Fitness’ innovative real estate strategy, and almond milk vs. Dean Foods dairy",
+      "podcast": {
+        "id": "c5ce6c02cbf1486496206829f7d42e8e",
+        "image": "https://cdn-images-1.listennotes.com/podcasts/snacks-daily-robinhood-financial-llc-hu4HiXUtv3y-kmx0XIZTAys.1400x1400.jpg",
+        "title": "Snacks Daily",
+        "publisher": "Robinhood Financial, LLC",
+        "thumbnail": "https://cdn-images-1.listennotes.com/podcasts/snacks-daily-robinhood-financial-llc-3qgUaLoWpvA-kmx0XIZTAys.300x300.jpg",
+        "listennotes_url": "https://www.listennotes.com/c/c5ce6c02cbf1486496206829f7d42e8e/"
+      },
+      "thumbnail": "https://cdn-images-1.listennotes.com/podcasts/snacks-daily-robinhood-financial-llc-3qgUaLoWpvA-kmx0XIZTAys.300x300.jpg",
+      "description": "<p>The annual Berkshire Hathaway shareholder meeting showcased 88-year-old legendary investor Warren Buffett, so we broke down his 6 hours of one-liner business takeaways. Planet Fitness shares are up 75% in the last year, so we’re focused on its innovative real estate strategy that feeds off the retail-pocalypse. And Dean Foods is America’s biggest dairy company, but the stock is down 62% in 2019 because of alt-milk.</p>",
+      "pub_date_ms": 1557136560207,
+      "listennotes_url": "https://www.listennotes.com/e/d6ff153d632f428195dfd54f002b0990/",
+      "audio_length_sec": 986,
+      "explicit_content": false,
+      "maybe_audio_invalid": false,
+      "listennotes_edit_url": "https://www.listennotes.com/e/d6ff153d632f428195dfd54f002b0990/#edit"
+    },
+    {
+      "id": "28e314e004cf4e95b7038258aa978faf",
+      "link": "https://www.nytimes.com/the-daily?utm_source=listennotes.com&utm_campaign=Listen+Notes&utm_medium=website",
+      "audio": "https://www.listennotes.com/e/p/28e314e004cf4e95b7038258aa978faf/",
+      "image": "https://cdn-images-1.listennotes.com/podcasts/the-daily-the-new-york-times-Kd-b9ukB7ya-xp7nhsmSkX2.1400x1400.jpg",
+      "title": "The Chinese Surveillance State, Part 1",
+      "podcast": {
+        "id": "f2eb196b20884b0490cc60a58b05bbb6",
+        "image": "https://cdn-images-1.listennotes.com/podcasts/the-daily-the-new-york-times-Kd-b9ukB7ya-xp7nhsmSkX2.1400x1400.jpg",
+        "title": "The Daily",
+        "publisher": "The New York Times",
+        "thumbnail": "https://cdn-images-1.listennotes.com/podcasts/the-daily-the-new-york-times-_iFAjsBZIXt-xp7nhsmSkX2.300x300.jpg",
+        "listennotes_url": "https://www.listennotes.com/c/f2eb196b20884b0490cc60a58b05bbb6/"
+      },
+      "thumbnail": "https://cdn-images-1.listennotes.com/podcasts/the-daily-the-new-york-times-_iFAjsBZIXt-xp7nhsmSkX2.300x300.jpg",
+      "description": "<p>Under President Xi Jinping, China is pioneering a new form of governance by surveillance. In the first of a two-part series, we look at how China tested that system by targeting one minority group. Guest: Paul Mozur, a technology reporter for The New York Times based in Shanghai. For more information on today’s episode, visit <a href=\"https: //www.nytimes.com/thedaily\" target=\"_blank\">nytimes.com/thedaily</a>. </p><p>Background reading: </p><ul><li>Chinese authorities are expanding an<a href=\"https://www.nytimes.com/interactive/2019/04/04/world/asia/xinjiang-china-surveillance-prison.html?smid=pc-thedaily\" target=\"_blank\"> extensive surveillance net</a> by using a<a href=\"https://www.nytimes.com/2019/04/14/technology/china-surveillance-artificial-intelligence-racial-profiling.html?smid=pc-thedaily\" target=\"_blank\"> vast, secret system of facial recognition technology to control the Uighurs</a>, a largely Muslim minority.</li><li>Technology built for China’s surveillance system<a href=\"https://www.nytimes.com/2019/04/24/technology/ecuador-surveillance-cameras-police-government.html?smid=pc-thedaily\" target=\"_blank\"> is now being applied — and sometimes abused — by other governments</a>.</li></ul>",
+      "pub_date_ms": 1557136540363,
+      "listennotes_url": "https://www.listennotes.com/e/28e314e004cf4e95b7038258aa978faf/",
+      "audio_length_sec": 1288,
+      "explicit_content": false,
+      "maybe_audio_invalid": false,
+      "listennotes_edit_url": "https://www.listennotes.com/e/28e314e004cf4e95b7038258aa978faf/#edit"
+    },
+    {
+      "id": "5ad170a60e76467e9d6b2453bd44fda6",
+      "link": "https://www.listenmoneymatters.com?utm_source=listennotes.com&utm_campaign=Listen+Notes&utm_medium=website",
+      "audio": "https://www.listennotes.com/e/p/5ad170a60e76467e9d6b2453bd44fda6/",
+      "image": "https://cdn-images-1.listennotes.com/podcasts/listen-money-matters-free-your-inner-7gAv31w6e5z-SJEHNr84kVg.1400x1400.jpg",
+      "title": "All Things Gold",
+      "podcast": {
+        "id": "3302bc71139541baa46ecb27dbf6071a",
+        "image": "https://cdn-images-1.listennotes.com/podcasts/listen-money-matters-free-your-inner-7gAv31w6e5z-SJEHNr84kVg.1400x1400.jpg",
+        "title": "Listen Money Matters - Free your inner financial badass. All the stuff you should know about personal finance.",
+        "publisher": "ListenMoneyMatters.com | Andrew Fiebert and Matt Giovanisci",
+        "thumbnail": "https://cdn-images-1.listennotes.com/podcasts/listen-money-matters-free-your-inner-Uo_qv9RYI6A-SJEHNr84kVg.300x300.jpg",
+        "listennotes_url": "https://www.listennotes.com/c/3302bc71139541baa46ecb27dbf6071a/"
+      },
+      "thumbnail": "https://cdn-images-1.listennotes.com/podcasts/listen-money-matters-free-your-inner-Uo_qv9RYI6A-SJEHNr84kVg.300x300.jpg",
+      "description": "<p>Some people who are hesitant to invest in the stock market are willing to invest in gold. Why? Gold is tangible, you can see it, hold it, and keep it right in your own house (or bunker). You can buy it from some guy in a late night infomercial. You can buy it with images of the fallen Twin Towers on it. Or an American eagle.<strong></p><p></strong></p><p><strong>You can’t say any of that about investing in the stock market!</strong> When you own stock, you don’t own a tangible thing. You have to deal with some slick stockbroker if you want to buy and sell it (you don’t). And stocks don’t come in a limited edition collector’s box.</p><p>LMM hasn’t discussed gold very much in the past and like a lot of you, thought it was something only Doomsday preppers were interested in so not really relevant to us or our audience. But while doing research for the <a href=\"https: //www.listenmoneymatters.com/ray-dalio-all-weather-portfolio/\">Golden Butterfly episode,</a> we learned some legitimate reasons for investing in gold and <strong><em>none</em></strong> of them are related to the zombie apocalypse that is surely coming.</p><p>Many of our listeners wanted to know more about it too, why and how to invest in gold. We got a lot of emails asking questions. You asked and we answered. This is all things gold.<strong></p><p></strong><a href=\"https://www.listenmoneymatters.com/all-things-gold/\">Full Article Here</a><strong></p><p></strong></p><p><strong>Show Notes</p><p></strong></p><p><a href=\"http://SPS.NORTHWESTERN.EDU/CFP\">Northwestern University CFP Program</a> - Prepare for a career as a financial planner </p><p> </p><p>Learn more about your ad choices. Visit <a href=\"https://megaphone.fm/adchoices\">megaphone.fm/adchoices</a></p>",
+      "pub_date_ms": 1557115200044,
+      "listennotes_url": "https://www.listennotes.com/e/5ad170a60e76467e9d6b2453bd44fda6/",
+      "audio_length_sec": 2677,
+      "explicit_content": true,
+      "maybe_audio_invalid": false,
+      "listennotes_edit_url": "https://www.listennotes.com/e/5ad170a60e76467e9d6b2453bd44fda6/#edit"
+    },
+    {
+      "id": "d969ec84fdc74ad2b70bca078b2f0772",
+      "link": "https://www.nytimes.com/the-daily?utm_source=listennotes.com&utm_campaign=Listen+Notes&utm_medium=website",
+      "audio": "https://www.listennotes.com/e/p/d969ec84fdc74ad2b70bca078b2f0772/",
+      "image": "https://cdn-images-1.listennotes.com/podcasts/the-daily-the-new-york-times-Kd-b9ukB7ya-xp7nhsmSkX2.1400x1400.jpg",
+      "title": "A Secret Dossier in Venezuela",
+      "podcast": {
+        "id": "f2eb196b20884b0490cc60a58b05bbb6",
+        "image": "https://cdn-images-1.listennotes.com/podcasts/the-daily-the-new-york-times-Kd-b9ukB7ya-xp7nhsmSkX2.1400x1400.jpg",
+        "title": "The Daily",
+        "publisher": "The New York Times",
+        "thumbnail": "https://cdn-images-1.listennotes.com/podcasts/the-daily-the-new-york-times-_iFAjsBZIXt-xp7nhsmSkX2.300x300.jpg",
+        "listennotes_url": "https://www.listennotes.com/c/f2eb196b20884b0490cc60a58b05bbb6/"
+      },
+      "thumbnail": "https://cdn-images-1.listennotes.com/podcasts/the-daily-the-new-york-times-_iFAjsBZIXt-xp7nhsmSkX2.300x300.jpg",
+      "description": "<p>After mass protests and international pressure failed to unseat President Nicolás Maduro of Venezuela, it became clear that it would take defections from within his own government to remove him from power. Now, secret documents suggest that some of Mr. Maduro’s people are starting to turn on him. Guest: Nicholas Casey, the Andes bureau chief for The New York Times. For more information on today’s episode, visit <a href=\"https: //www.nytimes.com/thedaily\" target=\"_blank\">nytimes.com/thedaily</a>. </p><p>Background reading: </p><ul><li>A<a href=\"https://www.nytimes.com/2019/05/02/world/americas/venezuela-maduro-hezbollah-drugs.html?smid=pc-thedaily\" target=\"_blank\"> secret dossier compiled by Venezuela’s intelligence agency</a> and provided to The New York Times shows how Tareck El Aissami, a confidant of Mr. Maduro, became a wealthy man even as his country headed toward economic collapse. </li><li><a href=\"https://www.nytimes.com/2018/03/12/podcasts/the-daily/venezuela-leopoldo-lopez.html?smid=pc-thedail\" target=\"_blank\">Listen to a series from “The Daily” about Leopoldo López</a>, a prominent opposition politician who was put under house arrest after staging protests in 2014.</li></ul>",
+      "pub_date_ms": 1556877363364,
+      "listennotes_url": "https://www.listennotes.com/e/d969ec84fdc74ad2b70bca078b2f0772/",
+      "audio_length_sec": 1213,
+      "explicit_content": false,
+      "maybe_audio_invalid": false,
+      "listennotes_edit_url": "https://www.listennotes.com/e/d969ec84fdc74ad2b70bca078b2f0772/#edit"
+    },
+    {
+      "id": "e2e15dc3f99745818872e71f7c828f89",
+      "link": "https://snacks.robinhood.com/?utm_source=listennotes.com&utm_campaign=Listen+Notes&utm_medium=website",
+      "audio": "https://www.listennotes.com/e/p/e2e15dc3f99745818872e71f7c828f89/",
+      "image": "https://cdn-images-1.listennotes.com/podcasts/snacks-daily-robinhood-financial-llc-hu4HiXUtv3y-kmx0XIZTAys.1400x1400.jpg",
+      "title": "The Taser CEO gets $246M in stock comp, Beyond Meat surges 163%, and Wayfair drops 7% because you’re expensive",
+      "podcast": {
+        "id": "c5ce6c02cbf1486496206829f7d42e8e",
+        "image": "https://cdn-images-1.listennotes.com/podcasts/snacks-daily-robinhood-financial-llc-hu4HiXUtv3y-kmx0XIZTAys.1400x1400.jpg",
+        "title": "Snacks Daily",
+        "publisher": "Robinhood Financial, LLC",
+        "thumbnail": "https://cdn-images-1.listennotes.com/podcasts/snacks-daily-robinhood-financial-llc-3qgUaLoWpvA-kmx0XIZTAys.300x300.jpg",
+        "listennotes_url": "https://www.listennotes.com/c/c5ce6c02cbf1486496206829f7d42e8e/"
+      },
+      "thumbnail": "https://cdn-images-1.listennotes.com/podcasts/snacks-daily-robinhood-financial-llc-3qgUaLoWpvA-kmx0XIZTAys.300x300.jpg",
+      "description": "<p>Axon Enterprises is the company behind the taser, and it just awarded its CEO $246M in compensation — So we look in to how it’s set up to incentivize him. Beyond Meat surged 163% on its IPO day. And Wayfair is the biggest online furniture platform whose stock fell 7%, but it’s got a fascinating relationship with 80 “house brands.”</p>",
+      "pub_date_ms": 1556877360208,
+      "listennotes_url": "https://www.listennotes.com/e/e2e15dc3f99745818872e71f7c828f89/",
+      "audio_length_sec": 893,
+      "explicit_content": false,
+      "maybe_audio_invalid": false,
+      "listennotes_edit_url": "https://www.listennotes.com/e/e2e15dc3f99745818872e71f7c828f89/#edit"
+    }
+  ],
+  "next_episode_pub_date": 1556877360208,
+  "genres": [
+    {
+      "id": 144,
+      "name": "Personal Finance",
+      "parent_id": 67
+    },
+    {
+      "id": 151,
+      "name": "Locally Focused",
+      "parent_id": 67
+    },
+    {
+      "id": 68,
+      "name": "TV & Film",
+      "parent_id": 67
+    },
+    {
+      "id": 127,
+      "name": "Technology",
+      "parent_id": 67
+    },
+    {
+      "id": 135,
+      "name": "True Crime",
+      "parent_id": 67
+    },
+    {
+      "id": 100,
+      "name": "Arts",
+      "parent_id": 67
+    },
+    {
+      "id": 93,
+      "name": "Business",
+      "parent_id": 67
+    },
+    {
+      "id": 133,
+      "name": "Comedy",
+      "parent_id": 67
+    },
+    {
+      "id": 111,
+      "name": "Education",
+      "parent_id": 67
+    },
+    {
+      "id": 168,
+      "name": "Fiction",
+      "parent_id": 67
+    },
+    {
+      "id": 117,
+      "name": "Government",
+      "parent_id": 67
+    },
+    {
+      "id": 88,
+      "name": "Health & Fitness",
+      "parent_id": 67
+    },
+    {
+      "id": 125,
+      "name": "History",
+      "parent_id": 67
+    },
+    {
+      "id": 132,
+      "name": "Kids & Family",
+      "parent_id": 67
+    },
+    {
+      "id": 82,
+      "name": "Leisure",
+      "parent_id": 67
+    },
+    {
+      "id": 134,
+      "name": "Music",
+      "parent_id": 67
+    },
+    {
+      "id": 99,
+      "name": "News",
+      "parent_id": 67
+    },
+    {
+      "id": 69,
+      "name": "Religion & Spirituality",
+      "parent_id": 67
+    },
+    {
+      "id": 107,
+      "name": "Science",
+      "parent_id": 67
+    },
+    {
+      "id": 122,
+      "name": "Society & Culture",
+      "parent_id": 67
+    },
+    {
+      "id": 77,
+      "name": "Sports",
+      "parent_id": 67
     }
   ]
 }

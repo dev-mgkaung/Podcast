@@ -8,24 +8,13 @@ import mk.podcast.com.networks.FirebaseApi
 interface PodcastModels {
     var mFirebaseApi: FirebaseApi
 
-    fun getCategoryList(
+    fun getCategoryListFromFirebase(
         onSuccess: (categories: List<GenreVO>) -> Unit,
         onFailure: (String) -> Unit
     )
 
-    fun getRandomPodcast(
-        onSuccess: (podcast: RandomPodcastVO) -> Unit,
-        onFailure: (String) -> Unit
-    )
-
-    fun getPodcatPlayLists(
-        onSuccess: (playlist: List<PlayListVO>) -> Unit,
-        onFailure: (String) -> Unit
-    )
-
-    fun getPodcastDetailById(
-        podcastID: String,
-        onSuccess: (playlist: DetailEpisodeVO) -> Unit,
+    fun getAllEpisodesFromFirebase(
+        onSuccess: (episodes: List<EpisodeVO>) -> Unit,
         onFailure: (String) -> Unit
     )
 
@@ -35,23 +24,34 @@ interface PodcastModels {
     fun getAllPodcastFromApiAndSaveToDatabase(onSuccess: () -> Unit, onError: (String) -> Unit)
 
     //PlayList Data
-    fun getAllPlayList(onError: (String) -> Unit): LiveData<List<PlayListVO>>
+    fun getAllEpisodeFromDB(onError: (String) -> Unit): LiveData<List<EpisodeVO>>
     fun getAllPlayListFromApiAndSaveToDatabase(onSuccess: () -> Unit, onError: (String) -> Unit)
 
     //Detail Episode Data
-    fun getDetailEpisodeData(episodeId : String, onError: (String) -> Unit) : LiveData<DetailEpisodeVO>
-    fun getDetailFromApiAndSaveToDatabase(episodeId : String, onSuccess: (detailVO :DetailEpisodeVO) -> Unit, onError: (String) -> Unit)
+    fun getDetailEpisodeDataByID(episodeId: String, onError: (String) -> Unit): LiveData<EpisodeVO>
+    fun getDetailFromApiAndSaveToDatabase(
+        episodeId: String,
+        onSuccess: (detailVO: EpisodeVO) -> Unit,
+        onError: (String) -> Unit
+    )
 
     //Category Genre Data
-    fun getCategoryDataList(onError: (String) -> Unit) : LiveData<List<GenreVO>>
+    fun getCategoryDataList(onError: (String) -> Unit): LiveData<List<GenreVO>>
     fun getCategoryDataFromApiAndSaveToDatabase(onSuccess: () -> Unit, onError: (String) -> Unit)
 
     //RandomPodcast Data
-    fun getRandomPodcastData( onError: (String) -> Unit) : LiveData<RandomPodcastVO>
-    fun getRandomPodcastFromApiAndSaveToDatabase( onSuccess: (datavo :RandomPodcastVO) -> Unit, onError: (String) -> Unit)
+    fun getRandomPodcastData(onError: (String) -> Unit): LiveData<List<EpisodeVO>>
+    fun getRandomPodcastFromApiAndSaveToDatabase(
+        onSuccess: (datavo: EpisodeVO) -> Unit,
+        onError: (String) -> Unit
+    )
 
     //Download Podcast
-    fun startDownloadPodcast(context: Context,dataVO: DataVO)
-    fun getDownloadPodcastList(onError: (String) -> Unit) : LiveData<List<DownloadVO>>
-    fun saveDownloadPodcastItem(donwloadVO: DownloadVO, onSuccess: () -> Unit, onError: (String) -> Unit)
+    fun startDownloadPodcast(context: Context, dataVO: EpisodeVO)
+    fun getDownloadPodcastList(onError: (String) -> Unit): LiveData<List<DownloadVO>>
+    fun saveDownloadPodcastItem(
+        donwloadVO: DownloadVO,
+        onSuccess: () -> Unit,
+        onError: (String) -> Unit
+    )
 }

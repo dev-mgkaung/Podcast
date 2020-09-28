@@ -33,7 +33,6 @@ class DownloadFragment : Fragment(), DownloadView {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_download, container, false)
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -66,7 +65,7 @@ class DownloadFragment : Fragment(), DownloadView {
         startActivity(
             DetailActivity.newIntent(
                 activity as Context,
-                downloadVO.download_id.toString(),
+                downloadVO.download_id,
                 DOWNLOADPAGE, downloadVO.download_audio_path
             )
         )

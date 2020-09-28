@@ -24,9 +24,7 @@ import mk.padc.themovie.utils.PLAYER_TYPE_STREAMING
 import mk.podcast.com.R
 import mk.podcast.com.activities.DetailActivity
 import mk.podcast.com.adapters.PodcastRecyclerAdapter
-import mk.podcast.com.datas.vos.DataVO
-import mk.podcast.com.datas.vos.PlayListVO
-import mk.podcast.com.datas.vos.RandomPodcastVO
+import mk.podcast.com.datas.vos.EpisodeVO
 import mk.podcast.com.medias.MyMediaPlayerHelper
 import mk.podcast.com.mvp.presenters.MainPresenter
 import mk.podcast.com.mvp.presenters.impls.MainPresenterImpl
@@ -93,11 +91,11 @@ class HomeFragment : Fragment(), MainView {
         fun newInstance() = HomeFragment().apply {}
     }
 
-    override fun displayPodcastList(list: List<PlayListVO>) {
+    override fun displayPodcastList(list: List<EpisodeVO>) {
         mAdapter.setNewData(list.toMutableList())
     }
 
-    override fun displayRandomPodcastData(data: RandomPodcastVO) {
+    override fun displayRandomPodcastData(data: EpisodeVO) {
         detail.text = Html.fromHtml(data.description)
         mMusicPlayerViewPod.setUpData(data.title, data.description, data.image, data.audio)
     }
@@ -112,7 +110,7 @@ class HomeFragment : Fragment(), MainView {
         })
     }
 
-    override fun selectedDownloadPodcastItem(data: DataVO) {
+    override fun selectedDownloadPodcastItem(data: EpisodeVO) {
         setupPermissions(data)
     }
 
@@ -160,7 +158,7 @@ class HomeFragment : Fragment(), MainView {
         if (initPlayer) MyMediaPlayerHelper.mediaPlayerStopPlayBack(activity as Activity)
     }
 
-    fun setupPermissions(data: DataVO) {
+    fun setupPermissions(data: EpisodeVO) {
         val permission = ContextCompat.checkSelfPermission(
             activity as Activity,
             android.Manifest.permission.WRITE_EXTERNAL_STORAGE

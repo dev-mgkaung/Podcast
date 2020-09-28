@@ -3,7 +3,6 @@ package mk.podcast.com.persistances.converters
 import androidx.room.TypeConverter
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
-import mk.podcast.com.datas.vos.DataVO
 
 
 class GenreIdListConverter {

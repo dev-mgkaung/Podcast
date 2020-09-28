@@ -16,11 +16,11 @@ import mk.padc.themovie.utils.DOWNLOADPAGE
 import mk.padc.themovie.utils.PLAYER_TYPE_FILE
 import mk.padc.themovie.utils.PLAYER_TYPE_STREAMING
 import mk.podcast.com.R
-import mk.podcast.com.datas.vos.DetailEpisodeVO
+import mk.podcast.com.datas.vos.EpisodeVO
+import mk.podcast.com.medias.MyMediaPlayerHelper
 import mk.podcast.com.mvp.presenters.DetailPresenter
 import mk.podcast.com.mvp.presenters.impls.DetailPresenterImpl
 import mk.podcast.com.mvp.views.DetailView
-import mk.podcast.com.medias.MyMediaPlayerHelper
 import mk.podcast.com.views.viewpods.MiniMusicPlayerViewPod
 
 
@@ -70,7 +70,7 @@ class DetailActivity : AppCompatActivity(), DetailView {
     }
 
     @SuppressLint("SetTextI18n")
-    override fun displayDetailData(data: DetailEpisodeVO) {
+    override fun displayDetailData(data: EpisodeVO) {
         detail_title.text = data.title
         detail_description.text = Html.fromHtml(data.description)
         audio_time.text = "${data.audio_length_sec} sec"

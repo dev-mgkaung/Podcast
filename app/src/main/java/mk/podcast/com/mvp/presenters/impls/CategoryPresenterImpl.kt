@@ -13,7 +13,7 @@ class CategoryPresenterImpl : CategoryPresenter, BaseAppPresenterImpl<CategoryVi
 
     override fun onUiReady(lifeCycleOwner: LifecycleOwner) {
 
-        mModelImpl.getCategoryList(onSuccess = {}, onFailure = {})
+        mModelImpl.getCategoryListFromFirebase(onSuccess = {}, onFailure = {})
 
         mModelImpl.getCategoryDataList(onError = {})
             .observe(lifeCycleOwner, Observer {
