@@ -26,8 +26,10 @@ class MainPresenterImpl : MainPresenter, BaseAppPresenterImpl<MainView>() {
             .observe(lifeCycleOwner, Observer {
                 mView?.displayPodcastList(it)
                 it?.let {
-                    val result = randomNumber(0, it.size)
-                    randomPodcast(lifeCycleOwner, it.get(result).id)
+                    if (it.size > 0) {
+                        val result = randomNumber(0, it.size)
+                        randomPodcast(lifeCycleOwner, it.get(result).id)
+                    }
                 }
             })
     }

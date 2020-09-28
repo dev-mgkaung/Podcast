@@ -6,6 +6,7 @@ import androidx.lifecycle.LiveData
 import mk.podcast.com.datas.models.BaseModel
 import mk.podcast.com.datas.models.PodcastModels
 import mk.podcast.com.datas.vos.*
+import mk.podcast.com.networks.ColudFirebaseDatabaseApiImpl
 import mk.podcast.com.networks.FirebaseApi
 import mk.podcast.com.networks.RealtimeDatabaseFirebaseApiImpl
 import mk.podcast.com.utils.startDownloading
@@ -13,7 +14,9 @@ import mk.podcast.com.utils.startDownloading
 
 object PodcastFirebaseDataModelImpl : PodcastModels, BaseModel() {
 
-    override var mFirebaseApi: FirebaseApi = RealtimeDatabaseFirebaseApiImpl
+    //  override var mFirebaseApi: FirebaseApi = RealtimeDatabaseFirebaseApiImpl
+    override var mFirebaseApi: FirebaseApi = ColudFirebaseDatabaseApiImpl
+
     override fun getCategoryListFromFirebase(
         onSuccess: (List<GenreVO>) -> Unit,
         onFailure: (String) -> Unit

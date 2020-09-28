@@ -7,8 +7,8 @@ import com.google.firebase.database.IgnoreExtraProperties
 @IgnoreExtraProperties
 @Entity(tableName = "genere")
 data class GenreVO(
-     @PrimaryKey
-     val id: Int? = 0,
-     var name: String? = "",
-     var parent_id: Int? = 0
+    @PrimaryKey
+    var id: Int? = 0,
+    var name: String? = "",
+    var parent_id: Int? = 0
 )
