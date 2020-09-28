@@ -35,7 +35,7 @@ class MainPresenterImpl : MainPresenter, BaseAppPresenterImpl<MainView>() {
     }
 
     fun randomPodcast(lifeCycleOwner: LifecycleOwner, episodeID: String) {
-        mModelImpl.getDetailEpisodeDataByID(episodeID, onError = {})
+        mModelImpl.getEpisodeDataByID(episodeID, onError = {})
             .observe(lifeCycleOwner, Observer {
                 mView?.displayRandomPodcastData(it)
             })

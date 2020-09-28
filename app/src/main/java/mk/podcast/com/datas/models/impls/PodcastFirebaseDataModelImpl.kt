@@ -56,7 +56,7 @@ object PodcastFirebaseDataModelImpl : PodcastModels, BaseModel() {
         TODO("Not yet implemented")
     }
 
-    override fun getDetailEpisodeDataByID(
+    override fun getEpisodeDataByID(
         episodeId: String,
         onError: (String) -> Unit
     ): LiveData<EpisodeVO> {
