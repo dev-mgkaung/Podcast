@@ -88,7 +88,7 @@ object PodcastFirebaseDataModelImpl : PodcastModels, BaseModel() {
     }
 
     override fun getRandomPodcastData(onError: (String) -> Unit): LiveData<List<EpisodeVO>> {
-        return mTheDB.episodeDao().getAllEpisodes()
+        return mTheDB.episodeDao().getRandomEpisode()
     }
 
     override fun getRandomPodcastFromApiAndSaveToDatabase(

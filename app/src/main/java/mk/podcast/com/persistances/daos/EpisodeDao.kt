@@ -22,6 +22,9 @@ interface EpisodeDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertEpisode(podcasts: EpisodeVO)
 
+    @Query("select * from episodes ORDER BY RANDOM()")
+    fun getRandomEpisode(): LiveData<List<EpisodeVO>>
+
     @Query("select * from episodes WHERE id = :detail_id")
     fun getAllDetailDataByEpisodeID(detail_id: String): LiveData<EpisodeVO>
 

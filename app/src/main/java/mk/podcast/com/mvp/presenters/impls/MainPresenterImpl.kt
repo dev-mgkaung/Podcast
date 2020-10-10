@@ -24,20 +24,16 @@ class MainPresenterImpl : MainPresenter, BaseAppPresenterImpl<MainView>() {
         mModelImpl.getAllEpisodeFromDB(onError = {})
             .observe(lifeCycleOwner, Observer {
                 mView?.displayPodcastList(it)
-                it?.let {
-                    if (it.size > 0) {
-                        val result = (0 until it.size).random()
-                        randomPodcast(lifeCycleOwner, it.get(result).id)
-                    }
-                }
+                randomEposiode(lifeCycleOwner)
             })
     }
 
-    fun randomPodcast(lifeCycleOwner: LifecycleOwner, episodeID: String) {
-        mModelImpl.getEpisodeDataByID(episodeID, onError = {})
-            .observe(lifeCycleOwner, Observer {
-                mView?.displayRandomPodcastData(it)
-            })
+    private fun randomEposiode(lifeCycleOwner: LifecycleOwner) {
+        mModelImpl.getRandomPodcastData(onError = {}).observe(lifeCycleOwner, Observer {
+            it?.let {
+                if (it.isNotEmpty()) mView?.displayRandomPodcastData(it[0])
+            }
+        })
     }
 
     override fun onTapPlayListItem(playListVO: EpisodeVO) {
