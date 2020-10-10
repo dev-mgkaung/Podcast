@@ -132,7 +132,7 @@ object PodcastModelmpl : PodcastModels, BaseModel() {
             })
     }
 
-    override fun getRandomPodcastData(onError: (String) -> Unit): LiveData<List<EpisodeVO>> {
+    override fun getRandomPodcastData(onError: (String) -> Unit): LiveData<EpisodeVO> {
         TODO("Not yet implemented")
     }
 

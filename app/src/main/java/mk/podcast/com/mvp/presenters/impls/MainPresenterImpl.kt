@@ -31,7 +31,7 @@ class MainPresenterImpl : MainPresenter, BaseAppPresenterImpl<MainView>() {
     private fun randomEposiode(lifeCycleOwner: LifecycleOwner) {
         mModelImpl.getRandomPodcastData(onError = {}).observe(lifeCycleOwner, Observer {
             it?.let {
-                if (it.isNotEmpty()) mView?.displayRandomPodcastData(it[0])
+                mView?.displayRandomPodcastData(it)
             }
         })
     }

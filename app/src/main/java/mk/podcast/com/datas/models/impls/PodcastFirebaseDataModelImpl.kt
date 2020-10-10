@@ -87,7 +87,7 @@ object PodcastFirebaseDataModelImpl : PodcastModels, BaseModel() {
         TODO("Not yet implemented")
     }
 
-    override fun getRandomPodcastData(onError: (String) -> Unit): LiveData<List<EpisodeVO>> {
+    override fun getRandomPodcastData(onError: (String) -> Unit): LiveData<EpisodeVO> {
         return mTheDB.episodeDao().getRandomEpisode()
     }
 

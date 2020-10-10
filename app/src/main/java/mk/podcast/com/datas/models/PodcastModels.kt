@@ -40,7 +40,7 @@ interface PodcastModels {
     fun getCategoryDataFromApiAndSaveToDatabase(onSuccess: () -> Unit, onError: (String) -> Unit)
 
     //RandomPodcast Data
-    fun getRandomPodcastData(onError: (String) -> Unit): LiveData<List<EpisodeVO>>
+    fun getRandomPodcastData(onError: (String) -> Unit): LiveData<EpisodeVO>
     fun getRandomPodcastFromApiAndSaveToDatabase(
         onSuccess: (datavo: EpisodeVO) -> Unit,
         onError: (String) -> Unit
