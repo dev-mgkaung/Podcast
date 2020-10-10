@@ -25,12 +25,11 @@ object ColudFirebaseDatabaseApiImpl : FirebaseApi {
                     val result = value?.documents ?: arrayListOf()
 
                     for (document in result) {
-                        val data = document.data
-                        val category = GenreVO()
-                        category.name = data?.get("name") as String
-                        category.parent_id = (data["parent_id"] as Long).toInt()
-                        category.id = (data["id"] as Long).toInt()
-                        categoryList.add(category)
+                        val hashmap = document.data
+                        hashmap?.put("id", document.id.toString())
+                        val Data = Gson().toJson(hashmap)
+                        val docsData = Gson().fromJson<GenreVO>(Data, GenreVO::class.java)
+                        categoryList.add(docsData)
                     }
                     onSuccess(categoryList)
                 }

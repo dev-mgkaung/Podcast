@@ -14,7 +14,7 @@ import mk.podcast.com.utils.startDownloading
 
 object PodcastFirebaseDataModelImpl : PodcastModels, BaseModel() {
 
-    //  override var mFirebaseApi: FirebaseApi = RealtimeDatabaseFirebaseApiImpl
+    // override var mFirebaseApi: FirebaseApi = RealtimeDatabaseFirebaseApiImpl
     override var mFirebaseApi: FirebaseApi = ColudFirebaseDatabaseApiImpl
 
     override fun getCategoryListFromFirebase(
@@ -22,6 +22,7 @@ object PodcastFirebaseDataModelImpl : PodcastModels, BaseModel() {
         onFailure: (String) -> Unit
     ) {
         mFirebaseApi.getCategoryList(onSuccess = {
+            mTheDB.generDao().deleteAllGenere()
             mTheDB.generDao().insertGenerData(it)
         }, onFailure = { onFailure(it) })
     }
@@ -32,6 +33,7 @@ object PodcastFirebaseDataModelImpl : PodcastModels, BaseModel() {
         onFailure: (String) -> Unit
     ) {
         mFirebaseApi.getAllEpisodes(onSuccess = {
+            mTheDB.episodeDao().deleteAllEpisodes()
             mTheDB.episodeDao().insertAllEpisodes(it)
         }, onFailure =
         { onFailure(it) })

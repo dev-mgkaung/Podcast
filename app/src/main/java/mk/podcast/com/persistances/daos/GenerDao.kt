@@ -16,4 +16,6 @@ interface GenerDao {
     @Query("select * from genere")
     fun getAllGenerData(): LiveData<List<GenreVO>>
 
+    @Query("DELETE FROM genere")
+    fun deleteAllGenere()
 }

@@ -11,10 +11,10 @@ fun ImageView.load(dataImageUrl: String?) {
         .into(this)
 }
 
-fun randomNumber(start: Int, end: Int): Int {
-    require(start <= end) { "Illegal Argument" }
-    return (start..end).random()
-}
+//fun randomNumber(start: Int, end: Int): Int {
+//    require(start <= end) { "Illegal Argument" }
+//    return (start..end).random()
+//}
 
 
 fun Long.convertMillisecondToHMS(): String {

@@ -5,7 +5,6 @@ import android.util.Log
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.Observer
 import mk.padc.share.mvp.presenters.impl.BaseAppPresenterImpl
-import mk.padc.share.utils.randomNumber
 import mk.podcast.com.datas.models.impls.PodcastFirebaseDataModelImpl
 import mk.podcast.com.datas.vos.DownloadVO
 import mk.podcast.com.datas.vos.EpisodeVO
@@ -27,7 +26,7 @@ class MainPresenterImpl : MainPresenter, BaseAppPresenterImpl<MainView>() {
                 mView?.displayPodcastList(it)
                 it?.let {
                     if (it.size > 0) {
-                        val result = randomNumber(0, it.size)
+                        val result = (0 until it.size).random()
                         randomPodcast(lifeCycleOwner, it.get(result).id)
                     }
                 }

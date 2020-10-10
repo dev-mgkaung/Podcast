@@ -24,4 +24,7 @@ interface EpisodeDao {
 
     @Query("select * from episodes WHERE id = :detail_id")
     fun getAllDetailDataByEpisodeID(detail_id: String): LiveData<EpisodeVO>
+
+    @Query("DELETE FROM episodes")
+    fun deleteAllEpisodes()
 }
